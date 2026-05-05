@@ -29,6 +29,7 @@ const run = () => {
   const items = loadShowdownFile('items.js');
   const abilities = loadShowdownFile('abilities.js');
   const formatsData = loadShowdownFile('formats-data.js'); // For tier checking
+  const learnsets = loadShowdownFile('learnsets.js');
   
   // We want to filter out illegal Pokemon (usually those not in Gen 9, or custom stuff).
   // In VGC / Champions, typically standard Pokemon are allowed.
@@ -88,16 +89,47 @@ const run = () => {
     }
   }
 
+  // Parse learnsets to just an array of move IDs
+  const cleanLearnsets = {};
+  for (const [key, learnsetObj] of Object.entries(learnsets)) {
+    if (learnsetObj && learnsetObj.learnset) {
+      // Showdown format: learnset: { "moveid": ["9L1", "8M", ...], ... }
+      cleanLearnsets[key] = Object.keys(learnsetObj.learnset);
+    }
+  }
+
+  // Hardcode Regulations map for M-A
+  // In a real scenario, this would parse formats.js
+  const regulations = {
+    vgc2026regma: {
+      name: "Gen 9 Champions Reg M-A",
+      bannedPokemon: [
+        "mewtwo", "lugia", "hooh", "kyogre", "groudon", "rayquaza", 
+        "dialga", "palkia", "giratina", "arceus", "reshiram", "zekrom", 
+        "kyurem", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", 
+        "solgaleo", "lunala", "necrozma", "zacian", "zamazenta", "eternatus",
+        "calyrex", "koraidon", "miraidon", "terapagos"
+        // Mythicals
+      ],
+      bannedItems: ["souldew", "adamantcrystal", "lustrousglobe", "griseouscore"],
+      bannedAbilities: ["powerconstruct"]
+    }
+  };
+
   fs.writeFileSync(path.join(OUT_DIR, 'pokedex.json'), JSON.stringify(cleanPokedex, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'moves.json'), JSON.stringify(cleanMoves, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'items.json'), JSON.stringify(cleanItems, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'abilities.json'), JSON.stringify(cleanAbilities, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, 'learnsets.json'), JSON.stringify(cleanLearnsets)); // Minified
+  fs.writeFileSync(path.join(OUT_DIR, 'regulations.json'), JSON.stringify(regulations, null, 2));
 
   console.log(`Extracted:
   - ${Object.keys(cleanPokedex).length} Pokemon
   - ${Object.keys(cleanMoves).length} Moves
   - ${Object.keys(cleanItems).length} Items
   - ${Object.keys(cleanAbilities).length} Abilities
+  - ${Object.keys(cleanLearnsets).length} Learnsets
+  - ${Object.keys(regulations).length} Regulations
   `);
 };
 

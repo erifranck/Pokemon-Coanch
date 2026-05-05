@@ -1,0 +1,44 @@
+{
+  "vgc2026regma": {
+    "name": "Gen 9 Champions Reg M-A",
+    "bannedPokemon": [
+      "mewtwo",
+      "lugia",
+      "hooh",
+      "kyogre",
+      "groudon",
+      "rayquaza",
+      "dialga",
+      "palkia",
+      "giratina",
+      "arceus",
+      "reshiram",
+      "zekrom",
+      "kyurem",
+      "xerneas",
+      "yveltal",
+      "zygarde",
+      "cosmog",
+      "cosmoem",
+      "solgaleo",
+      "lunala",
+      "necrozma",
+      "zacian",
+      "zamazenta",
+      "eternatus",
+      "calyrex",
+      "koraidon",
+      "miraidon",
+      "terapagos"
+    ],
+    "bannedItems": [
+      "souldew",
+      "adamantcrystal",
+      "lustrousglobe",
+      "griseouscore"
+    ],
+    "bannedAbilities": [
+      "powerconstruct"
+    ]
+  }
+}

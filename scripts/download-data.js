@@ -3,7 +3,7 @@ import path from 'path';
 import https from 'https';
 
 const SHOWDOWN_URL_BASE = 'https://play.pokemonshowdown.com/data/';
-const FILES_TO_DOWNLOAD = ['pokedex.js', 'moves.js', 'formats-data.js', 'items.js', 'abilities.js'];
+const FILES_TO_DOWNLOAD = ['pokedex.js', 'moves.js', 'formats-data.js', 'items.js', 'abilities.js', 'learnsets.js'];
 const RAW_DIR = path.join(process.cwd(), 'scripts', 'raw_data');
 
 if (!fs.existsSync(RAW_DIR)) {
