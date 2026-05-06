@@ -2,7 +2,7 @@ import React from 'react';
 import { useAppStore } from '../store/useAppStore';
 import pokedexData from '../data/pokedex.json';
 
-import regulationsData from '../data/regulations.json';
+import formatData from '../data/format_data.json';
 
 export const TeamManager: React.FC = () => {
   const { teams, activeTeamId, setActiveTeam, createTeam, cloneTeam, deleteTeam, updateTeamRegulation } = useAppStore();
@@ -27,11 +27,11 @@ export const TeamManager: React.FC = () => {
 
           <select 
             className="bg-gray-800 text-gray-300 p-2 rounded-lg border border-gray-700 focus:outline-none focus:border-blue-500 text-sm"
-            value={activeTeam.regulation || 'vgc2026regma'}
+            value={activeTeam.regulation || 'gen9championsvgc2026regma'}
             onChange={(e) => updateTeamRegulation(activeTeamId, e.target.value)}
           >
-            {Object.entries(regulationsData).map(([key, reg]: any) => (
-              <option key={key} value={key}>{reg.name}</option>
+            {Object.entries(formatData).map(([key, format]: any) => (
+              <option key={key} value={key}>{format.name}</option>
             ))}
           </select>
           

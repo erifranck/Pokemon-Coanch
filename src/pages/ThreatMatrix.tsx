@@ -7,7 +7,7 @@ import { checkLegality } from '../utils/legality';
 const ThreatMatrix: React.FC = () => {
   const { threats, addThreat, updateThreat, removeThreat, teams, activeTeamId, relationships, linkThreat, unlinkThreat } = useAppStore();
   const team = teams[activeTeamId]?.members || [];
-  const regulation = teams[activeTeamId]?.regulation || 'vgc2026regma';
+  const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
   const [search, setSearch] = useState('');
 
   const handleAddThreat = (pokemonId: string) => {

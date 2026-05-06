@@ -1,5 +1,5 @@
 import learnsetsData from '../data/learnsets.json';
-import regulationsData from '../data/regulations.json';
+import formatData from '../data/format_data.json';
 import pokedexData from '../data/pokedex.json';
 
 type LegalityType = 'pokemon' | 'item' | 'ability' | 'move';
@@ -8,17 +8,23 @@ export const checkLegality = (
   pokemonId: string, 
   type: LegalityType, 
   valueId: string, 
-  regulationId: string
+  formatId: string
 ): boolean => {
   if (!valueId) return true; // Empty string/selection is always "legal"
   
-  const regulation = (regulationsData as any)[regulationId];
-  if (!regulation) return true; // If regulation doesn't exist, assume anything goes
+  const format = (formatData as any)[formatId];
+  if (!format) return true; // If format doesn't exist, assume anything goes
 
-  // 1. Check banned lists
-  if (type === 'pokemon' && regulation.bannedPokemon?.includes(valueId)) return false;
-  if (type === 'item' && regulation.bannedItems?.includes(valueId)) return false;
-  if (type === 'ability' && regulation.bannedAbilities?.includes(valueId)) return false;
+  // 1. Check if Pokemon is explicitly legal in the format
+  if (type === 'pokemon') {
+      const isLegal = !!format.pokemon[valueId];
+      return isLegal;
+  }
+  
+  if (type === 'item') {
+      const isLegal = !!format.items[valueId];
+      return isLegal;
+  }
 
   // 2. Check move learnsets
   if (type === 'move') {

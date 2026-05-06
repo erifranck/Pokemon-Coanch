@@ -20,7 +20,7 @@ const STAT_NAMES = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'] as const;
 
 export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
   const { teams, activeTeamId } = useAppStore();
-  const regulation = teams[activeTeamId]?.regulation || 'vgc2026regma';
+  const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
   
   const pokemonDef = (pokedexData as any)[card.pokemonId];
   

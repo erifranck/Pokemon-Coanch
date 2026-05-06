@@ -31,7 +31,7 @@ export interface ThreatCard extends PokemonCard {
 export interface TeamProfile {
   id: string;
   name: string;
-  regulation: string; // e.g., 'vgc2026regma'
+  regulation: string; // e.g., 'gen9championsvgc2026regma'
   members: TeamCard[];
 }
 

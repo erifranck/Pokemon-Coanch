@@ -8,7 +8,7 @@ import { checkLegality } from '../utils/legality';
 const TeamBuilder: React.FC = () => {
   const { teams, activeTeamId, addTeamMember, updateTeamMember, removeTeamMember } = useAppStore();
   const team = teams[activeTeamId]?.members || [];
-  const regulation = teams[activeTeamId]?.regulation || 'vgc2026regma';
+  const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
   const [search, setSearch] = useState('');
 
   const handleAddPokemon = (pokemonId: string) => {

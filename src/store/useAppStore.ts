@@ -42,7 +42,7 @@ export const useAppStore = create<AppState>()(
   persist(
     (set, get) => ({
       teams: {
-        [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Team 1', regulation: 'vgc2026regma', members: [] }
+        [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Team 1', regulation: 'gen9championsvgc2026regma', members: [] }
       },
       activeTeamId: INITIAL_TEAM_ID,
       threats: [],
@@ -52,27 +52,27 @@ export const useAppStore = create<AppState>()(
       createTeam: (name = 'New Team') => set((state) => {
         const id = generateId();
         return {
-          teams: { ...state.teams, [id]: { id, name, regulation: 'vgc2026regma', members: [] } },
+          teams: { ...state.teams, [id]: { id, name, regulation: 'gen9championsvgc2026regma', members: [] } },
           activeTeamId: id
         };
       }),
 
-      cloneTeam: () => set((state) => {
-        const activeTeam = state.teams[state.activeTeamId];
-        if (!activeTeam) return state;
-        
-        const newId = generateId();
-        // Generate new IDs for cloned members to not mess up relationships
-        const clonedMembers = activeTeam.members.map(m => ({ ...m, id: generateId() }));
-        
-        return {
-          teams: { 
-            ...state.teams, 
-            [newId]: { id: newId, name: `${activeTeam.name} (Copy)`, regulation: activeTeam.regulation, members: clonedMembers } 
-          },
-          activeTeamId: newId
-        };
-      }),
+        cloneTeam: () => set((state) => {
+          const activeTeam = state.teams[state.activeTeamId];
+          if (!activeTeam) return state;
+  
+          const newId = generateId();
+          // Ensure cloned members have the correct type for TeamCard
+          const clonedMembers = activeTeam.members.map(m => ({ ...m, id: generateId(), isTeamMember: true as const }));
+          
+          return {
+            teams: { 
+              ...state.teams, 
+              [newId]: { id: newId, name: `${activeTeam.name} (Copy)`, regulation: activeTeam.regulation, members: clonedMembers } 
+            },
+            activeTeamId: newId
+          };
+        }),
 
       deleteTeam: (id) => set((state) => {
         const newTeams = { ...state.teams };
@@ -81,7 +81,8 @@ export const useAppStore = create<AppState>()(
         // Prevent deleting the last team
         if (Object.keys(newTeams).length === 0) {
           const fallbackId = generateId();
-          newTeams[fallbackId] = { id: fallbackId, name: 'Team 1', regulation: 'vgc2026regma', members: [] };
+          const newTeamProfile: TeamProfile = { id: fallbackId, name: 'Team 1', regulation: 'gen9championsvgc2026regma', members: [] };
+          newTeams[fallbackId] = newTeamProfile;
           return { teams: newTeams, activeTeamId: fallbackId };
         }
         
@@ -201,16 +202,16 @@ export const useAppStore = create<AppState>()(
           let importedActiveId = data.activeTeamId;
           
           if (!importedTeams && data.team) {
-             importedTeams = { [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Imported Team', members: data.team } };
+             importedTeams = { [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Imported Team', regulation: 'gen9championsvgc2026regma', members: data.team } as TeamProfile };
              importedActiveId = INITIAL_TEAM_ID;
           }
 
           set({
-            teams: importedTeams || { [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Team 1', regulation: 'vgc2026regma', members: [] } },
+            teams: (importedTeams || { [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Team 1', regulation: 'gen9championsvgc2026regma', members: [] } }) as unknown as Record<string, TeamProfile>,
             activeTeamId: importedActiveId || INITIAL_TEAM_ID,
             threats: data.threats || [],
             relationships: data.relationships || {}
-          });
+          } as unknown as Partial<AppState>);
         } catch (e) {
           console.error("Failed to import data", e);
         }
@@ -219,18 +220,18 @@ export const useAppStore = create<AppState>()(
     {
       name: 'poke-coach-storage',
       // Migration function for existing users who had `team: []`
-      migrate: (persistedState: any, version) => {
+      migrate: (persistedState: any, _version) => {
         if (persistedState && persistedState.team && !persistedState.teams) {
           return {
             ...persistedState,
             teams: {
-              [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Legacy Team', regulation: 'vgc2026regma', members: persistedState.team }
+              [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Legacy Team', regulation: 'gen9championsvgc2026regma', members: persistedState.team }
             },
             activeTeamId: INITIAL_TEAM_ID,
             team: undefined // cleanup old key
           };
         }
-        return persistedState;
+        return persistedState as any;
       }
     }
   )

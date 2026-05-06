@@ -100,19 +100,26 @@ const run = () => {
 
   // Hardcode Regulations map for M-A
   // In a real scenario, this would parse formats.js
+  // NOTE: For new games like Champions, it's better to use an ALLOWED list (Whitelist)
+  // because the Dex is restricted. Fill this array with the ACTUAL Pokémon available in Champions Reg M-A!
   const regulations = {
     vgc2026regma: {
       name: "Gen 9 Champions Reg M-A",
-      bannedPokemon: [
-        "mewtwo", "lugia", "hooh", "kyogre", "groudon", "rayquaza", 
-        "dialga", "palkia", "giratina", "arceus", "reshiram", "zekrom", 
-        "kyurem", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", 
-        "solgaleo", "lunala", "necrozma", "zacian", "zamazenta", "eternatus",
-        "calyrex", "koraidon", "miraidon", "terapagos"
-        // Mythicals
+      // WHITELIST: Only these are legal. Comment out or add as needed!
+      allowedPokemon: [
+        "charizard", "pikachu", "jigglypuff", // REMOVE THESE - just examples
+        "typhlosion", "emboar", "delphox", "incineroar",
+        "greninja", "inteleon", "samurott",
+        "lucario", "zoroark", "tsareena", "grimmsnarl",
+        "dragapult", "garchomp", "hydreigon", "roaringmoon", "ironvaliant",
+        "flutter mane", "murkrow", "tornadus", "thundurus",
+        "urshifu", "ogerpon", "torkoal", "pelipper", "archaludon",
+        "amoonguss", "rllaboom", "whimsicott", "farigiraf",
+        "landorus", "tapu koko", "tapu fini", "tapu lele", "tapu bulu"
+        // TODO: User must fill this list with the real Champions Dex!
       ],
       bannedItems: ["souldew", "adamantcrystal", "lustrousglobe", "griseouscore"],
-      bannedAbilities: ["powerconstruct"]
+      bannedAbilities: ["power construct"]
     }
   };
 
