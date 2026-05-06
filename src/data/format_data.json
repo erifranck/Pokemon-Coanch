@@ -7162,587 +7162,4407 @@
       "abomasite": {
         "id": "abomasite",
         "name": "Abomasite",
-        "desc": "If held by an Abomasnow, this item allows it to Mega Evolve in battle."
+        "desc": "If held by an Abomasnow, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Abomasnow": "Abomasnow-Mega"
+        }
       },
       "absolite": {
         "id": "absolite",
         "name": "Absolite",
-        "desc": "If held by an Absol, this item allows it to Mega Evolve into Mega Absol in battle."
+        "desc": "If held by an Absol, this item allows it to Mega Evolve into Mega Absol in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Absol": "Absol-Mega"
+        }
       },
       "aerodactylite": {
         "id": "aerodactylite",
         "name": "Aerodactylite",
-        "desc": "If held by an Aerodactyl, this item allows it to Mega Evolve in battle."
+        "desc": "If held by an Aerodactyl, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Aerodactyl": "Aerodactyl-Mega"
+        }
       },
       "aggronite": {
         "id": "aggronite",
         "name": "Aggronite",
-        "desc": "If held by an Aggron, this item allows it to Mega Evolve in battle."
+        "desc": "If held by an Aggron, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Aggron": "Aggron-Mega"
+        }
       },
       "alakazite": {
         "id": "alakazite",
         "name": "Alakazite",
-        "desc": "If held by an Alakazam, this item allows it to Mega Evolve in battle."
+        "desc": "If held by an Alakazam, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Alakazam": "Alakazam-Mega"
+        }
       },
       "altarianite": {
         "id": "altarianite",
         "name": "Altarianite",
-        "desc": "If held by an Altaria, this item allows it to Mega Evolve in battle."
+        "desc": "If held by an Altaria, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Altaria": "Altaria-Mega"
+        }
       },
       "ampharosite": {
         "id": "ampharosite",
         "name": "Ampharosite",
-        "desc": "If held by an Ampharos, this item allows it to Mega Evolve in battle."
+        "desc": "If held by an Ampharos, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Ampharos": "Ampharos-Mega"
+        }
       },
       "audinite": {
         "id": "audinite",
         "name": "Audinite",
-        "desc": "If held by an Audino, this item allows it to Mega Evolve in battle."
+        "desc": "If held by an Audino, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Audino": "Audino-Mega"
+        }
       },
       "banettite": {
         "id": "banettite",
         "name": "Banettite",
-        "desc": "If held by a Banette, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Banette, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Banette": "Banette-Mega"
+        }
       },
       "beedrillite": {
         "id": "beedrillite",
         "name": "Beedrillite",
-        "desc": "If held by a Beedrill, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Beedrill, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Beedrill": "Beedrill-Mega"
+        }
       },
       "blastoisinite": {
         "id": "blastoisinite",
         "name": "Blastoisinite",
-        "desc": "If held by a Blastoise, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Blastoise, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Blastoise": "Blastoise-Mega"
+        }
       },
       "cameruptite": {
         "id": "cameruptite",
         "name": "Cameruptite",
-        "desc": "If held by a Camerupt, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Camerupt, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Camerupt": "Camerupt-Mega"
+        }
       },
       "chandelurite": {
         "id": "chandelurite",
         "name": "Chandelurite",
-        "desc": "If held by a Chandelure, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Chandelure, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Chandelure": "Chandelure-Mega"
+        }
       },
       "charizarditex": {
         "id": "charizarditex",
         "name": "Charizardite X",
-        "desc": "If held by a Charizard, this item allows it to Mega Evolve into Mega Charizard X."
+        "desc": "If held by a Charizard, this item allows it to Mega Evolve into Mega Charizard X.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Charizard": "Charizard-Mega-X"
+        }
       },
       "charizarditey": {
         "id": "charizarditey",
         "name": "Charizardite Y",
-        "desc": "If held by a Charizard, this item allows it to Mega Evolve into Mega Charizard Y."
+        "desc": "If held by a Charizard, this item allows it to Mega Evolve into Mega Charizard Y.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Charizard": "Charizard-Mega-Y"
+        }
       },
       "chesnaughtite": {
         "id": "chesnaughtite",
         "name": "Chesnaughtite",
-        "desc": "If held by a Chesnaught, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Chesnaught, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Chesnaught": "Chesnaught-Mega"
+        }
       },
       "chimechite": {
         "id": "chimechite",
         "name": "Chimechite",
-        "desc": "If held by a Chimecho, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Chimecho, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Chimecho": "Chimecho-Mega"
+        }
       },
       "clefablite": {
         "id": "clefablite",
         "name": "Clefablite",
-        "desc": "If held by a Clefable, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Clefable, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Clefable": "Clefable-Mega"
+        }
       },
       "crabominite": {
         "id": "crabominite",
         "name": "Crabominite",
-        "desc": "If held by a Crabominable, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Crabominable, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Crabominable": "Crabominable-Mega"
+        }
       },
       "delphoxite": {
         "id": "delphoxite",
         "name": "Delphoxite",
-        "desc": "If held by a Delphox, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Delphox, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Delphox": "Delphox-Mega"
+        }
       },
       "dragoninite": {
         "id": "dragoninite",
         "name": "Dragoninite",
-        "desc": "If held by a Dragonite, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Dragonite, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Dragonite": "Dragonite-Mega"
+        }
       },
       "drampanite": {
         "id": "drampanite",
         "name": "Drampanite",
-        "desc": "If held by a Drampa, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Drampa, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Drampa": "Drampa-Mega"
+        }
       },
       "emboarite": {
         "id": "emboarite",
         "name": "Emboarite",
-        "desc": "If held by an Emboar, this item allows it to Mega Evolve in battle."
+        "desc": "If held by an Emboar, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Emboar": "Emboar-Mega"
+        }
       },
       "excadrite": {
         "id": "excadrite",
         "name": "Excadrite",
-        "desc": "If held by an Excadrill, this item allows it to Mega Evolve in battle."
+        "desc": "If held by an Excadrill, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Excadrill": "Excadrill-Mega"
+        }
       },
       "feraligite": {
         "id": "feraligite",
         "name": "Feraligite",
-        "desc": "If held by a Feraligatr, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Feraligatr, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Feraligatr": "Feraligatr-Mega"
+        }
       },
       "floettite": {
         "id": "floettite",
         "name": "Floettite",
-        "desc": "If held by an Eternal Flower Floette, this item allows it to Mega Evolve in battle."
+        "desc": "If held by an Eternal Flower Floette, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Floette-Eternal": "Floette-Mega"
+        }
       },
       "froslassite": {
         "id": "froslassite",
         "name": "Froslassite",
-        "desc": "If held by a Froslass, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Froslass, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Froslass": "Froslass-Mega"
+        }
       },
       "galladite": {
         "id": "galladite",
         "name": "Galladite",
-        "desc": "If held by a Gallade, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Gallade, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Gallade": "Gallade-Mega"
+        }
       },
       "garchompite": {
         "id": "garchompite",
         "name": "Garchompite",
-        "desc": "If held by a Garchomp, this item allows it to Mega Evolve into Mega Garchomp."
+        "desc": "If held by a Garchomp, this item allows it to Mega Evolve into Mega Garchomp.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Garchomp": "Garchomp-Mega"
+        }
       },
       "gardevoirite": {
         "id": "gardevoirite",
         "name": "Gardevoirite",
-        "desc": "If held by a Gardevoir, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Gardevoir, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Gardevoir": "Gardevoir-Mega"
+        }
       },
       "gengarite": {
         "id": "gengarite",
         "name": "Gengarite",
-        "desc": "If held by a Gengar, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Gengar, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Gengar": "Gengar-Mega"
+        }
       },
       "glalitite": {
         "id": "glalitite",
         "name": "Glalitite",
-        "desc": "If held by a Glalie, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Glalie, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Glalie": "Glalie-Mega"
+        }
       },
       "glimmoranite": {
         "id": "glimmoranite",
         "name": "Glimmoranite",
-        "desc": "If held by a Glimmora, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Glimmora, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Glimmora": "Glimmora-Mega"
+        }
       },
       "golurkite": {
         "id": "golurkite",
         "name": "Golurkite",
-        "desc": "If held by a Golurk, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Golurk, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Golurk": "Golurk-Mega"
+        }
       },
       "greninjite": {
         "id": "greninjite",
         "name": "Greninjite",
-        "desc": "If held by a Greninja, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Greninja, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Greninja": "Greninja-Mega"
+        }
       },
       "gyaradosite": {
         "id": "gyaradosite",
         "name": "Gyaradosite",
-        "desc": "If held by a Gyarados, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Gyarados, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Gyarados": "Gyarados-Mega"
+        }
       },
       "hawluchanite": {
         "id": "hawluchanite",
         "name": "Hawluchanite",
-        "desc": "If held by a Hawlucha, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Hawlucha, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Hawlucha": "Hawlucha-Mega"
+        }
       },
       "heracronite": {
         "id": "heracronite",
         "name": "Heracronite",
-        "desc": "If held by a Heracross, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Heracross, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Heracross": "Heracross-Mega"
+        }
       },
       "houndoominite": {
         "id": "houndoominite",
         "name": "Houndoominite",
-        "desc": "If held by a Houndoom, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Houndoom, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Houndoom": "Houndoom-Mega"
+        }
       },
       "kangaskhanite": {
         "id": "kangaskhanite",
         "name": "Kangaskhanite",
-        "desc": "If held by a Kangaskhan, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Kangaskhan, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Kangaskhan": "Kangaskhan-Mega"
+        }
       },
       "lopunnite": {
         "id": "lopunnite",
         "name": "Lopunnite",
-        "desc": "If held by a Lopunny, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Lopunny, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Lopunny": "Lopunny-Mega"
+        }
       },
       "lucarionite": {
         "id": "lucarionite",
         "name": "Lucarionite",
-        "desc": "If held by a Lucario, this item allows it to Mega Evolve into Mega Lucario in battle."
+        "desc": "If held by a Lucario, this item allows it to Mega Evolve into Mega Lucario in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Lucario": "Lucario-Mega"
+        }
       },
       "manectite": {
         "id": "manectite",
         "name": "Manectite",
-        "desc": "If held by a Manectric, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Manectric, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Manectric": "Manectric-Mega"
+        }
       },
       "medichamite": {
         "id": "medichamite",
         "name": "Medichamite",
-        "desc": "If held by a Medicham, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Medicham, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Medicham": "Medicham-Mega"
+        }
       },
       "meganiumite": {
         "id": "meganiumite",
         "name": "Meganiumite",
-        "desc": "If held by a Meganium, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Meganium, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Meganium": "Meganium-Mega"
+        }
       },
       "meowsticite": {
         "id": "meowsticite",
         "name": "Meowsticite",
-        "desc": "If held by a Meowstic, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Meowstic, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Meowstic": "Meowstic-M-Mega",
+          "Meowstic-F": "Meowstic-F-Mega"
+        }
       },
       "pidgeotite": {
         "id": "pidgeotite",
         "name": "Pidgeotite",
-        "desc": "If held by a Pidgeot, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Pidgeot, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Pidgeot": "Pidgeot-Mega"
+        }
       },
       "pinsirite": {
         "id": "pinsirite",
         "name": "Pinsirite",
-        "desc": "If held by a Pinsir, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Pinsir, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Pinsir": "Pinsir-Mega"
+        }
       },
       "sablenite": {
         "id": "sablenite",
         "name": "Sablenite",
-        "desc": "If held by a Sableye, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Sableye, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Sableye": "Sableye-Mega"
+        }
       },
       "scizorite": {
         "id": "scizorite",
         "name": "Scizorite",
-        "desc": "If held by a Scizor, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Scizor, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Scizor": "Scizor-Mega"
+        }
       },
       "scovillainite": {
         "id": "scovillainite",
         "name": "Scovillainite",
-        "desc": "If held by a Scovillain, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Scovillain, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Scovillain": "Scovillain-Mega"
+        }
       },
       "sharpedonite": {
         "id": "sharpedonite",
         "name": "Sharpedonite",
-        "desc": "If held by a Sharpedo, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Sharpedo, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Sharpedo": "Sharpedo-Mega"
+        }
       },
       "skarmorite": {
         "id": "skarmorite",
         "name": "Skarmorite",
-        "desc": "If held by a Skarmory, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Skarmory, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Skarmory": "Skarmory-Mega"
+        }
       },
       "slowbronite": {
         "id": "slowbronite",
         "name": "Slowbronite",
-        "desc": ""
+        "desc": "",
+        "megaEvolves": null,
+        "megaStone": {
+          "Slowbro": "Slowbro-Mega"
+        }
       },
       "spelltag": {
         "id": "spelltag",
         "name": "Spell Tag",
-        "desc": "Holder's Ghost-type attacks have 1.2x power."
+        "desc": "Holder's Ghost-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "starminite": {
         "id": "starminite",
         "name": "Starminite",
-        "desc": "If held by a Starmie, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Starmie, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Starmie": "Starmie-Mega"
+        }
       },
       "steelixite": {
         "id": "steelixite",
         "name": "Steelixite",
-        "desc": "If held by a Steelix, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Steelix, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Steelix": "Steelix-Mega"
+        }
       },
       "tyranitarite": {
         "id": "tyranitarite",
         "name": "Tyranitarite",
-        "desc": "If held by a Tyranitar, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Tyranitar, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Tyranitar": "Tyranitar-Mega"
+        }
       },
       "venusaurite": {
         "id": "venusaurite",
         "name": "Venusaurite",
-        "desc": "If held by a Venusaur, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Venusaur, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Venusaur": "Venusaur-Mega"
+        }
       },
       "victreebelite": {
         "id": "victreebelite",
         "name": "Victreebelite",
-        "desc": "If held by a Victreebel, this item allows it to Mega Evolve in battle."
+        "desc": "If held by a Victreebel, this item allows it to Mega Evolve in battle.",
+        "megaEvolves": null,
+        "megaStone": {
+          "Victreebel": "Victreebel-Mega"
+        }
       },
       "whiteherb": {
         "id": "whiteherb",
         "name": "White Herb",
-        "desc": "Restores all lowered stat stages to 0 when one is less than 0. Single use."
+        "desc": "Restores all lowered stat stages to 0 when one is less than 0. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "aspearberry": {
         "id": "aspearberry",
         "name": "Aspear Berry",
-        "desc": "Holder is cured if it is frozen. Single use."
+        "desc": "Holder is cured if it is frozen. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "babiriberry": {
         "id": "babiriberry",
         "name": "Babiri Berry",
-        "desc": "Halves damage taken from a supereffective Steel-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Steel-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "blackbelt": {
         "id": "blackbelt",
         "name": "Black Belt",
-        "desc": "Holder's Fighting-type attacks have 1.2x power."
+        "desc": "Holder's Fighting-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "blackglasses": {
         "id": "blackglasses",
         "name": "Black Glasses",
-        "desc": "Holder's Dark-type attacks have 1.2x power."
+        "desc": "Holder's Dark-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "brightpowder": {
         "id": "brightpowder",
         "name": "Bright Powder",
-        "desc": "The accuracy of attacks against the holder is 0.9x."
+        "desc": "The accuracy of attacks against the holder is 0.9x.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "charcoal": {
         "id": "charcoal",
         "name": "Charcoal",
-        "desc": "Holder's Fire-type attacks have 1.2x power."
+        "desc": "Holder's Fire-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "chartiberry": {
         "id": "chartiberry",
         "name": "Charti Berry",
-        "desc": "Halves damage taken from a supereffective Rock-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Rock-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "cheriberry": {
         "id": "cheriberry",
         "name": "Cheri Berry",
-        "desc": "Holder cures itself if it is paralyzed. Single use."
+        "desc": "Holder cures itself if it is paralyzed. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "chestoberry": {
         "id": "chestoberry",
         "name": "Chesto Berry",
-        "desc": "Holder wakes up if it is asleep. Single use."
+        "desc": "Holder wakes up if it is asleep. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "chilanberry": {
         "id": "chilanberry",
         "name": "Chilan Berry",
-        "desc": "Halves damage taken from a Normal-type attack. Single use."
+        "desc": "Halves damage taken from a Normal-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "choicescarf": {
         "id": "choicescarf",
         "name": "Choice Scarf",
-        "desc": "Holder's Speed is 1.5x, but it can only select the first move it executes."
+        "desc": "Holder's Speed is 1.5x, but it can only select the first move it executes.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "chopleberry": {
         "id": "chopleberry",
         "name": "Chople Berry",
-        "desc": "Halves damage taken from a supereffective Fighting-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Fighting-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "cobaberry": {
         "id": "cobaberry",
         "name": "Coba Berry",
-        "desc": "Halves damage taken from a supereffective Flying-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Flying-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "colburberry": {
         "id": "colburberry",
         "name": "Colbur Berry",
-        "desc": "Halves damage taken from a supereffective Dark-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Dark-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "dragonfang": {
         "id": "dragonfang",
         "name": "Dragon Fang",
-        "desc": "Holder's Dragon-type attacks have 1.2x power."
+        "desc": "Holder's Dragon-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "fairyfeather": {
         "id": "fairyfeather",
         "name": "Fairy Feather",
-        "desc": "Holder's Fairy-type attacks have 1.2x power."
+        "desc": "Holder's Fairy-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "focusband": {
         "id": "focusband",
         "name": "Focus Band",
-        "desc": "Holder has a 10% chance to survive an attack that would KO it with 1 HP."
+        "desc": "Holder has a 10% chance to survive an attack that would KO it with 1 HP.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "focussash": {
         "id": "focussash",
         "name": "Focus Sash",
-        "desc": "If holder's HP is full, will survive an attack that would KO it with 1 HP. Single use."
+        "desc": "If holder's HP is full, will survive an attack that would KO it with 1 HP. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "habanberry": {
         "id": "habanberry",
         "name": "Haban Berry",
-        "desc": "Halves damage taken from a supereffective Dragon-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Dragon-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "hardstone": {
         "id": "hardstone",
         "name": "Hard Stone",
-        "desc": "Holder's Rock-type attacks have 1.2x power."
+        "desc": "Holder's Rock-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "kasibberry": {
         "id": "kasibberry",
         "name": "Kasib Berry",
-        "desc": "Halves damage taken from a supereffective Ghost-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Ghost-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "kebiaberry": {
         "id": "kebiaberry",
         "name": "Kebia Berry",
-        "desc": "Halves damage taken from a supereffective Poison-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Poison-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "kingsrock": {
         "id": "kingsrock",
         "name": "King's Rock",
-        "desc": "Holder's attacks without a chance to make the target flinch gain a 10% chance to make the target flinch. Evolves Poliwhirl into Politoed and Slowpoke into Slowking when traded."
+        "desc": "Holder's attacks without a chance to make the target flinch gain a 10% chance to make the target flinch. Evolves Poliwhirl into Politoed and Slowpoke into Slowking when traded.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "leftovers": {
         "id": "leftovers",
         "name": "Leftovers",
-        "desc": "At the end of every turn, holder restores 1/16 of its max HP."
+        "desc": "At the end of every turn, holder restores 1/16 of its max HP.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "leppaberry": {
         "id": "leppaberry",
         "name": "Leppa Berry",
-        "desc": "Restores 10 PP to the first of the holder's moves to reach 0 PP. Single use."
+        "desc": "Restores 10 PP to the first of the holder's moves to reach 0 PP. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "lightball": {
         "id": "lightball",
         "name": "Light Ball",
-        "desc": "If held by a Pikachu, its Attack and Sp. Atk are doubled."
+        "desc": "If held by a Pikachu, its Attack and Sp. Atk are doubled.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "lumberry": {
         "id": "lumberry",
         "name": "Lum Berry",
-        "desc": "Holder cures itself if it has a non-volatile status or is confused. Single use."
+        "desc": "Holder cures itself if it has a non-volatile status or is confused. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "magnet": {
         "id": "magnet",
         "name": "Magnet",
-        "desc": "Holder's Electric-type attacks have 1.2x power."
+        "desc": "Holder's Electric-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "mentalherb": {
         "id": "mentalherb",
         "name": "Mental Herb",
-        "desc": "Cures holder of Attract, Disable, Encore, Heal Block, Taunt, Torment. Single use."
+        "desc": "Cures holder of Attract, Disable, Encore, Heal Block, Taunt, Torment. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "metalcoat": {
         "id": "metalcoat",
         "name": "Metal Coat",
-        "desc": "Holder's Steel-type attacks have 1.2x power. Evolves Onix into Steelix and Scyther into Scizor when traded."
+        "desc": "Holder's Steel-type attacks have 1.2x power. Evolves Onix into Steelix and Scyther into Scizor when traded.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "miracleseed": {
         "id": "miracleseed",
         "name": "Miracle Seed",
-        "desc": "Holder's Grass-type attacks have 1.2x power."
+        "desc": "Holder's Grass-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "mysticwater": {
         "id": "mysticwater",
         "name": "Mystic Water",
-        "desc": "Holder's Water-type attacks have 1.2x power."
+        "desc": "Holder's Water-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "nevermeltice": {
         "id": "nevermeltice",
         "name": "Never-Melt Ice",
-        "desc": "Holder's Ice-type attacks have 1.2x power."
+        "desc": "Holder's Ice-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "occaberry": {
         "id": "occaberry",
         "name": "Occa Berry",
-        "desc": "Halves damage taken from a supereffective Fire-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Fire-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "oranberry": {
         "id": "oranberry",
         "name": "Oran Berry",
-        "desc": "Restores 10 HP when at 1/2 max HP or less. Single use."
+        "desc": "Restores 10 HP when at 1/2 max HP or less. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "passhoberry": {
         "id": "passhoberry",
         "name": "Passho Berry",
-        "desc": "Halves damage taken from a supereffective Water-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Water-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "payapaberry": {
         "id": "payapaberry",
         "name": "Payapa Berry",
-        "desc": "Halves damage taken from a supereffective Psychic-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Psychic-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "pechaberry": {
         "id": "pechaberry",
         "name": "Pecha Berry",
-        "desc": "Holder is cured if it is poisoned. Single use."
+        "desc": "Holder is cured if it is poisoned. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "persimberry": {
         "id": "persimberry",
         "name": "Persim Berry",
-        "desc": "Holder is cured if it is confused. Single use."
+        "desc": "Holder is cured if it is confused. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "poisonbarb": {
         "id": "poisonbarb",
         "name": "Poison Barb",
-        "desc": "Holder's Poison-type attacks have 1.2x power."
+        "desc": "Holder's Poison-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "quickclaw": {
         "id": "quickclaw",
         "name": "Quick Claw",
-        "desc": "Each turn, holder has a 20% chance to move first in its priority bracket."
+        "desc": "Each turn, holder has a 20% chance to move first in its priority bracket.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "rawstberry": {
         "id": "rawstberry",
         "name": "Rawst Berry",
-        "desc": "Holder is cured if it is burned. Single use."
+        "desc": "Holder is cured if it is burned. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "rindoberry": {
         "id": "rindoberry",
         "name": "Rindo Berry",
-        "desc": "Halves damage taken from a supereffective Grass-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Grass-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "roseliberry": {
         "id": "roseliberry",
         "name": "Roseli Berry",
-        "desc": "Halves damage taken from a supereffective Fairy-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Fairy-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "scopelens": {
         "id": "scopelens",
         "name": "Scope Lens",
-        "desc": "Holder's critical hit ratio is raised by 1 stage."
+        "desc": "Holder's critical hit ratio is raised by 1 stage.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "sharpbeak": {
         "id": "sharpbeak",
         "name": "Sharp Beak",
-        "desc": "Holder's Flying-type attacks have 1.2x power."
+        "desc": "Holder's Flying-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "shellbell": {
         "id": "shellbell",
         "name": "Shell Bell",
-        "desc": "After an attack, holder gains 1/8 of the damage in HP dealt to other Pokemon."
+        "desc": "After an attack, holder gains 1/8 of the damage in HP dealt to other Pokemon.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "shucaberry": {
         "id": "shucaberry",
         "name": "Shuca Berry",
-        "desc": "Halves damage taken from a supereffective Ground-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Ground-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "silkscarf": {
         "id": "silkscarf",
         "name": "Silk Scarf",
-        "desc": "Holder's Normal-type attacks have 1.2x power."
+        "desc": "Holder's Normal-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "silverpowder": {
         "id": "silverpowder",
         "name": "Silver Powder",
-        "desc": "Holder's Bug-type attacks have 1.2x power."
+        "desc": "Holder's Bug-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "sitrusberry": {
         "id": "sitrusberry",
         "name": "Sitrus Berry",
-        "desc": "Restores 1/4 max HP when at 1/2 max HP or less. Single use."
+        "desc": "Restores 1/4 max HP when at 1/2 max HP or less. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "softsand": {
         "id": "softsand",
         "name": "Soft Sand",
-        "desc": "Holder's Ground-type attacks have 1.2x power."
+        "desc": "Holder's Ground-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "tangaberry": {
         "id": "tangaberry",
         "name": "Tanga Berry",
-        "desc": "Halves damage taken from a supereffective Bug-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Bug-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "twistedspoon": {
         "id": "twistedspoon",
         "name": "Twisted Spoon",
-        "desc": "Holder's Psychic-type attacks have 1.2x power."
+        "desc": "Holder's Psychic-type attacks have 1.2x power.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "wacanberry": {
         "id": "wacanberry",
         "name": "Wacan Berry",
-        "desc": "Halves damage taken from a supereffective Electric-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Electric-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
       },
       "yacheberry": {
         "id": "yacheberry",
         "name": "Yache Berry",
-        "desc": "Halves damage taken from a supereffective Ice-type attack. Single use."
+        "desc": "Halves damage taken from a supereffective Ice-type attack. Single use.",
+        "megaEvolves": null,
+        "megaStone": null
+      }
+    },
+    "moves": {
+      "appleacid": {
+        "id": "appleacid",
+        "name": "Apple Acid",
+        "type": "Grass",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "banefulbunker": {
+        "id": "banefulbunker",
+        "name": "Baneful Bunker",
+        "type": "Poison",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "beakblast": {
+        "id": "beakblast",
+        "name": "Beak Blast",
+        "type": "Flying",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "belch": {
+        "id": "belch",
+        "name": "Belch",
+        "type": "Poison",
+        "basePower": 120,
+        "category": "Special"
+      },
+      "bonerush": {
+        "id": "bonerush",
+        "name": "Bone Rush",
+        "type": "Ground",
+        "basePower": 30,
+        "category": "Physical"
+      },
+      "burnup": {
+        "id": "burnup",
+        "name": "Burn Up",
+        "type": "Fire",
+        "basePower": 130,
+        "category": "Special"
+      },
+      "ceaselessedge": {
+        "id": "ceaselessedge",
+        "name": "Ceaseless Edge",
+        "type": "Dark",
+        "basePower": 65,
+        "category": "Physical"
+      },
+      "clangoroussoul": {
+        "id": "clangoroussoul",
+        "name": "Clangorous Soul",
+        "type": "Dragon",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "corrosivegas": {
+        "id": "corrosivegas",
+        "name": "Corrosive Gas",
+        "type": "Poison",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "crabhammer": {
+        "id": "crabhammer",
+        "name": "Crabhammer",
+        "type": "Water",
+        "basePower": 100,
+        "category": "Physical"
+      },
+      "crushclaw": {
+        "id": "crushclaw",
+        "name": "Crush Claw",
+        "type": "Normal",
+        "basePower": 75,
+        "category": "Physical"
+      },
+      "direclaw": {
+        "id": "direclaw",
+        "name": "Dire Claw",
+        "type": "Poison",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "dragoncheer": {
+        "id": "dragoncheer",
+        "name": "Dragon Cheer",
+        "type": "Dragon",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "dragonclaw": {
+        "id": "dragonclaw",
+        "name": "Dragon Claw",
+        "type": "Dragon",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "electrify": {
+        "id": "electrify",
+        "name": "Electrify",
+        "type": "Electric",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "encore": {
+        "id": "encore",
+        "name": "Encore",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "fakeout": {
+        "id": "fakeout",
+        "name": "Fake Out",
+        "type": "Normal",
+        "basePower": 40,
+        "category": "Physical"
+      },
+      "firelash": {
+        "id": "firelash",
+        "name": "Fire Lash",
+        "type": "Fire",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "firstimpression": {
+        "id": "firstimpression",
+        "name": "First Impression",
+        "type": "Bug",
+        "basePower": 100,
+        "category": "Physical"
+      },
+      "freezedry": {
+        "id": "freezedry",
+        "name": "Freeze-Dry",
+        "type": "Ice",
+        "basePower": 70,
+        "category": "Special"
+      },
+      "gravapple": {
+        "id": "gravapple",
+        "name": "Grav Apple",
+        "type": "Grass",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "growth": {
+        "id": "growth",
+        "name": "Growth",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "infernalparade": {
+        "id": "infernalparade",
+        "name": "Infernal Parade",
+        "type": "Ghost",
+        "basePower": 65,
+        "category": "Special"
+      },
+      "ironhead": {
+        "id": "ironhead",
+        "name": "Iron Head",
+        "type": "Steel",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "kingsshield": {
+        "id": "kingsshield",
+        "name": "King's Shield",
+        "type": "Steel",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "lightofruin": {
+        "id": "lightofruin",
+        "name": "Light of Ruin",
+        "type": "Fairy",
+        "basePower": 140,
+        "category": "Special"
+      },
+      "moonblast": {
+        "id": "moonblast",
+        "name": "Moonblast",
+        "type": "Fairy",
+        "basePower": 95,
+        "category": "Special"
+      },
+      "mountaingale": {
+        "id": "mountaingale",
+        "name": "Mountain Gale",
+        "type": "Ice",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "nightdaze": {
+        "id": "nightdaze",
+        "name": "Night Daze",
+        "type": "Dark",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "nightslash": {
+        "id": "nightslash",
+        "name": "Night Slash",
+        "type": "Dark",
+        "basePower": 70,
+        "category": "Physical"
+      },
+      "powershift": {
+        "id": "powershift",
+        "name": "Power Shift",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "protect": {
+        "id": "protect",
+        "name": "Protect",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "psyshieldbash": {
+        "id": "psyshieldbash",
+        "name": "Psyshield Bash",
+        "type": "Psychic",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "saltcure": {
+        "id": "saltcure",
+        "name": "Salt Cure",
+        "type": "Rock",
+        "basePower": 40,
+        "category": "Physical"
+      },
+      "sandstorm": {
+        "id": "sandstorm",
+        "name": "Sandstorm",
+        "type": "Rock",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "shadowclaw": {
+        "id": "shadowclaw",
+        "name": "Shadow Claw",
+        "type": "Ghost",
+        "basePower": 70,
+        "category": "Physical"
+      },
+      "snaptrap": {
+        "id": "snaptrap",
+        "name": "Snap Trap",
+        "type": "Steel",
+        "basePower": 35,
+        "category": "Physical"
+      },
+      "snowscape": {
+        "id": "snowscape",
+        "name": "Snowscape",
+        "type": "Ice",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "spikyshield": {
+        "id": "spikyshield",
+        "name": "Spiky Shield",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "spiritshackle": {
+        "id": "spiritshackle",
+        "name": "Spirit Shackle",
+        "type": "Ghost",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "stoneaxe": {
+        "id": "stoneaxe",
+        "name": "Stone Axe",
+        "type": "Rock",
+        "basePower": 65,
+        "category": "Physical"
+      },
+      "stormthrow": {
+        "id": "stormthrow",
+        "name": "Storm Throw",
+        "type": "Fighting",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "stuffcheeks": {
+        "id": "stuffcheeks",
+        "name": "Stuff Cheeks",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "syrupbomb": {
+        "id": "syrupbomb",
+        "name": "Syrup Bomb",
+        "type": "Grass",
+        "basePower": 60,
+        "category": "Special"
+      },
+      "toxicthread": {
+        "id": "toxicthread",
+        "name": "Toxic Thread",
+        "type": "Poison",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "trickortreat": {
+        "id": "trickortreat",
+        "name": "Trick-or-Treat",
+        "type": "Ghost",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "tropkick": {
+        "id": "tropkick",
+        "name": "Trop Kick",
+        "type": "Grass",
+        "basePower": 85,
+        "category": "Physical"
+      },
+      "accelerock": {
+        "id": "accelerock",
+        "name": "Accelerock",
+        "type": "Rock",
+        "basePower": 40,
+        "category": "Physical"
+      },
+      "acidarmor": {
+        "id": "acidarmor",
+        "name": "Acid Armor",
+        "type": "Poison",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "acidspray": {
+        "id": "acidspray",
+        "name": "Acid Spray",
+        "type": "Poison",
+        "basePower": 40,
+        "category": "Special"
+      },
+      "acrobatics": {
+        "id": "acrobatics",
+        "name": "Acrobatics",
+        "type": "Flying",
+        "basePower": 55,
+        "category": "Physical"
+      },
+      "acupressure": {
+        "id": "acupressure",
+        "name": "Acupressure",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "aerialace": {
+        "id": "aerialace",
+        "name": "Aerial Ace",
+        "type": "Flying",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "afteryou": {
+        "id": "afteryou",
+        "name": "After You",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "agility": {
+        "id": "agility",
+        "name": "Agility",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "aircutter": {
+        "id": "aircutter",
+        "name": "Air Cutter",
+        "type": "Flying",
+        "basePower": 60,
+        "category": "Special"
+      },
+      "airslash": {
+        "id": "airslash",
+        "name": "Air Slash",
+        "type": "Flying",
+        "basePower": 75,
+        "category": "Special"
+      },
+      "alluringvoice": {
+        "id": "alluringvoice",
+        "name": "Alluring Voice",
+        "type": "Fairy",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "allyswitch": {
+        "id": "allyswitch",
+        "name": "Ally Switch",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "amnesia": {
+        "id": "amnesia",
+        "name": "Amnesia",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "ancientpower": {
+        "id": "ancientpower",
+        "name": "Ancient Power",
+        "type": "Rock",
+        "basePower": 60,
+        "category": "Special"
+      },
+      "aquacutter": {
+        "id": "aquacutter",
+        "name": "Aqua Cutter",
+        "type": "Water",
+        "basePower": 70,
+        "category": "Physical"
+      },
+      "aquajet": {
+        "id": "aquajet",
+        "name": "Aqua Jet",
+        "type": "Water",
+        "basePower": 40,
+        "category": "Physical"
+      },
+      "aquaring": {
+        "id": "aquaring",
+        "name": "Aqua Ring",
+        "type": "Water",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "aquastep": {
+        "id": "aquastep",
+        "name": "Aqua Step",
+        "type": "Water",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "aquatail": {
+        "id": "aquatail",
+        "name": "Aqua Tail",
+        "type": "Water",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "armorcannon": {
+        "id": "armorcannon",
+        "name": "Armor Cannon",
+        "type": "Fire",
+        "basePower": 120,
+        "category": "Special"
+      },
+      "aromaticmist": {
+        "id": "aromaticmist",
+        "name": "Aromatic Mist",
+        "type": "Fairy",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "assurance": {
+        "id": "assurance",
+        "name": "Assurance",
+        "type": "Dark",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "attract": {
+        "id": "attract",
+        "name": "Attract",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "aurasphere": {
+        "id": "aurasphere",
+        "name": "Aura Sphere",
+        "type": "Fighting",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "aurawheel": {
+        "id": "aurawheel",
+        "name": "Aura Wheel",
+        "type": "Electric",
+        "basePower": 110,
+        "category": "Physical"
+      },
+      "auroraveil": {
+        "id": "auroraveil",
+        "name": "Aurora Veil",
+        "type": "Ice",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "avalanche": {
+        "id": "avalanche",
+        "name": "Avalanche",
+        "type": "Ice",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "axekick": {
+        "id": "axekick",
+        "name": "Axe Kick",
+        "type": "Fighting",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "babydolleyes": {
+        "id": "babydolleyes",
+        "name": "Baby-Doll Eyes",
+        "type": "Fairy",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "batonpass": {
+        "id": "batonpass",
+        "name": "Baton Pass",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "beatup": {
+        "id": "beatup",
+        "name": "Beat Up",
+        "type": "Dark",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "bellydrum": {
+        "id": "bellydrum",
+        "name": "Belly Drum",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "bind": {
+        "id": "bind",
+        "name": "Bind",
+        "type": "Normal",
+        "basePower": 15,
+        "category": "Physical"
+      },
+      "bite": {
+        "id": "bite",
+        "name": "Bite",
+        "type": "Dark",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "bitterblade": {
+        "id": "bitterblade",
+        "name": "Bitter Blade",
+        "type": "Fire",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "bittermalice": {
+        "id": "bittermalice",
+        "name": "Bitter Malice",
+        "type": "Ghost",
+        "basePower": 75,
+        "category": "Special"
+      },
+      "blastburn": {
+        "id": "blastburn",
+        "name": "Blast Burn",
+        "type": "Fire",
+        "basePower": 150,
+        "category": "Special"
+      },
+      "blazekick": {
+        "id": "blazekick",
+        "name": "Blaze Kick",
+        "type": "Fire",
+        "basePower": 85,
+        "category": "Physical"
+      },
+      "blizzard": {
+        "id": "blizzard",
+        "name": "Blizzard",
+        "type": "Ice",
+        "basePower": 110,
+        "category": "Special"
+      },
+      "block": {
+        "id": "block",
+        "name": "Block",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "bodypress": {
+        "id": "bodypress",
+        "name": "Body Press",
+        "type": "Fighting",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "bodyslam": {
+        "id": "bodyslam",
+        "name": "Body Slam",
+        "type": "Normal",
+        "basePower": 85,
+        "category": "Physical"
+      },
+      "boomburst": {
+        "id": "boomburst",
+        "name": "Boomburst",
+        "type": "Normal",
+        "basePower": 140,
+        "category": "Special"
+      },
+      "bounce": {
+        "id": "bounce",
+        "name": "Bounce",
+        "type": "Flying",
+        "basePower": 85,
+        "category": "Physical"
+      },
+      "bravebird": {
+        "id": "bravebird",
+        "name": "Brave Bird",
+        "type": "Flying",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "breakingswipe": {
+        "id": "breakingswipe",
+        "name": "Breaking Swipe",
+        "type": "Dragon",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "brickbreak": {
+        "id": "brickbreak",
+        "name": "Brick Break",
+        "type": "Fighting",
+        "basePower": 75,
+        "category": "Physical"
+      },
+      "brutalswing": {
+        "id": "brutalswing",
+        "name": "Brutal Swing",
+        "type": "Dark",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "bugbite": {
+        "id": "bugbite",
+        "name": "Bug Bite",
+        "type": "Bug",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "bugbuzz": {
+        "id": "bugbuzz",
+        "name": "Bug Buzz",
+        "type": "Bug",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "bulkup": {
+        "id": "bulkup",
+        "name": "Bulk Up",
+        "type": "Fighting",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "bulldoze": {
+        "id": "bulldoze",
+        "name": "Bulldoze",
+        "type": "Ground",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "bulletpunch": {
+        "id": "bulletpunch",
+        "name": "Bullet Punch",
+        "type": "Steel",
+        "basePower": 40,
+        "category": "Physical"
+      },
+      "bulletseed": {
+        "id": "bulletseed",
+        "name": "Bullet Seed",
+        "type": "Grass",
+        "basePower": 25,
+        "category": "Physical"
+      },
+      "burningjealousy": {
+        "id": "burningjealousy",
+        "name": "Burning Jealousy",
+        "type": "Fire",
+        "basePower": 70,
+        "category": "Special"
+      },
+      "calmmind": {
+        "id": "calmmind",
+        "name": "Calm Mind",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "charge": {
+        "id": "charge",
+        "name": "Charge",
+        "type": "Electric",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "chargebeam": {
+        "id": "chargebeam",
+        "name": "Charge Beam",
+        "type": "Electric",
+        "basePower": 50,
+        "category": "Special"
+      },
+      "charm": {
+        "id": "charm",
+        "name": "Charm",
+        "type": "Fairy",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "chillingwater": {
+        "id": "chillingwater",
+        "name": "Chilling Water",
+        "type": "Water",
+        "basePower": 50,
+        "category": "Special"
+      },
+      "chillyreception": {
+        "id": "chillyreception",
+        "name": "Chilly Reception",
+        "type": "Ice",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "circlethrow": {
+        "id": "circlethrow",
+        "name": "Circle Throw",
+        "type": "Fighting",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "clangingscales": {
+        "id": "clangingscales",
+        "name": "Clanging Scales",
+        "type": "Dragon",
+        "basePower": 110,
+        "category": "Special"
+      },
+      "clearsmog": {
+        "id": "clearsmog",
+        "name": "Clear Smog",
+        "type": "Poison",
+        "basePower": 50,
+        "category": "Special"
+      },
+      "closecombat": {
+        "id": "closecombat",
+        "name": "Close Combat",
+        "type": "Fighting",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "coaching": {
+        "id": "coaching",
+        "name": "Coaching",
+        "type": "Fighting",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "coil": {
+        "id": "coil",
+        "name": "Coil",
+        "type": "Poison",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "comeuppance": {
+        "id": "comeuppance",
+        "name": "Comeuppance",
+        "type": "Dark",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "confuseray": {
+        "id": "confuseray",
+        "name": "Confuse Ray",
+        "type": "Ghost",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "copycat": {
+        "id": "copycat",
+        "name": "Copycat",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "cosmicpower": {
+        "id": "cosmicpower",
+        "name": "Cosmic Power",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "cottonguard": {
+        "id": "cottonguard",
+        "name": "Cotton Guard",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "cottonspore": {
+        "id": "cottonspore",
+        "name": "Cotton Spore",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "counter": {
+        "id": "counter",
+        "name": "Counter",
+        "type": "Fighting",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "covet": {
+        "id": "covet",
+        "name": "Covet",
+        "type": "Normal",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "crosschop": {
+        "id": "crosschop",
+        "name": "Cross Chop",
+        "type": "Fighting",
+        "basePower": 100,
+        "category": "Physical"
+      },
+      "crosspoison": {
+        "id": "crosspoison",
+        "name": "Cross Poison",
+        "type": "Poison",
+        "basePower": 70,
+        "category": "Physical"
+      },
+      "crunch": {
+        "id": "crunch",
+        "name": "Crunch",
+        "type": "Dark",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "curse": {
+        "id": "curse",
+        "name": "Curse",
+        "type": "Ghost",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "darkestlariat": {
+        "id": "darkestlariat",
+        "name": "Darkest Lariat",
+        "type": "Dark",
+        "basePower": 85,
+        "category": "Physical"
+      },
+      "darkpulse": {
+        "id": "darkpulse",
+        "name": "Dark Pulse",
+        "type": "Dark",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "dazzlinggleam": {
+        "id": "dazzlinggleam",
+        "name": "Dazzling Gleam",
+        "type": "Fairy",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "decorate": {
+        "id": "decorate",
+        "name": "Decorate",
+        "type": "Fairy",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "defog": {
+        "id": "defog",
+        "name": "Defog",
+        "type": "Flying",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "destinybond": {
+        "id": "destinybond",
+        "name": "Destiny Bond",
+        "type": "Ghost",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "detect": {
+        "id": "detect",
+        "name": "Detect",
+        "type": "Fighting",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "dig": {
+        "id": "dig",
+        "name": "Dig",
+        "type": "Ground",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "disable": {
+        "id": "disable",
+        "name": "Disable",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "discharge": {
+        "id": "discharge",
+        "name": "Discharge",
+        "type": "Electric",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "dive": {
+        "id": "dive",
+        "name": "Dive",
+        "type": "Water",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "doubleedge": {
+        "id": "doubleedge",
+        "name": "Double-Edge",
+        "type": "Normal",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "doublehit": {
+        "id": "doublehit",
+        "name": "Double Hit",
+        "type": "Normal",
+        "basePower": 35,
+        "category": "Physical"
+      },
+      "doubleteam": {
+        "id": "doubleteam",
+        "name": "Double Team",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "dracometeor": {
+        "id": "dracometeor",
+        "name": "Draco Meteor",
+        "type": "Dragon",
+        "basePower": 130,
+        "category": "Special"
+      },
+      "dragondance": {
+        "id": "dragondance",
+        "name": "Dragon Dance",
+        "type": "Dragon",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "dragondarts": {
+        "id": "dragondarts",
+        "name": "Dragon Darts",
+        "type": "Dragon",
+        "basePower": 50,
+        "category": "Physical"
+      },
+      "dragonpulse": {
+        "id": "dragonpulse",
+        "name": "Dragon Pulse",
+        "type": "Dragon",
+        "basePower": 85,
+        "category": "Special"
+      },
+      "dragonrush": {
+        "id": "dragonrush",
+        "name": "Dragon Rush",
+        "type": "Dragon",
+        "basePower": 100,
+        "category": "Physical"
+      },
+      "dragontail": {
+        "id": "dragontail",
+        "name": "Dragon Tail",
+        "type": "Dragon",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "drainingkiss": {
+        "id": "drainingkiss",
+        "name": "Draining Kiss",
+        "type": "Fairy",
+        "basePower": 50,
+        "category": "Special"
+      },
+      "drainpunch": {
+        "id": "drainpunch",
+        "name": "Drain Punch",
+        "type": "Fighting",
+        "basePower": 75,
+        "category": "Physical"
+      },
+      "drillpeck": {
+        "id": "drillpeck",
+        "name": "Drill Peck",
+        "type": "Flying",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "drillrun": {
+        "id": "drillrun",
+        "name": "Drill Run",
+        "type": "Ground",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "dualwingbeat": {
+        "id": "dualwingbeat",
+        "name": "Dual Wingbeat",
+        "type": "Flying",
+        "basePower": 40,
+        "category": "Physical"
+      },
+      "dynamicpunch": {
+        "id": "dynamicpunch",
+        "name": "Dynamic Punch",
+        "type": "Fighting",
+        "basePower": 100,
+        "category": "Physical"
+      },
+      "earthpower": {
+        "id": "earthpower",
+        "name": "Earth Power",
+        "type": "Ground",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "earthquake": {
+        "id": "earthquake",
+        "name": "Earthquake",
+        "type": "Ground",
+        "basePower": 100,
+        "category": "Physical"
+      },
+      "eerieimpulse": {
+        "id": "eerieimpulse",
+        "name": "Eerie Impulse",
+        "type": "Electric",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "eeriespell": {
+        "id": "eeriespell",
+        "name": "Eerie Spell",
+        "type": "Psychic",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "electricterrain": {
+        "id": "electricterrain",
+        "name": "Electric Terrain",
+        "type": "Electric",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "electroball": {
+        "id": "electroball",
+        "name": "Electro Ball",
+        "type": "Electric",
+        "basePower": 0,
+        "category": "Special"
+      },
+      "electroshot": {
+        "id": "electroshot",
+        "name": "Electro Shot",
+        "type": "Electric",
+        "basePower": 130,
+        "category": "Special"
+      },
+      "electroweb": {
+        "id": "electroweb",
+        "name": "Electroweb",
+        "type": "Electric",
+        "basePower": 55,
+        "category": "Special"
+      },
+      "endeavor": {
+        "id": "endeavor",
+        "name": "Endeavor",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "endure": {
+        "id": "endure",
+        "name": "Endure",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "energyball": {
+        "id": "energyball",
+        "name": "Energy Ball",
+        "type": "Grass",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "entrainment": {
+        "id": "entrainment",
+        "name": "Entrainment",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "eruption": {
+        "id": "eruption",
+        "name": "Eruption",
+        "type": "Fire",
+        "basePower": 150,
+        "category": "Special"
+      },
+      "expandingforce": {
+        "id": "expandingforce",
+        "name": "Expanding Force",
+        "type": "Psychic",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "explosion": {
+        "id": "explosion",
+        "name": "Explosion",
+        "type": "Normal",
+        "basePower": 250,
+        "category": "Physical"
+      },
+      "extrasensory": {
+        "id": "extrasensory",
+        "name": "Extrasensory",
+        "type": "Psychic",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "extremespeed": {
+        "id": "extremespeed",
+        "name": "Extreme Speed",
+        "type": "Normal",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "facade": {
+        "id": "facade",
+        "name": "Facade",
+        "type": "Normal",
+        "basePower": 70,
+        "category": "Physical"
+      },
+      "fairylock": {
+        "id": "fairylock",
+        "name": "Fairy Lock",
+        "type": "Fairy",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "faketears": {
+        "id": "faketears",
+        "name": "Fake Tears",
+        "type": "Dark",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "featherdance": {
+        "id": "featherdance",
+        "name": "Feather Dance",
+        "type": "Flying",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "feint": {
+        "id": "feint",
+        "name": "Feint",
+        "type": "Normal",
+        "basePower": 30,
+        "category": "Physical"
+      },
+      "fellstinger": {
+        "id": "fellstinger",
+        "name": "Fell Stinger",
+        "type": "Bug",
+        "basePower": 50,
+        "category": "Physical"
+      },
+      "ficklebeam": {
+        "id": "ficklebeam",
+        "name": "Fickle Beam",
+        "type": "Dragon",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "fierydance": {
+        "id": "fierydance",
+        "name": "Fiery Dance",
+        "type": "Fire",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "finalgambit": {
+        "id": "finalgambit",
+        "name": "Final Gambit",
+        "type": "Fighting",
+        "basePower": 0,
+        "category": "Special"
+      },
+      "fireblast": {
+        "id": "fireblast",
+        "name": "Fire Blast",
+        "type": "Fire",
+        "basePower": 110,
+        "category": "Special"
+      },
+      "firefang": {
+        "id": "firefang",
+        "name": "Fire Fang",
+        "type": "Fire",
+        "basePower": 65,
+        "category": "Physical"
+      },
+      "firepunch": {
+        "id": "firepunch",
+        "name": "Fire Punch",
+        "type": "Fire",
+        "basePower": 75,
+        "category": "Physical"
+      },
+      "firespin": {
+        "id": "firespin",
+        "name": "Fire Spin",
+        "type": "Fire",
+        "basePower": 35,
+        "category": "Special"
+      },
+      "fissure": {
+        "id": "fissure",
+        "name": "Fissure",
+        "type": "Ground",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "flail": {
+        "id": "flail",
+        "name": "Flail",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "flamecharge": {
+        "id": "flamecharge",
+        "name": "Flame Charge",
+        "type": "Fire",
+        "basePower": 50,
+        "category": "Physical"
+      },
+      "flamethrower": {
+        "id": "flamethrower",
+        "name": "Flamethrower",
+        "type": "Fire",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "flareblitz": {
+        "id": "flareblitz",
+        "name": "Flare Blitz",
+        "type": "Fire",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "flashcannon": {
+        "id": "flashcannon",
+        "name": "Flash Cannon",
+        "type": "Steel",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "flatter": {
+        "id": "flatter",
+        "name": "Flatter",
+        "type": "Dark",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "fling": {
+        "id": "fling",
+        "name": "Fling",
+        "type": "Dark",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "flipturn": {
+        "id": "flipturn",
+        "name": "Flip Turn",
+        "type": "Water",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "flowertrick": {
+        "id": "flowertrick",
+        "name": "Flower Trick",
+        "type": "Grass",
+        "basePower": 70,
+        "category": "Physical"
+      },
+      "fly": {
+        "id": "fly",
+        "name": "Fly",
+        "type": "Flying",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "flyingpress": {
+        "id": "flyingpress",
+        "name": "Flying Press",
+        "type": "Fighting",
+        "basePower": 100,
+        "category": "Physical"
+      },
+      "focusblast": {
+        "id": "focusblast",
+        "name": "Focus Blast",
+        "type": "Fighting",
+        "basePower": 120,
+        "category": "Special"
+      },
+      "focusenergy": {
+        "id": "focusenergy",
+        "name": "Focus Energy",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "focuspunch": {
+        "id": "focuspunch",
+        "name": "Focus Punch",
+        "type": "Fighting",
+        "basePower": 150,
+        "category": "Physical"
+      },
+      "followme": {
+        "id": "followme",
+        "name": "Follow Me",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "forestscurse": {
+        "id": "forestscurse",
+        "name": "Forest's Curse",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "foulplay": {
+        "id": "foulplay",
+        "name": "Foul Play",
+        "type": "Dark",
+        "basePower": 95,
+        "category": "Physical"
+      },
+      "frenzyplant": {
+        "id": "frenzyplant",
+        "name": "Frenzy Plant",
+        "type": "Grass",
+        "basePower": 150,
+        "category": "Special"
+      },
+      "frostbreath": {
+        "id": "frostbreath",
+        "name": "Frost Breath",
+        "type": "Ice",
+        "basePower": 60,
+        "category": "Special"
+      },
+      "futuresight": {
+        "id": "futuresight",
+        "name": "Future Sight",
+        "type": "Psychic",
+        "basePower": 120,
+        "category": "Special"
+      },
+      "gastroacid": {
+        "id": "gastroacid",
+        "name": "Gastro Acid",
+        "type": "Poison",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "gigadrain": {
+        "id": "gigadrain",
+        "name": "Giga Drain",
+        "type": "Grass",
+        "basePower": 75,
+        "category": "Special"
+      },
+      "gigaimpact": {
+        "id": "gigaimpact",
+        "name": "Giga Impact",
+        "type": "Normal",
+        "basePower": 150,
+        "category": "Physical"
+      },
+      "gigatonhammer": {
+        "id": "gigatonhammer",
+        "name": "Gigaton Hammer",
+        "type": "Steel",
+        "basePower": 160,
+        "category": "Physical"
+      },
+      "glare": {
+        "id": "glare",
+        "name": "Glare",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "grassknot": {
+        "id": "grassknot",
+        "name": "Grass Knot",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Special"
+      },
+      "grassyglide": {
+        "id": "grassyglide",
+        "name": "Grassy Glide",
+        "type": "Grass",
+        "basePower": 55,
+        "category": "Physical"
+      },
+      "grassyterrain": {
+        "id": "grassyterrain",
+        "name": "Grassy Terrain",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "gravity": {
+        "id": "gravity",
+        "name": "Gravity",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "guardsplit": {
+        "id": "guardsplit",
+        "name": "Guard Split",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "guardswap": {
+        "id": "guardswap",
+        "name": "Guard Swap",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "guillotine": {
+        "id": "guillotine",
+        "name": "Guillotine",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "gunkshot": {
+        "id": "gunkshot",
+        "name": "Gunk Shot",
+        "type": "Poison",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "gyroball": {
+        "id": "gyroball",
+        "name": "Gyro Ball",
+        "type": "Steel",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "hammerarm": {
+        "id": "hammerarm",
+        "name": "Hammer Arm",
+        "type": "Fighting",
+        "basePower": 100,
+        "category": "Physical"
+      },
+      "hardpress": {
+        "id": "hardpress",
+        "name": "Hard Press",
+        "type": "Steel",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "haze": {
+        "id": "haze",
+        "name": "Haze",
+        "type": "Ice",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "headlongrush": {
+        "id": "headlongrush",
+        "name": "Headlong Rush",
+        "type": "Ground",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "headsmash": {
+        "id": "headsmash",
+        "name": "Head Smash",
+        "type": "Rock",
+        "basePower": 150,
+        "category": "Physical"
+      },
+      "healbell": {
+        "id": "healbell",
+        "name": "Heal Bell",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "healingwish": {
+        "id": "healingwish",
+        "name": "Healing Wish",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "healpulse": {
+        "id": "healpulse",
+        "name": "Heal Pulse",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "heatcrash": {
+        "id": "heatcrash",
+        "name": "Heat Crash",
+        "type": "Fire",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "heatwave": {
+        "id": "heatwave",
+        "name": "Heat Wave",
+        "type": "Fire",
+        "basePower": 95,
+        "category": "Special"
+      },
+      "heavyslam": {
+        "id": "heavyslam",
+        "name": "Heavy Slam",
+        "type": "Steel",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "helpinghand": {
+        "id": "helpinghand",
+        "name": "Helping Hand",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "hex": {
+        "id": "hex",
+        "name": "Hex",
+        "type": "Ghost",
+        "basePower": 65,
+        "category": "Special"
+      },
+      "highhorsepower": {
+        "id": "highhorsepower",
+        "name": "High Horsepower",
+        "type": "Ground",
+        "basePower": 95,
+        "category": "Physical"
+      },
+      "highjumpkick": {
+        "id": "highjumpkick",
+        "name": "High Jump Kick",
+        "type": "Fighting",
+        "basePower": 130,
+        "category": "Physical"
+      },
+      "horndrill": {
+        "id": "horndrill",
+        "name": "Horn Drill",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "hornleech": {
+        "id": "hornleech",
+        "name": "Horn Leech",
+        "type": "Grass",
+        "basePower": 75,
+        "category": "Physical"
+      },
+      "howl": {
+        "id": "howl",
+        "name": "Howl",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "hurricane": {
+        "id": "hurricane",
+        "name": "Hurricane",
+        "type": "Flying",
+        "basePower": 110,
+        "category": "Special"
+      },
+      "hydrocannon": {
+        "id": "hydrocannon",
+        "name": "Hydro Cannon",
+        "type": "Water",
+        "basePower": 150,
+        "category": "Special"
+      },
+      "hydropump": {
+        "id": "hydropump",
+        "name": "Hydro Pump",
+        "type": "Water",
+        "basePower": 110,
+        "category": "Special"
+      },
+      "hyperbeam": {
+        "id": "hyperbeam",
+        "name": "Hyper Beam",
+        "type": "Normal",
+        "basePower": 150,
+        "category": "Special"
+      },
+      "hypervoice": {
+        "id": "hypervoice",
+        "name": "Hyper Voice",
+        "type": "Normal",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "hypnosis": {
+        "id": "hypnosis",
+        "name": "Hypnosis",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "icebeam": {
+        "id": "icebeam",
+        "name": "Ice Beam",
+        "type": "Ice",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "icefang": {
+        "id": "icefang",
+        "name": "Ice Fang",
+        "type": "Ice",
+        "basePower": 65,
+        "category": "Physical"
+      },
+      "icehammer": {
+        "id": "icehammer",
+        "name": "Ice Hammer",
+        "type": "Ice",
+        "basePower": 100,
+        "category": "Physical"
+      },
+      "icepunch": {
+        "id": "icepunch",
+        "name": "Ice Punch",
+        "type": "Ice",
+        "basePower": 75,
+        "category": "Physical"
+      },
+      "iceshard": {
+        "id": "iceshard",
+        "name": "Ice Shard",
+        "type": "Ice",
+        "basePower": 40,
+        "category": "Physical"
+      },
+      "icespinner": {
+        "id": "icespinner",
+        "name": "Ice Spinner",
+        "type": "Ice",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "iciclecrash": {
+        "id": "iciclecrash",
+        "name": "Icicle Crash",
+        "type": "Ice",
+        "basePower": 85,
+        "category": "Physical"
+      },
+      "iciclespear": {
+        "id": "iciclespear",
+        "name": "Icicle Spear",
+        "type": "Ice",
+        "basePower": 25,
+        "category": "Physical"
+      },
+      "icywind": {
+        "id": "icywind",
+        "name": "Icy Wind",
+        "type": "Ice",
+        "basePower": 55,
+        "category": "Special"
+      },
+      "imprison": {
+        "id": "imprison",
+        "name": "Imprison",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "inferno": {
+        "id": "inferno",
+        "name": "Inferno",
+        "type": "Fire",
+        "basePower": 100,
+        "category": "Special"
+      },
+      "infestation": {
+        "id": "infestation",
+        "name": "Infestation",
+        "type": "Bug",
+        "basePower": 20,
+        "category": "Special"
+      },
+      "ingrain": {
+        "id": "ingrain",
+        "name": "Ingrain",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "instruct": {
+        "id": "instruct",
+        "name": "Instruct",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "irondefense": {
+        "id": "irondefense",
+        "name": "Iron Defense",
+        "type": "Steel",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "irontail": {
+        "id": "irontail",
+        "name": "Iron Tail",
+        "type": "Steel",
+        "basePower": 100,
+        "category": "Physical"
+      },
+      "jetpunch": {
+        "id": "jetpunch",
+        "name": "Jet Punch",
+        "type": "Water",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "knockoff": {
+        "id": "knockoff",
+        "name": "Knock Off",
+        "type": "Dark",
+        "basePower": 65,
+        "category": "Physical"
+      },
+      "kowtowcleave": {
+        "id": "kowtowcleave",
+        "name": "Kowtow Cleave",
+        "type": "Dark",
+        "basePower": 85,
+        "category": "Physical"
+      },
+      "lashout": {
+        "id": "lashout",
+        "name": "Lash Out",
+        "type": "Dark",
+        "basePower": 75,
+        "category": "Physical"
+      },
+      "lastresort": {
+        "id": "lastresort",
+        "name": "Last Resort",
+        "type": "Normal",
+        "basePower": 140,
+        "category": "Physical"
+      },
+      "lastrespects": {
+        "id": "lastrespects",
+        "name": "Last Respects",
+        "type": "Ghost",
+        "basePower": 50,
+        "category": "Physical"
+      },
+      "lavaplume": {
+        "id": "lavaplume",
+        "name": "Lava Plume",
+        "type": "Fire",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "leafblade": {
+        "id": "leafblade",
+        "name": "Leaf Blade",
+        "type": "Grass",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "leafstorm": {
+        "id": "leafstorm",
+        "name": "Leaf Storm",
+        "type": "Grass",
+        "basePower": 130,
+        "category": "Special"
+      },
+      "leechlife": {
+        "id": "leechlife",
+        "name": "Leech Life",
+        "type": "Bug",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "leechseed": {
+        "id": "leechseed",
+        "name": "Leech Seed",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "lifedew": {
+        "id": "lifedew",
+        "name": "Life Dew",
+        "type": "Water",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "lightscreen": {
+        "id": "lightscreen",
+        "name": "Light Screen",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "liquidation": {
+        "id": "liquidation",
+        "name": "Liquidation",
+        "type": "Water",
+        "basePower": 85,
+        "category": "Physical"
+      },
+      "lockon": {
+        "id": "lockon",
+        "name": "Lock-On",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "lowkick": {
+        "id": "lowkick",
+        "name": "Low Kick",
+        "type": "Fighting",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "lowsweep": {
+        "id": "lowsweep",
+        "name": "Low Sweep",
+        "type": "Fighting",
+        "basePower": 65,
+        "category": "Physical"
+      },
+      "luminacrash": {
+        "id": "luminacrash",
+        "name": "Lumina Crash",
+        "type": "Psychic",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "lunge": {
+        "id": "lunge",
+        "name": "Lunge",
+        "type": "Bug",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "machpunch": {
+        "id": "machpunch",
+        "name": "Mach Punch",
+        "type": "Fighting",
+        "basePower": 40,
+        "category": "Physical"
+      },
+      "magicpowder": {
+        "id": "magicpowder",
+        "name": "Magic Powder",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "magicroom": {
+        "id": "magicroom",
+        "name": "Magic Room",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "magneticflux": {
+        "id": "magneticflux",
+        "name": "Magnetic Flux",
+        "type": "Electric",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "magnetrise": {
+        "id": "magnetrise",
+        "name": "Magnet Rise",
+        "type": "Electric",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "matchagotcha": {
+        "id": "matchagotcha",
+        "name": "Matcha Gotcha",
+        "type": "Grass",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "meanlook": {
+        "id": "meanlook",
+        "name": "Mean Look",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "megahorn": {
+        "id": "megahorn",
+        "name": "Megahorn",
+        "type": "Bug",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "megakick": {
+        "id": "megakick",
+        "name": "Mega Kick",
+        "type": "Normal",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "memento": {
+        "id": "memento",
+        "name": "Memento",
+        "type": "Dark",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "metalburst": {
+        "id": "metalburst",
+        "name": "Metal Burst",
+        "type": "Steel",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "metalsound": {
+        "id": "metalsound",
+        "name": "Metal Sound",
+        "type": "Steel",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "meteorbeam": {
+        "id": "meteorbeam",
+        "name": "Meteor Beam",
+        "type": "Rock",
+        "basePower": 120,
+        "category": "Special"
+      },
+      "meteormash": {
+        "id": "meteormash",
+        "name": "Meteor Mash",
+        "type": "Steel",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "milkdrink": {
+        "id": "milkdrink",
+        "name": "Milk Drink",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "minimize": {
+        "id": "minimize",
+        "name": "Minimize",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "mirrorcoat": {
+        "id": "mirrorcoat",
+        "name": "Mirror Coat",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Special"
+      },
+      "mistyexplosion": {
+        "id": "mistyexplosion",
+        "name": "Misty Explosion",
+        "type": "Fairy",
+        "basePower": 100,
+        "category": "Special"
+      },
+      "mistyterrain": {
+        "id": "mistyterrain",
+        "name": "Misty Terrain",
+        "type": "Fairy",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "moonlight": {
+        "id": "moonlight",
+        "name": "Moonlight",
+        "type": "Fairy",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "morningsun": {
+        "id": "morningsun",
+        "name": "Morning Sun",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "mortalspin": {
+        "id": "mortalspin",
+        "name": "Mortal Spin",
+        "type": "Poison",
+        "basePower": 30,
+        "category": "Physical"
+      },
+      "muddywater": {
+        "id": "muddywater",
+        "name": "Muddy Water",
+        "type": "Water",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "mudshot": {
+        "id": "mudshot",
+        "name": "Mud Shot",
+        "type": "Ground",
+        "basePower": 55,
+        "category": "Special"
+      },
+      "mudslap": {
+        "id": "mudslap",
+        "name": "Mud-Slap",
+        "type": "Ground",
+        "basePower": 20,
+        "category": "Special"
+      },
+      "mysticalfire": {
+        "id": "mysticalfire",
+        "name": "Mystical Fire",
+        "type": "Fire",
+        "basePower": 75,
+        "category": "Special"
+      },
+      "nastyplot": {
+        "id": "nastyplot",
+        "name": "Nasty Plot",
+        "type": "Dark",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "nightshade": {
+        "id": "nightshade",
+        "name": "Night Shade",
+        "type": "Ghost",
+        "basePower": 0,
+        "category": "Special"
+      },
+      "nobleroar": {
+        "id": "nobleroar",
+        "name": "Noble Roar",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "nuzzle": {
+        "id": "nuzzle",
+        "name": "Nuzzle",
+        "type": "Electric",
+        "basePower": 20,
+        "category": "Physical"
+      },
+      "outrage": {
+        "id": "outrage",
+        "name": "Outrage",
+        "type": "Dragon",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "overheat": {
+        "id": "overheat",
+        "name": "Overheat",
+        "type": "Fire",
+        "basePower": 130,
+        "category": "Special"
+      },
+      "painsplit": {
+        "id": "painsplit",
+        "name": "Pain Split",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "paraboliccharge": {
+        "id": "paraboliccharge",
+        "name": "Parabolic Charge",
+        "type": "Electric",
+        "basePower": 65,
+        "category": "Special"
+      },
+      "partingshot": {
+        "id": "partingshot",
+        "name": "Parting Shot",
+        "type": "Dark",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "payback": {
+        "id": "payback",
+        "name": "Payback",
+        "type": "Dark",
+        "basePower": 50,
+        "category": "Physical"
+      },
+      "perishsong": {
+        "id": "perishsong",
+        "name": "Perish Song",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "petalblizzard": {
+        "id": "petalblizzard",
+        "name": "Petal Blizzard",
+        "type": "Grass",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "petaldance": {
+        "id": "petaldance",
+        "name": "Petal Dance",
+        "type": "Grass",
+        "basePower": 120,
+        "category": "Special"
+      },
+      "phantomforce": {
+        "id": "phantomforce",
+        "name": "Phantom Force",
+        "type": "Ghost",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "pinmissile": {
+        "id": "pinmissile",
+        "name": "Pin Missile",
+        "type": "Bug",
+        "basePower": 25,
+        "category": "Physical"
+      },
+      "playrough": {
+        "id": "playrough",
+        "name": "Play Rough",
+        "type": "Fairy",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "pluck": {
+        "id": "pluck",
+        "name": "Pluck",
+        "type": "Flying",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "poisonfang": {
+        "id": "poisonfang",
+        "name": "Poison Fang",
+        "type": "Poison",
+        "basePower": 50,
+        "category": "Physical"
+      },
+      "poisonjab": {
+        "id": "poisonjab",
+        "name": "Poison Jab",
+        "type": "Poison",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "poisonpowder": {
+        "id": "poisonpowder",
+        "name": "Poison Powder",
+        "type": "Poison",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "pollenpuff": {
+        "id": "pollenpuff",
+        "name": "Pollen Puff",
+        "type": "Bug",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "poltergeist": {
+        "id": "poltergeist",
+        "name": "Poltergeist",
+        "type": "Ghost",
+        "basePower": 110,
+        "category": "Physical"
+      },
+      "populationbomb": {
+        "id": "populationbomb",
+        "name": "Population Bomb",
+        "type": "Normal",
+        "basePower": 20,
+        "category": "Physical"
+      },
+      "pounce": {
+        "id": "pounce",
+        "name": "Pounce",
+        "type": "Bug",
+        "basePower": 50,
+        "category": "Physical"
+      },
+      "pound": {
+        "id": "pound",
+        "name": "Pound",
+        "type": "Normal",
+        "basePower": 40,
+        "category": "Physical"
+      },
+      "powergem": {
+        "id": "powergem",
+        "name": "Power Gem",
+        "type": "Rock",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "powersplit": {
+        "id": "powersplit",
+        "name": "Power Split",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "powerswap": {
+        "id": "powerswap",
+        "name": "Power Swap",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "powertrick": {
+        "id": "powertrick",
+        "name": "Power Trick",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "powertrip": {
+        "id": "powertrip",
+        "name": "Power Trip",
+        "type": "Dark",
+        "basePower": 20,
+        "category": "Physical"
+      },
+      "powerwhip": {
+        "id": "powerwhip",
+        "name": "Power Whip",
+        "type": "Grass",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "psychic": {
+        "id": "psychic",
+        "name": "Psychic",
+        "type": "Psychic",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "psychicfangs": {
+        "id": "psychicfangs",
+        "name": "Psychic Fangs",
+        "type": "Psychic",
+        "basePower": 85,
+        "category": "Physical"
+      },
+      "psychicnoise": {
+        "id": "psychicnoise",
+        "name": "Psychic Noise",
+        "type": "Psychic",
+        "basePower": 75,
+        "category": "Special"
+      },
+      "psychicterrain": {
+        "id": "psychicterrain",
+        "name": "Psychic Terrain",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "psychocut": {
+        "id": "psychocut",
+        "name": "Psycho Cut",
+        "type": "Psychic",
+        "basePower": 70,
+        "category": "Physical"
+      },
+      "psychup": {
+        "id": "psychup",
+        "name": "Psych Up",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "psyshock": {
+        "id": "psyshock",
+        "name": "Psyshock",
+        "type": "Psychic",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "quash": {
+        "id": "quash",
+        "name": "Quash",
+        "type": "Dark",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "quickattack": {
+        "id": "quickattack",
+        "name": "Quick Attack",
+        "type": "Normal",
+        "basePower": 40,
+        "category": "Physical"
+      },
+      "quickguard": {
+        "id": "quickguard",
+        "name": "Quick Guard",
+        "type": "Fighting",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "quiverdance": {
+        "id": "quiverdance",
+        "name": "Quiver Dance",
+        "type": "Bug",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "ragepowder": {
+        "id": "ragepowder",
+        "name": "Rage Powder",
+        "type": "Bug",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "ragingbull": {
+        "id": "ragingbull",
+        "name": "Raging Bull",
+        "type": "Normal",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "ragingfury": {
+        "id": "ragingfury",
+        "name": "Raging Fury",
+        "type": "Fire",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "raindance": {
+        "id": "raindance",
+        "name": "Rain Dance",
+        "type": "Water",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "rapidspin": {
+        "id": "rapidspin",
+        "name": "Rapid Spin",
+        "type": "Normal",
+        "basePower": 50,
+        "category": "Physical"
+      },
+      "razorshell": {
+        "id": "razorshell",
+        "name": "Razor Shell",
+        "type": "Water",
+        "basePower": 75,
+        "category": "Physical"
+      },
+      "recover": {
+        "id": "recover",
+        "name": "Recover",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "recycle": {
+        "id": "recycle",
+        "name": "Recycle",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "reflect": {
+        "id": "reflect",
+        "name": "Reflect",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "reflecttype": {
+        "id": "reflecttype",
+        "name": "Reflect Type",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "rest": {
+        "id": "rest",
+        "name": "Rest",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "reversal": {
+        "id": "reversal",
+        "name": "Reversal",
+        "type": "Fighting",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "risingvoltage": {
+        "id": "risingvoltage",
+        "name": "Rising Voltage",
+        "type": "Electric",
+        "basePower": 70,
+        "category": "Special"
+      },
+      "roar": {
+        "id": "roar",
+        "name": "Roar",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "rockblast": {
+        "id": "rockblast",
+        "name": "Rock Blast",
+        "type": "Rock",
+        "basePower": 25,
+        "category": "Physical"
+      },
+      "rockpolish": {
+        "id": "rockpolish",
+        "name": "Rock Polish",
+        "type": "Rock",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "rockslide": {
+        "id": "rockslide",
+        "name": "Rock Slide",
+        "type": "Rock",
+        "basePower": 75,
+        "category": "Physical"
+      },
+      "rocktomb": {
+        "id": "rocktomb",
+        "name": "Rock Tomb",
+        "type": "Rock",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "rockwrecker": {
+        "id": "rockwrecker",
+        "name": "Rock Wrecker",
+        "type": "Rock",
+        "basePower": 150,
+        "category": "Physical"
+      },
+      "roleplay": {
+        "id": "roleplay",
+        "name": "Role Play",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "roost": {
+        "id": "roost",
+        "name": "Roost",
+        "type": "Flying",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "round": {
+        "id": "round",
+        "name": "Round",
+        "type": "Normal",
+        "basePower": 60,
+        "category": "Special"
+      },
+      "sacredsword": {
+        "id": "sacredsword",
+        "name": "Sacred Sword",
+        "type": "Fighting",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "safeguard": {
+        "id": "safeguard",
+        "name": "Safeguard",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "sandtomb": {
+        "id": "sandtomb",
+        "name": "Sand Tomb",
+        "type": "Ground",
+        "basePower": 35,
+        "category": "Physical"
+      },
+      "scald": {
+        "id": "scald",
+        "name": "Scald",
+        "type": "Water",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "scaleshot": {
+        "id": "scaleshot",
+        "name": "Scale Shot",
+        "type": "Dragon",
+        "basePower": 25,
+        "category": "Physical"
+      },
+      "scaryface": {
+        "id": "scaryface",
+        "name": "Scary Face",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "scorchingsands": {
+        "id": "scorchingsands",
+        "name": "Scorching Sands",
+        "type": "Ground",
+        "basePower": 70,
+        "category": "Special"
+      },
+      "screech": {
+        "id": "screech",
+        "name": "Screech",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "seedbomb": {
+        "id": "seedbomb",
+        "name": "Seed Bomb",
+        "type": "Grass",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "seismictoss": {
+        "id": "seismictoss",
+        "name": "Seismic Toss",
+        "type": "Fighting",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "selfdestruct": {
+        "id": "selfdestruct",
+        "name": "Self-Destruct",
+        "type": "Normal",
+        "basePower": 200,
+        "category": "Physical"
+      },
+      "shadowball": {
+        "id": "shadowball",
+        "name": "Shadow Ball",
+        "type": "Ghost",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "shadowpunch": {
+        "id": "shadowpunch",
+        "name": "Shadow Punch",
+        "type": "Ghost",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "shadowsneak": {
+        "id": "shadowsneak",
+        "name": "Shadow Sneak",
+        "type": "Ghost",
+        "basePower": 40,
+        "category": "Physical"
+      },
+      "shedtail": {
+        "id": "shedtail",
+        "name": "Shed Tail",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "sheercold": {
+        "id": "sheercold",
+        "name": "Sheer Cold",
+        "type": "Ice",
+        "basePower": 0,
+        "category": "Special"
+      },
+      "shellsidearm": {
+        "id": "shellsidearm",
+        "name": "Shell Side Arm",
+        "type": "Poison",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "shellsmash": {
+        "id": "shellsmash",
+        "name": "Shell Smash",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "shelter": {
+        "id": "shelter",
+        "name": "Shelter",
+        "type": "Steel",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "simplebeam": {
+        "id": "simplebeam",
+        "name": "Simple Beam",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "sing": {
+        "id": "sing",
+        "name": "Sing",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "skillswap": {
+        "id": "skillswap",
+        "name": "Skill Swap",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "skittersmack": {
+        "id": "skittersmack",
+        "name": "Skitter Smack",
+        "type": "Bug",
+        "basePower": 70,
+        "category": "Physical"
+      },
+      "skyattack": {
+        "id": "skyattack",
+        "name": "Sky Attack",
+        "type": "Flying",
+        "basePower": 140,
+        "category": "Physical"
+      },
+      "slackoff": {
+        "id": "slackoff",
+        "name": "Slack Off",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "sleeppowder": {
+        "id": "sleeppowder",
+        "name": "Sleep Powder",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "sleeptalk": {
+        "id": "sleeptalk",
+        "name": "Sleep Talk",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "sludgebomb": {
+        "id": "sludgebomb",
+        "name": "Sludge Bomb",
+        "type": "Poison",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "sludgewave": {
+        "id": "sludgewave",
+        "name": "Sludge Wave",
+        "type": "Poison",
+        "basePower": 95,
+        "category": "Special"
+      },
+      "smackdown": {
+        "id": "smackdown",
+        "name": "Smack Down",
+        "type": "Rock",
+        "basePower": 50,
+        "category": "Physical"
+      },
+      "smartstrike": {
+        "id": "smartstrike",
+        "name": "Smart Strike",
+        "type": "Steel",
+        "basePower": 70,
+        "category": "Physical"
+      },
+      "snarl": {
+        "id": "snarl",
+        "name": "Snarl",
+        "type": "Dark",
+        "basePower": 55,
+        "category": "Special"
+      },
+      "snore": {
+        "id": "snore",
+        "name": "Snore",
+        "type": "Normal",
+        "basePower": 50,
+        "category": "Special"
+      },
+      "soak": {
+        "id": "soak",
+        "name": "Soak",
+        "type": "Water",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "softboiled": {
+        "id": "softboiled",
+        "name": "Soft-Boiled",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "solarbeam": {
+        "id": "solarbeam",
+        "name": "Solar Beam",
+        "type": "Grass",
+        "basePower": 120,
+        "category": "Special"
+      },
+      "solarblade": {
+        "id": "solarblade",
+        "name": "Solar Blade",
+        "type": "Grass",
+        "basePower": 125,
+        "category": "Physical"
+      },
+      "sparklingaria": {
+        "id": "sparklingaria",
+        "name": "Sparkling Aria",
+        "type": "Water",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "speedswap": {
+        "id": "speedswap",
+        "name": "Speed Swap",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "spicyextract": {
+        "id": "spicyextract",
+        "name": "Spicy Extract",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "spikes": {
+        "id": "spikes",
+        "name": "Spikes",
+        "type": "Ground",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "spite": {
+        "id": "spite",
+        "name": "Spite",
+        "type": "Ghost",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "spitup": {
+        "id": "spitup",
+        "name": "Spit Up",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Special"
+      },
+      "spore": {
+        "id": "spore",
+        "name": "Spore",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "stealthrock": {
+        "id": "stealthrock",
+        "name": "Stealth Rock",
+        "type": "Rock",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "steelbeam": {
+        "id": "steelbeam",
+        "name": "Steel Beam",
+        "type": "Steel",
+        "basePower": 140,
+        "category": "Special"
+      },
+      "steelroller": {
+        "id": "steelroller",
+        "name": "Steel Roller",
+        "type": "Steel",
+        "basePower": 130,
+        "category": "Physical"
+      },
+      "steelwing": {
+        "id": "steelwing",
+        "name": "Steel Wing",
+        "type": "Steel",
+        "basePower": 70,
+        "category": "Physical"
+      },
+      "stickyweb": {
+        "id": "stickyweb",
+        "name": "Sticky Web",
+        "type": "Bug",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "stockpile": {
+        "id": "stockpile",
+        "name": "Stockpile",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "stompingtantrum": {
+        "id": "stompingtantrum",
+        "name": "Stomping Tantrum",
+        "type": "Ground",
+        "basePower": 75,
+        "category": "Physical"
+      },
+      "stoneedge": {
+        "id": "stoneedge",
+        "name": "Stone Edge",
+        "type": "Rock",
+        "basePower": 100,
+        "category": "Physical"
+      },
+      "storedpower": {
+        "id": "storedpower",
+        "name": "Stored Power",
+        "type": "Psychic",
+        "basePower": 20,
+        "category": "Special"
+      },
+      "strengthsap": {
+        "id": "strengthsap",
+        "name": "Strength Sap",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "stringshot": {
+        "id": "stringshot",
+        "name": "String Shot",
+        "type": "Bug",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "struggle": {
+        "id": "struggle",
+        "name": "Struggle",
+        "type": "Normal",
+        "basePower": 50,
+        "category": "Physical"
+      },
+      "strugglebug": {
+        "id": "strugglebug",
+        "name": "Struggle Bug",
+        "type": "Bug",
+        "basePower": 50,
+        "category": "Special"
+      },
+      "stunspore": {
+        "id": "stunspore",
+        "name": "Stun Spore",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "substitute": {
+        "id": "substitute",
+        "name": "Substitute",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "suckerpunch": {
+        "id": "suckerpunch",
+        "name": "Sucker Punch",
+        "type": "Dark",
+        "basePower": 70,
+        "category": "Physical"
+      },
+      "sunnyday": {
+        "id": "sunnyday",
+        "name": "Sunny Day",
+        "type": "Fire",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "supercellslam": {
+        "id": "supercellslam",
+        "name": "Supercell Slam",
+        "type": "Electric",
+        "basePower": 100,
+        "category": "Physical"
+      },
+      "superfang": {
+        "id": "superfang",
+        "name": "Super Fang",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Physical"
+      },
+      "superpower": {
+        "id": "superpower",
+        "name": "Superpower",
+        "type": "Fighting",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "surf": {
+        "id": "surf",
+        "name": "Surf",
+        "type": "Water",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "swagger": {
+        "id": "swagger",
+        "name": "Swagger",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "swallow": {
+        "id": "swallow",
+        "name": "Swallow",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "sweetkiss": {
+        "id": "sweetkiss",
+        "name": "Sweet Kiss",
+        "type": "Fairy",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "sweetscent": {
+        "id": "sweetscent",
+        "name": "Sweet Scent",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "switcheroo": {
+        "id": "switcheroo",
+        "name": "Switcheroo",
+        "type": "Dark",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "swordsdance": {
+        "id": "swordsdance",
+        "name": "Swords Dance",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "synthesis": {
+        "id": "synthesis",
+        "name": "Synthesis",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "tailslap": {
+        "id": "tailslap",
+        "name": "Tail Slap",
+        "type": "Normal",
+        "basePower": 25,
+        "category": "Physical"
+      },
+      "tailwind": {
+        "id": "tailwind",
+        "name": "Tailwind",
+        "type": "Flying",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "taunt": {
+        "id": "taunt",
+        "name": "Taunt",
+        "type": "Dark",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "tearfullook": {
+        "id": "tearfullook",
+        "name": "Tearful Look",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "teatime": {
+        "id": "teatime",
+        "name": "Teatime",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "teeterdance": {
+        "id": "teeterdance",
+        "name": "Teeter Dance",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "temperflare": {
+        "id": "temperflare",
+        "name": "Temper Flare",
+        "type": "Fire",
+        "basePower": 75,
+        "category": "Physical"
+      },
+      "terrainpulse": {
+        "id": "terrainpulse",
+        "name": "Terrain Pulse",
+        "type": "Normal",
+        "basePower": 50,
+        "category": "Special"
+      },
+      "thief": {
+        "id": "thief",
+        "name": "Thief",
+        "type": "Dark",
+        "basePower": 60,
+        "category": "Physical"
+      },
+      "thrash": {
+        "id": "thrash",
+        "name": "Thrash",
+        "type": "Normal",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "throatchop": {
+        "id": "throatchop",
+        "name": "Throat Chop",
+        "type": "Dark",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "thunder": {
+        "id": "thunder",
+        "name": "Thunder",
+        "type": "Electric",
+        "basePower": 110,
+        "category": "Special"
+      },
+      "thunderbolt": {
+        "id": "thunderbolt",
+        "name": "Thunderbolt",
+        "type": "Electric",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "thunderfang": {
+        "id": "thunderfang",
+        "name": "Thunder Fang",
+        "type": "Electric",
+        "basePower": 65,
+        "category": "Physical"
+      },
+      "thunderpunch": {
+        "id": "thunderpunch",
+        "name": "Thunder Punch",
+        "type": "Electric",
+        "basePower": 75,
+        "category": "Physical"
+      },
+      "thunderwave": {
+        "id": "thunderwave",
+        "name": "Thunder Wave",
+        "type": "Electric",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "tickle": {
+        "id": "tickle",
+        "name": "Tickle",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "tidyup": {
+        "id": "tidyup",
+        "name": "Tidy Up",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "torchsong": {
+        "id": "torchsong",
+        "name": "Torch Song",
+        "type": "Fire",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "torment": {
+        "id": "torment",
+        "name": "Torment",
+        "type": "Dark",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "toxic": {
+        "id": "toxic",
+        "name": "Toxic",
+        "type": "Poison",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "toxicspikes": {
+        "id": "toxicspikes",
+        "name": "Toxic Spikes",
+        "type": "Poison",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "trailblaze": {
+        "id": "trailblaze",
+        "name": "Trailblaze",
+        "type": "Grass",
+        "basePower": 50,
+        "category": "Physical"
+      },
+      "transform": {
+        "id": "transform",
+        "name": "Transform",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "triattack": {
+        "id": "triattack",
+        "name": "Tri Attack",
+        "type": "Normal",
+        "basePower": 80,
+        "category": "Special"
+      },
+      "trick": {
+        "id": "trick",
+        "name": "Trick",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "trickroom": {
+        "id": "trickroom",
+        "name": "Trick Room",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "triplearrows": {
+        "id": "triplearrows",
+        "name": "Triple Arrows",
+        "type": "Fighting",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "tripleaxel": {
+        "id": "tripleaxel",
+        "name": "Triple Axel",
+        "type": "Ice",
+        "basePower": 20,
+        "category": "Physical"
+      },
+      "twinbeam": {
+        "id": "twinbeam",
+        "name": "Twin Beam",
+        "type": "Psychic",
+        "basePower": 40,
+        "category": "Special"
+      },
+      "upperhand": {
+        "id": "upperhand",
+        "name": "Upper Hand",
+        "type": "Fighting",
+        "basePower": 65,
+        "category": "Physical"
+      },
+      "uproar": {
+        "id": "uproar",
+        "name": "Uproar",
+        "type": "Normal",
+        "basePower": 90,
+        "category": "Special"
+      },
+      "uturn": {
+        "id": "uturn",
+        "name": "U-turn",
+        "type": "Bug",
+        "basePower": 70,
+        "category": "Physical"
+      },
+      "vacuumwave": {
+        "id": "vacuumwave",
+        "name": "Vacuum Wave",
+        "type": "Fighting",
+        "basePower": 40,
+        "category": "Special"
+      },
+      "venoshock": {
+        "id": "venoshock",
+        "name": "Venoshock",
+        "type": "Poison",
+        "basePower": 65,
+        "category": "Special"
+      },
+      "voltswitch": {
+        "id": "voltswitch",
+        "name": "Volt Switch",
+        "type": "Electric",
+        "basePower": 70,
+        "category": "Special"
+      },
+      "volttackle": {
+        "id": "volttackle",
+        "name": "Volt Tackle",
+        "type": "Electric",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "waterfall": {
+        "id": "waterfall",
+        "name": "Waterfall",
+        "type": "Water",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "waterpulse": {
+        "id": "waterpulse",
+        "name": "Water Pulse",
+        "type": "Water",
+        "basePower": 60,
+        "category": "Special"
+      },
+      "watershuriken": {
+        "id": "watershuriken",
+        "name": "Water Shuriken",
+        "type": "Water",
+        "basePower": 15,
+        "category": "Special"
+      },
+      "waterspout": {
+        "id": "waterspout",
+        "name": "Water Spout",
+        "type": "Water",
+        "basePower": 150,
+        "category": "Special"
+      },
+      "wavecrash": {
+        "id": "wavecrash",
+        "name": "Wave Crash",
+        "type": "Water",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "weatherball": {
+        "id": "weatherball",
+        "name": "Weather Ball",
+        "type": "Normal",
+        "basePower": 50,
+        "category": "Special"
+      },
+      "whirlpool": {
+        "id": "whirlpool",
+        "name": "Whirlpool",
+        "type": "Water",
+        "basePower": 35,
+        "category": "Special"
+      },
+      "whirlwind": {
+        "id": "whirlwind",
+        "name": "Whirlwind",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "wideguard": {
+        "id": "wideguard",
+        "name": "Wide Guard",
+        "type": "Rock",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "wildcharge": {
+        "id": "wildcharge",
+        "name": "Wild Charge",
+        "type": "Electric",
+        "basePower": 90,
+        "category": "Physical"
+      },
+      "willowisp": {
+        "id": "willowisp",
+        "name": "Will-O-Wisp",
+        "type": "Fire",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "wish": {
+        "id": "wish",
+        "name": "Wish",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "wonderroom": {
+        "id": "wonderroom",
+        "name": "Wonder Room",
+        "type": "Psychic",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "woodhammer": {
+        "id": "woodhammer",
+        "name": "Wood Hammer",
+        "type": "Grass",
+        "basePower": 120,
+        "category": "Physical"
+      },
+      "worryseed": {
+        "id": "worryseed",
+        "name": "Worry Seed",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "wrap": {
+        "id": "wrap",
+        "name": "Wrap",
+        "type": "Normal",
+        "basePower": 15,
+        "category": "Physical"
+      },
+      "xscissor": {
+        "id": "xscissor",
+        "name": "X-Scissor",
+        "type": "Bug",
+        "basePower": 80,
+        "category": "Physical"
+      },
+      "yawn": {
+        "id": "yawn",
+        "name": "Yawn",
+        "type": "Normal",
+        "basePower": 0,
+        "category": "Status"
+      },
+      "zapcannon": {
+        "id": "zapcannon",
+        "name": "Zap Cannon",
+        "type": "Electric",
+        "basePower": 120,
+        "category": "Special"
+      },
+      "zenheadbutt": {
+        "id": "zenheadbutt",
+        "name": "Zen Headbutt",
+        "type": "Psychic",
+        "basePower": 80,
+        "category": "Physical"
       }
     }
   }

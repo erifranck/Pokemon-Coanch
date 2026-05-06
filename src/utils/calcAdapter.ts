@@ -19,16 +19,27 @@ export const calculateFinalStat = (
   statName: string, 
   baseStat: number, 
   sp: number, 
-  natureModifier: number = 1.0
+  natureModifier: number = 1.0,
+  itemName: string = ''
 ): number => {
   const base50 = calculateBaseStat50(statName, baseStat);
   const withSp = base50 + sp;
   
-  if (statName === 'hp') {
-    return withSp; // HP is not affected by Nature
+  let finalStat = withSp;
+  if (statName !== 'hp') {
+    finalStat = Math.floor(withSp * natureModifier);
   }
   
-  return Math.floor(withSp * natureModifier);
+  // Apply item modifiers
+  const item = itemName.toLowerCase().replace(/[^a-z0-9]/g, '');
+  if (item === 'choicescarf' && statName === 'spe') return Math.floor(finalStat * 1.5);
+  if (item === 'choiceband' && statName === 'atk') return Math.floor(finalStat * 1.5);
+  if (item === 'choicespecs' && statName === 'spa') return Math.floor(finalStat * 1.5);
+  if (item === 'eviolite' && (statName === 'def' || statName === 'spd')) return Math.floor(finalStat * 1.5);
+  if (item === 'lightball' && (statName === 'atk' || statName === 'spa')) return Math.floor(finalStat * 2.0); // Only for Pikachu, validation done contextually
+  if (item === 'thickclub' && statName === 'atk') return Math.floor(finalStat * 2.0); // Cubone/Marowak
+  
+  return finalStat;
 };
 
 // Map of nature modifiers
@@ -69,14 +80,15 @@ export const createChampionsPokemon = (
   nature: string,
   options: any = {}
 ) => {
+  const item = options.item || '';
   // 1. Calculate raw stats based on SPs
   const rawStats = {
-    hp: calculateFinalStat('hp', baseStats.hp, sps.hp || 0),
-    atk: calculateFinalStat('atk', baseStats.atk, sps.atk || 0, getNatureModifier('atk', nature)),
-    def: calculateFinalStat('def', baseStats.def, sps.def || 0, getNatureModifier('def', nature)),
-    spa: calculateFinalStat('spa', baseStats.spa, sps.spa || 0, getNatureModifier('spa', nature)),
-    spd: calculateFinalStat('spd', baseStats.spd, sps.spd || 0, getNatureModifier('spd', nature)),
-    spe: calculateFinalStat('spe', baseStats.spe, sps.spe || 0, getNatureModifier('spe', nature))
+    hp: calculateFinalStat('hp', baseStats.hp, sps.hp || 0, 1.0, item),
+    atk: calculateFinalStat('atk', baseStats.atk, sps.atk || 0, getNatureModifier('atk', nature), item),
+    def: calculateFinalStat('def', baseStats.def, sps.def || 0, getNatureModifier('def', nature), item),
+    spa: calculateFinalStat('spa', baseStats.spa, sps.spa || 0, getNatureModifier('spa', nature), item),
+    spd: calculateFinalStat('spd', baseStats.spd, sps.spd || 0, getNatureModifier('spd', nature), item),
+    spe: calculateFinalStat('spe', baseStats.spe, sps.spe || 0, getNatureModifier('spe', nature), item)
   };
 
   // 2. Instantiate Pokemon and forcefully override the calculated stats

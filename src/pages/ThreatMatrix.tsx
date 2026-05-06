@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { PokemonCard } from '../components/PokemonCard';
-import pokedexData from '../data/pokedex.json';
-import { checkLegality } from '../utils/legality';
+import formatData from '../data/format_data.json';
 
 const ThreatMatrix: React.FC = () => {
   const { threats, addThreat, updateThreat, removeThreat, teams, activeTeamId, relationships, linkThreat, unlinkThreat } = useAppStore();
@@ -10,8 +9,10 @@ const ThreatMatrix: React.FC = () => {
   const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
   const [search, setSearch] = useState('');
 
+  const activeFormat = (formatData as any)[regulation];
+
   const handleAddThreat = (pokemonId: string) => {
-    const def = (pokedexData as any)[pokemonId];
+    const def = activeFormat?.pokemon[pokemonId];
     if (!def) return;
     
     addThreat({
@@ -28,12 +29,12 @@ const ThreatMatrix: React.FC = () => {
     setSearch('');
   };
 
-  const filteredPokedex = Object.entries(pokedexData)
-    .filter(([key, def]: any) => 
+  const filteredPokedex = activeFormat ? Object.entries(activeFormat.pokemon)
+    .filter(([_key, def]: any) => 
       def.name.toLowerCase().includes(search.toLowerCase()) &&
-      checkLegality(key, 'pokemon', key, regulation)
+      !def.name.includes('-Mega') // Exclude Mega forms (they're accessed via the card's Mega Toggle)
     )
-    .slice(0, 10);
+    .slice(0, 10) : [];
 
   return (
     <div className="space-y-6">

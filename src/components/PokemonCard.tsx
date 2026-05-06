@@ -1,10 +1,7 @@
-import React, { useMemo } from 'react';
-import pokedexData from '../data/pokedex.json';
-import movesData from '../data/moves.json';
-import itemsData from '../data/items.json';
-import abilitiesData from '../data/abilities.json';
+import React, { useState } from 'react';
+import formatData from '../data/format_data.json';
 import type { PokemonCard as PokemonCardType, StatMap } from '../types/store';
-import { calculateFinalStat } from '../utils/calcAdapter';
+import { calculateFinalStat, getNatureModifier } from '../utils/calcAdapter';
 import { TypeChip } from './TypeChip';
 import { Combobox } from './Combobox';
 import { checkLegality } from '../utils/legality';
@@ -22,8 +19,39 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
   const { teams, activeTeamId } = useAppStore();
   const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
   
-  const pokemonDef = (pokedexData as any)[card.pokemonId];
+  const [previewMode, setPreviewMode] = useState<'mega' | 'base'>('mega');
   
+  // Use formatData to get accurate showdwown properties and megas
+  const activeFormat = (formatData as any)[regulation];
+  if (!activeFormat) return <div className="p-4 bg-gray-800 rounded-lg border border-red-500 text-red-400 text-sm">Format data not found for {regulation}. Run update script.</div>;
+
+  const basePokemonDef = activeFormat.pokemon[card.pokemonId];
+  if (!basePokemonDef) return <div className="p-4 bg-gray-800 rounded-lg border border-yellow-500 text-yellow-400 text-sm">Pokémon {card.pokemonId} not found in {regulation} Dex.</div>;
+
+  const itemDefObj = card.item ? Object.values(activeFormat.items || {}).find((i: any) => i.name === card.item) as any : null;
+  
+   // Determine if it holds its own mega stone.
+  // megaStone is an object like { "Charizard": "Charizard-Mega-X" } mapping base species -> mega form name.
+  let megaFormId = null;
+  if (itemDefObj && itemDefObj.megaStone) {
+      const megaStoneObj = itemDefObj.megaStone;
+      if (typeof megaStoneObj === 'object' && megaStoneObj[basePokemonDef.name]) {
+          const targetName = megaStoneObj[basePokemonDef.name];
+          if (typeof targetName === 'string') {
+              megaFormId = targetName.toLowerCase().replace(/[^a-z0-9]/g, '');
+          }
+      }
+  }
+  
+  const isHoldingMegaStone = megaFormId !== null;
+  
+  // Choose the definition to display
+  let activePokemonDef = basePokemonDef;
+  const resolvedMegaId = megaFormId; // TS narrowing
+  if (isHoldingMegaStone && resolvedMegaId && previewMode === 'mega' && activeFormat?.pokemon?.[resolvedMegaId]) {
+      activePokemonDef = activeFormat.pokemon[resolvedMegaId];
+  }
+
   const totalSP = Object.values(card.sps).reduce((a, b) => a + b, 0);
 
   const handleSpChange = (stat: keyof StatMap, value: number) => {
@@ -38,30 +66,40 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
     onUpdate({ sps: { ...card.sps, [stat]: newVal } });
   };
 
-  if (!pokemonDef) return <div className="p-4 bg-gray-800 rounded-lg">Unknown Pokemon</div>;
-
   return (
-    <div className="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 flex flex-col space-y-4">
+    <div className={`bg-gray-800 p-4 rounded-xl shadow-lg border flex flex-col space-y-4 ${isHoldingMegaStone && previewMode === 'mega' ? 'border-purple-500 shadow-purple-900/20' : 'border-gray-700'}`}>
       <div className="flex justify-between items-start">
         <div className="flex items-center space-x-3">
           <img 
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonDef.baseSpecies ? (pokedexData as any)[pokemonDef.baseSpecies.toLowerCase()]?.num || pokemonDef.num : pokemonDef.num}.png`} 
-            alt={pokemonDef.name}
+            src={`https://play.pokemonshowdown.com/sprites/gen5/${activePokemonDef.id}.png`} 
+            alt={activePokemonDef.name}
             className="w-16 h-16 bg-gray-700 rounded-full"
-            onError={(e) => { (e.target as HTMLImageElement).src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'; }}
+            onError={(e) => { (e.target as HTMLImageElement).src = 'https://play.pokemonshowdown.com/sprites/items/poke-ball.png'; }}
           />
           <div>
-            <h2 className="text-xl font-bold text-yellow-400 capitalize">{pokemonDef.name}</h2>
+            <h2 className={`text-xl font-bold capitalize ${isHoldingMegaStone && previewMode === 'mega' ? 'text-purple-400' : 'text-yellow-400'}`}>
+                {activePokemonDef.name}
+            </h2>
             <div className="flex space-x-1 mt-1">
-              {pokemonDef.types.map((t: string) => <TypeChip key={t} type={t} />)}
+              {activePokemonDef.types.map((t: string) => <TypeChip key={t} type={t} />)}
             </div>
           </div>
         </div>
-        {onRemove && (
-          <button onClick={onRemove} className="text-red-400 hover:text-red-300 text-sm mt-1">
-            Remove
-          </button>
-        )}
+        <div className="flex flex-col items-end">
+          {isHoldingMegaStone && (
+            <button 
+              onClick={() => setPreviewMode(prev => prev === 'mega' ? 'base' : 'mega')}
+              className="text-xs px-2 py-1 mb-2 bg-purple-900/50 text-purple-300 border border-purple-700 rounded hover:bg-purple-800/50"
+            >
+              {previewMode === 'mega' ? '👁️ View Base' : '⚡ View Mega'}
+            </button>
+          )}
+          {onRemove && (
+            <button onClick={onRemove} className="text-red-400 hover:text-red-300 text-sm mt-1">
+              Remove
+            </button>
+          )}
+        </div>
       </div>
 
       <div className="grid grid-cols-2 gap-4">
@@ -83,9 +121,8 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
             <Combobox 
               label="Item"
               value={card.item}
-              options={Object.entries(itemsData)
-                .filter(([key, item]: any) => checkLegality(card.pokemonId, 'item', item.name, regulation))
-                .map(([key, item]: any) => ({ id: item.name, label: item.name }))}
+              options={Object.values(activeFormat.items || {})
+                .map((item: any) => ({ id: item.name, label: item.name }))}
               onChange={(val) => onUpdate({ item: val })}
               isIllegal={!checkLegality(card.pokemonId, 'item', card.item, regulation)}
             />
@@ -94,11 +131,10 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
             <Combobox 
               label="Ability"
               value={card.ability}
-              options={Object.values(pokemonDef.abilities)
-                .filter((abilityName: any) => checkLegality(card.pokemonId, 'ability', abilityName, regulation))
+              options={Object.values(activePokemonDef.abilities || {})
                 .map((abilityName: any) => ({ id: abilityName, label: abilityName }))}
               onChange={(val) => onUpdate({ ability: val })}
-              isIllegal={!checkLegality(card.pokemonId, 'ability', card.ability, regulation)}
+              isIllegal={!checkLegality(activePokemonDef.id, 'ability', card.ability, regulation)}
             />
           </div>
           <div>
@@ -119,15 +155,13 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
         <div className="space-y-2 text-sm">
           {[0, 1, 2, 3].map((idx) => {
             const moveId = card.moves[idx] || '';
-            const moveDef = moveId ? (movesData as any)[moveId] : null;
             return (
               <div key={idx}>
                 <Combobox 
                   label={`Move ${idx + 1}`}
                   value={moveId}
-                  options={Object.entries(movesData)
-                    .filter(([key, move]: any) => checkLegality(card.pokemonId, 'move', key, regulation))
-                    .map(([key, move]: any) => ({ id: key, label: move.name }))}
+                  options={Object.values(activeFormat.moves || {})
+                    .map((move: any) => ({ id: move.id, label: move.name }))}
                   onChange={(val) => {
                     const newMoves = [...card.moves] as [string, string, string, string];
                     newMoves[idx] = val;
@@ -153,11 +187,23 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
         <div className="space-y-1">
           {STAT_NAMES.map(stat => {
             const spVal = card.sps[stat] || 0;
-            const finalStat = calculateFinalStat(stat, pokemonDef.baseStats[stat], spVal, 1.0); // Rough display without nature color
+            const natureMod = getNatureModifier(stat, card.nature);
+            
+            // Calculate stat WITHOUT item to check for modification
+            const baseFinal = calculateFinalStat(stat, activePokemonDef.baseStats[stat], spVal, natureMod);
+            // Calculate stat WITH item
+            const totalFinal = calculateFinalStat(stat, activePokemonDef.baseStats[stat], spVal, natureMod, card.item);
+            
+            const isModified = totalFinal !== baseFinal;
+
             return (
               <div key={stat} className="flex items-center text-xs">
-                <span className="w-8 font-bold uppercase text-gray-400">{stat}</span>
-                <span className="w-8 text-right font-mono text-gray-300">{finalStat}</span>
+                <span className={`w-8 font-bold uppercase ${natureMod > 1 ? 'text-red-400' : natureMod < 1 ? 'text-blue-400' : 'text-gray-400'}`}>
+                  {stat}
+                </span>
+                <span className={`w-8 text-right font-mono ${isModified ? 'text-green-400 font-bold' : 'text-gray-300'}`}>
+                  {totalFinal}
+                </span>
                 <input 
                   type="range" 
                   min="0" 

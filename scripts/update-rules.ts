@@ -100,10 +100,29 @@ async function extractRules() {
         for (const item of formatDex.items.all()) {
             if (item.isNonstandard) continue;
             
+            // Normalize megaEvolves and megaStone since showdown data structures can vary
+            let megaEvolves = item.megaEvolves || null;
+            let megaStone = item.megaStone || null;
+            
             legalItems[item.id] = {
                 id: item.id,
                 name: item.name,
-                desc: item.desc
+                desc: item.desc,
+                megaEvolves: megaEvolves,
+                megaStone: megaStone
+            };
+        }
+
+        const legalMoves: any = {};
+        for (const move of formatDex.moves.all()) {
+            if (move.isNonstandard || move.num <= 0) continue;
+            
+            legalMoves[move.id] = {
+                id: move.id,
+                name: move.name,
+                type: move.type,
+                basePower: move.basePower,
+                category: move.category
             };
         }
         
@@ -111,7 +130,8 @@ async function extractRules() {
             id: format.id,
             name: format.name,
             pokemon: legalPokemon,
-            items: legalItems
+            items: legalItems,
+            moves: legalMoves
         };
     }
     

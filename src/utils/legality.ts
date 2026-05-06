@@ -1,6 +1,4 @@
-import learnsetsData from '../data/learnsets.json';
 import formatData from '../data/format_data.json';
-import pokedexData from '../data/pokedex.json';
 
 type LegalityType = 'pokemon' | 'item' | 'ability' | 'move';
 
@@ -15,50 +13,29 @@ export const checkLegality = (
   const format = (formatData as any)[formatId];
   if (!format) return true; // If format doesn't exist, assume anything goes
 
-  // 1. Check if Pokemon is explicitly legal in the format
+  // 1. Check if Pokemon is explicitly legal in the format (key = pokemon ID like "charizard")
   if (type === 'pokemon') {
       const isLegal = !!format.pokemon[valueId];
       return isLegal;
   }
   
+  // 2. Items: valueId is the item NAME (e.g., "Charizardite X"), search by name
   if (type === 'item') {
-      const isLegal = !!format.items[valueId];
+      const isLegal = Object.values(format.items || {}).some((item: any) => item.name === valueId);
       return isLegal;
   }
 
-  // 2. Check move learnsets
+  // 3. Moves: valueId is the move ID (e.g., "thunderbolt"), check existence in format
   if (type === 'move') {
-    // Some Pokemon inherit learnsets from base forms (e.g. Ogerpon-Wellspring -> Ogerpon)
-    let searchId = pokemonId;
-    let allowedMoves: string[] = (learnsetsData as any)[searchId] || [];
-    
-    // If we don't have moves for this specific form, check the base species
-    if (allowedMoves.length === 0) {
-      const pokeDef = (pokedexData as any)[pokemonId];
-      if (pokeDef && pokeDef.baseSpecies) {
-        searchId = pokeDef.baseSpecies.toLowerCase().replace(/[^a-z0-9]/g, '');
-        allowedMoves = (learnsetsData as any)[searchId] || [];
-      }
-    }
-
-    if (allowedMoves.length > 0) {
-      // Normalize valueId (sometimes moves in learnsets don't have dashes/spaces)
-      const normalizedMoveId = valueId.toLowerCase().replace(/[^a-z0-9]/g, '');
-      return allowedMoves.includes(normalizedMoveId);
-    }
-    
-    // If we truly have no learnset data for this Pokemon, we might want to default to true
-    // to avoid false positives on brand new Pokemon until Showdown updates their files.
-    // However, for strict VGC, we could return false. Let's return true as fallback.
-    return true; 
+      const isLegal = !!format.moves[valueId];
+      return isLegal;
   }
 
-  // 3. Check if ability belongs to Pokemon
+  // 4. Check if ability belongs to Pokemon in the current format
   if (type === 'ability') {
-    const pokeDef = (pokedexData as any)[pokemonId];
-    if (pokeDef) {
+    const pokeDef = format.pokemon[pokemonId];
+    if (pokeDef && pokeDef.abilities) {
       const validAbilities = Object.values(pokeDef.abilities);
-      // Value might be the ID or the Name. We check if it matches any name.
       return validAbilities.includes(valueId);
     }
   }

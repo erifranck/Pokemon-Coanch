@@ -1,7 +1,5 @@
 import React from 'react';
 import { useAppStore } from '../store/useAppStore';
-import pokedexData from '../data/pokedex.json';
-
 import formatData from '../data/format_data.json';
 
 export const TeamManager: React.FC = () => {
@@ -9,6 +7,8 @@ export const TeamManager: React.FC = () => {
   const activeTeam = teams[activeTeamId];
 
   if (!activeTeam) return null;
+
+  const activeFormat = (formatData as any)[activeTeam.regulation];
 
   return (
     <div className="bg-gray-800 p-4 rounded-xl border border-gray-700 shadow-md mb-6">
@@ -38,15 +38,34 @@ export const TeamManager: React.FC = () => {
           {/* Mini Sprites Preview */}
           <div className="hidden md:flex space-x-1">
             {activeTeam.members.map(m => {
-              const def = (pokedexData as any)[m.pokemonId];
-              const num = def?.baseSpecies ? (pokedexData as any)[def.baseSpecies.toLowerCase()]?.num : def?.num;
+              if (!activeFormat) return null;
+              
+              // Get the item def to check if it mega evolves this pokemon
+              const itemDef = m.item ? Object.values(activeFormat.items || {}).find((i: any) => i.name === m.item) as any : null;
+              
+              // We need to find the correct active form ID (if it's holding a mega stone, show the mega)
+              const basePokemonId = m.pokemonId;
+              let activeId = basePokemonId;
+              
+              const baseDef = activeFormat.pokemon[basePokemonId];
+              if (itemDef && itemDef.megaStone && baseDef) {
+                  // megaStone is an object like { "Charizard": "Charizard-Mega-X" }
+                  const megaStoneObj = itemDef.megaStone;
+                  if (typeof megaStoneObj === 'object' && megaStoneObj[baseDef.name]) {
+                      const targetName = megaStoneObj[baseDef.name];
+                      if (typeof targetName === 'string') {
+                          activeId = targetName.toLowerCase().replace(/[^a-z0-9]/g, '');
+                      }
+                  }
+              }
+
               return (
                 <img 
                   key={m.id}
-                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${num || 0}.png`}
+                  src={`https://play.pokemonshowdown.com/sprites/gen5/${activeId}.png`}
                   alt={m.name}
                   className="w-10 h-10 bg-gray-700 rounded-full"
-                  onError={(e) => { (e.target as HTMLImageElement).src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'; }}
+                  onError={(e) => { (e.target as HTMLImageElement).src = 'https://play.pokemonshowdown.com/sprites/items/poke-ball.png'; }}
                   title={m.name}
                 />
               );

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { PokemonCard } from '../components/PokemonCard';
-import pokedexData from '../data/pokedex.json';
+import formatData from '../data/format_data.json';
 import { TeamManager } from '../components/TeamManager';
-import { checkLegality } from '../utils/legality';
 
 const TeamBuilder: React.FC = () => {
   const { teams, activeTeamId, addTeamMember, updateTeamMember, removeTeamMember } = useAppStore();
@@ -11,8 +10,10 @@ const TeamBuilder: React.FC = () => {
   const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
   const [search, setSearch] = useState('');
 
+  const activeFormat = (formatData as any)[regulation];
+
   const handleAddPokemon = (pokemonId: string) => {
-    const def = (pokedexData as any)[pokemonId];
+    const def = activeFormat?.pokemon[pokemonId];
     if (!def) return;
     
     addTeamMember({
@@ -28,12 +29,12 @@ const TeamBuilder: React.FC = () => {
     setSearch('');
   };
 
-  const filteredPokedex = Object.entries(pokedexData)
-    .filter(([key, def]: any) => 
+  const filteredPokedex = activeFormat ? Object.entries(activeFormat.pokemon)
+    .filter(([_key, def]: any) => 
       def.name.toLowerCase().includes(search.toLowerCase()) &&
-      checkLegality(key, 'pokemon', key, regulation)
+      !def.name.includes('-Mega') // Exclude Mega forms (they're accessed via the card's Mega Toggle)
     )
-    .slice(0, 10); // Limit results for performance
+    .slice(0, 10) : []; // Limit results for performance
 
   return (
     <div className="space-y-6">
