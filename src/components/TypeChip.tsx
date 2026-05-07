@@ -24,12 +24,13 @@ const TYPE_COLORS: Record<string, string> = {
 
 interface Props {
   type: string;
+  className?: string;
 }
 
-export const TypeChip: React.FC<Props> = ({ type }) => {
+export const TypeChip: React.FC<Props> = ({ type, className = '' }) => {
   const colorClass = TYPE_COLORS[type] || 'bg-gray-500';
   return (
-    <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded shadow ${colorClass}`}>
+    <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded shadow ${colorClass} ${ className }`}>
       {type}
     </span>
   );

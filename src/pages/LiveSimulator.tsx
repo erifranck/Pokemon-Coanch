@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { createChampionsPokemon, calculateFullDamageResult, getNatureModifier } from '../utils/calcAdapter';
 import formatData from '../data/format_data.json';
@@ -6,6 +6,8 @@ import { getMegaFormId } from '../utils/megaUtils';
 import { getShowdownSpriteUrl } from '../utils/spriteUtils';
 import { Combobox } from '../components/Combobox';
 import { Field, Generations, Move } from '@smogon/calc';
+import { TypeChip } from '../components/TypeChip';
+import { useSimulatorState } from '../utils/useSimulatorState';
 
 const gen = Generations.get(9);
 const STAT_NAMES = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'] as const;
@@ -18,38 +20,42 @@ const getNatureColor = (statName: string, nature: string) => {
 };
 
 const LiveSimulator: React.FC = () => {
-  const { teams, activeTeamId, threats, relationships } = useAppStore();
+  const { teams, activeTeamId, threats, relationships, updateTeamMember, updateThreat } = useAppStore();
   const team = teams[activeTeamId]?.members || [];
   const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
-  const [activeAllyId, setActiveAllyId] = useState<string>(team[0]?.id || '');
-  const [activeThreatId, setActiveThreatId] = useState<string>('');
   
-  // Field States
-  const [weather, setWeather] = useState<string>('');
-  const [terrain, setTerrain] = useState<string>('');
-  const [allyTailwind, setAllyTailwind] = useState(false);
-  const [threatTailwind, setThreatTailwind] = useState(false);
-  const [allyReflect, setAllyReflect] = useState(false);
-  const [allyLightScreen, setAllyLightScreen] = useState(false);
-  const [allyAuroraVeil, setAllyAuroraVeil] = useState(false);
-  const [threatReflect, setThreatReflect] = useState(false);
-  const [threatLightScreen, setThreatLightScreen] = useState(false);
-  const [threatAuroraVeil, setThreatAuroraVeil] = useState(false);
-  const [allyBurn, setAllyBurn] = useState(false);
-  const [threatBurn, setThreatBurn] = useState(false);
-  const [allyHelpingHand, setAllyHelpingHand] = useState(false);
-  const [threatHelpingHand, setThreatHelpingHand] = useState(false);
-  const [fairyAura, setFairyAura] = useState(false);
-  const [darkAura, setDarkAura] = useState(false);
-
-  // Stat Stage Boosts
-  const [allyBoosts, setAllyBoosts] = useState<Record<string, number>>({});
-  const [threatBoosts, setThreatBoosts] = useState<Record<string, number>>({});
-
-  const activeFormat = (formatData as any)[regulation];
+  const sim = useSimulatorState();
+  const activeAllyId = sim.activeAllyId || team[0]?.id || '';
+  const activeThreatId = sim.activeThreatId || '';
+  const {
+    weather, terrain,
+    allyTailwind, threatTailwind,
+    allyReflect, allyLightScreen, allyAuroraVeil,
+    threatReflect, threatLightScreen, threatAuroraVeil,
+    allyBurn, threatBurn,
+    allyHelpingHand, threatHelpingHand,
+    fairyAura, darkAura,
+    allyBoosts, threatBoosts,
+    allySps, threatSps,
+    updateSimulator, resetSimulator,
+  } = sim;
 
   const activeAlly = team.find(t => t.id === activeAllyId);
   const activeThreat = threats.find(t => t.id === activeThreatId);
+  const activeFormat = (formatData as any)[regulation];
+
+  // Initialize local SPs from card data
+  useEffect(() => {
+    if (activeAlly && (!allySps || Object.keys(allySps).length === 0)) {
+      updateSimulator({ allySps: { ...activeAlly.sps } });
+    }
+  }, [activeAllyId]);
+
+  useEffect(() => {
+    if (activeThreat && (!threatSps || Object.keys(threatSps).length === 0)) {
+      updateSimulator({ threatSps: { ...activeThreat.sps } });
+    }
+  }, [activeThreatId]);
 
   const linkedThreatIds = activeAllyId ? (relationships[activeAllyId] || []) : [];
   const linkedThreats = threats.filter(t => linkedThreatIds.includes(t.id));
@@ -78,14 +84,14 @@ const LiveSimulator: React.FC = () => {
     const allyDef = allyResolved.effectiveDef;
     const threatDef = threatResolved.effectiveDef;
 
-    const pAlly = createChampionsPokemon(gen, allyDef.name, allyDef.baseStats, activeAlly.sps, activeAlly.nature, {
+    const pAlly = createChampionsPokemon(gen, allyDef.name, allyDef.baseStats, allySps, activeAlly.nature, {
       item: activeAlly.item,
       ability: Object.values(allyDef.abilities || {})[0] as string,
       boosts: allyBoosts,
       status: allyBurn ? 'brn' : '',
     });
 
-    const pThreat = createChampionsPokemon(gen, threatDef.name, threatDef.baseStats, activeThreat.sps, activeThreat.nature, {
+    const pThreat = createChampionsPokemon(gen, threatDef.name, threatDef.baseStats, threatSps, activeThreat.nature, {
       item: activeThreat.item,
       ability: Object.values(threatDef.abilities || {})[0] as string,
       boosts: threatBoosts,
@@ -161,26 +167,22 @@ const LiveSimulator: React.FC = () => {
   const calcs = useMemo(() => runCalcs(), [
     activeAlly, activeThreat, weather, terrain, allyTailwind, threatTailwind,
     allyReflect, allyLightScreen, allyAuroraVeil, threatReflect, threatLightScreen, threatAuroraVeil,
-    allyBurn, threatBurn, allyHelpingHand, threatHelpingHand, allyBoosts, threatBoosts, fairyAura, darkAura
+    allyBurn, threatBurn, allyHelpingHand, threatHelpingHand, allyBoosts, threatBoosts, fairyAura, darkAura, allySps, threatSps
   ]);
 
   const boostSetter = (isAlly: boolean, stat: string) => ({
     value: (isAlly ? allyBoosts[stat] : threatBoosts[stat]) || 0,
     onChange: (v: number) => {
       if (isAlly) {
-        setAllyBoosts((prev: Record<string, number>) => {
-          const next = { ...prev };
-          if (v === 0) delete next[stat];
-          else next[stat] = v;
-          return next;
-        });
+        const next = { ...allyBoosts };
+        if (v === 0) delete next[stat];
+        else next[stat] = v;
+        updateSimulator({ allyBoosts: next });
       } else {
-        setThreatBoosts((prev: Record<string, number>) => {
-          const next = { ...prev };
-          if (v === 0) delete next[stat];
-          else next[stat] = v;
-          return next;
-        });
+        const next = { ...threatBoosts };
+        if (v === 0) delete next[stat];
+        else next[stat] = v;
+        updateSimulator({ threatBoosts: next });
       }
     }
   });
@@ -280,7 +282,7 @@ const LiveSimulator: React.FC = () => {
                 className="mb-5"
                 value={activeAllyId}
                 options={team.map(t => ({ id: t.id, label: t.name }))}
-                onChange={(val) => setActiveAllyId(val)}
+                onChange={(val) => updateSimulator({ activeAllyId: val })}
               />
 
               {activeAlly && calcs && (
@@ -289,32 +291,57 @@ const LiveSimulator: React.FC = () => {
                     <img 
                       src={getShowdownSpriteUrl(calcs.allyDef?.name || activeAlly.name)}
                       alt={activeAlly.name}
-                      className="w-12 h-12 bg-gray-700 rounded-full"
+                      className="w-40 h-40 bg-gray-700 rounded-full"
                       onError={(e) => { (e.target as HTMLImageElement).src = 'https://play.pokemonshowdown.com/sprites/items/poke-ball.png'; }}
                     />
-                    <div>
+                    <div className="ml-3">
                       <div className="font-bold">{calcs.allyDef.name}</div>
-                      <div className="text-xs text-gray-500">{calcs.allyDef.types?.join(' / ')}</div>
+                      <div className="flex space-x-1 mt-1">
+                        {(calcs.allyDef.types || []).map((t: string) => <TypeChip key={t} type={t} />)}
+                      </div>
                     </div>
                   </div>
-                  {STAT_NAMES.map(s => renderStatRow(s, s, calcs.pAlly, activeAlly.sps, activeAlly.nature, allyBoosts[s] || 0, true))}
+                  {STAT_NAMES.map(s => renderStatRow(s, s, calcs.pAlly, allySps, activeAlly.nature, allyBoosts[s] || 0, true))}
+                  <div className="mt-3 pt-3 border-t border-gray-700">
+                    <h4 className="text-xs font-bold text-gray-400 mb-2">SP Tweaker (local)</h4>
+                    {STAT_NAMES.map(s => {
+                      const val = allySps[s] || 0;
+                      return (
+                        <div key={s} className="flex items-center text-xs mb-1">
+                          <span className="w-8 uppercase text-gray-500">{s}</span>
+                          <input type="range" min="0" max="32" value={val}
+                            onChange={(e) => updateSimulator({ allySps: { ...allySps, [s]: parseInt(e.target.value) } })}
+                            className="mx-1 flex-1 accent-blue-500" />
+                          <span className="w-6 text-right font-mono text-blue-400">{val}</span>
+                        </div>
+                      );
+                    })}
+                    <button onClick={() => updateTeamMember(activeAlly.id, { sps: allySps as any })} 
+                      className="w-full mt-2 px-2 py-1 bg-blue-600 hover:bg-blue-500 text-white text-xs rounded">
+                      💾 Save to {activeAlly.name}
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
 
             {/* MIDDLE: FIELD CONTROLS */}
             <div className="space-y-4">
+              <button onClick={resetSimulator} className="w-full px-3 py-1.5 bg-gray-700 hover:bg-gray-600 text-gray-300 text-xs font-bold rounded border border-gray-600">
+                🔄 Reset All Modifiers
+              </button>
+
               <div className="bg-gray-800 p-4 rounded-xl border border-gray-700">
                 <h2 className="text-gray-300 font-bold mb-3 text-center">Field Conditions</h2>
                 <div className="grid grid-cols-2 gap-2 text-sm mb-3">
-                  <select className="bg-gray-700 p-1 rounded" value={weather} onChange={(e) => setWeather(e.target.value)}>
+                  <select className="bg-gray-700 p-1 rounded" value={weather} onChange={(e) => updateSimulator({ weather: e.target.value })}>
                     <option value="">No Weather</option>
                     <option value="Sun">Sun</option>
                     <option value="Rain">Rain</option>
                     <option value="Sand">Sand</option>
                     <option value="Snow">Snow</option>
                   </select>
-                  <select className="bg-gray-700 p-1 rounded" value={terrain} onChange={(e) => setTerrain(e.target.value)}>
+                  <select className="bg-gray-700 p-1 rounded" value={terrain} onChange={(e) => updateSimulator({ terrain: e.target.value })}>
                     <option value="">No Terrain</option>
                     <option value="Grassy">Grassy</option>
                     <option value="Electric">Electric</option>
@@ -323,12 +350,12 @@ const LiveSimulator: React.FC = () => {
                   </select>
                 </div>
                 <div className="grid grid-cols-2 gap-1 text-xs">
-                  <label className="flex items-center space-x-1"><input type="checkbox" checked={fairyAura} onChange={() => setFairyAura(!fairyAura)} /><span className="text-pink-400">Fairy Aura</span></label>
-                  <label className="flex items-center space-x-1"><input type="checkbox" checked={darkAura} onChange={() => setDarkAura(!darkAura)} /><span className="text-purple-400">Dark Aura</span></label>
-                  <label className="flex items-center space-x-1"><input type="checkbox" checked={allyTailwind} onChange={() => setAllyTailwind(!allyTailwind)} /><span>Ally Tailwind</span></label>
-                  <label className="flex items-center space-x-1"><input type="checkbox" checked={threatTailwind} onChange={() => setThreatTailwind(!threatTailwind)} /><span>Enemy Tailwind</span></label>
-                  <label className="flex items-center space-x-1"><input type="checkbox" checked={allyHelpingHand} onChange={() => setAllyHelpingHand(!allyHelpingHand)} /><span>Ally Help Hand</span></label>
-                  <label className="flex items-center space-x-1"><input type="checkbox" checked={threatHelpingHand} onChange={() => setThreatHelpingHand(!threatHelpingHand)} /><span>Enemy Help Hand</span></label>
+                  <label className="flex items-center space-x-1"><input type="checkbox" checked={fairyAura} onChange={() => updateSimulator({ fairyAura: !fairyAura })} /><span className="text-pink-400">Fairy Aura</span></label>
+                  <label className="flex items-center space-x-1"><input type="checkbox" checked={darkAura} onChange={() => updateSimulator({ darkAura: !darkAura })} /><span className="text-purple-400">Dark Aura</span></label>
+                  <label className="flex items-center space-x-1"><input type="checkbox" checked={allyTailwind} onChange={() => updateSimulator({ allyTailwind: !allyTailwind })} /><span>Ally Tailwind</span></label>
+                  <label className="flex items-center space-x-1"><input type="checkbox" checked={threatTailwind} onChange={() => updateSimulator({ threatTailwind: !threatTailwind })} /><span>Enemy Tailwind</span></label>
+                  <label className="flex items-center space-x-1"><input type="checkbox" checked={allyHelpingHand} onChange={() => updateSimulator({ allyHelpingHand: !allyHelpingHand })} /><span>Ally Help Hand</span></label>
+                  <label className="flex items-center space-x-1"><input type="checkbox" checked={threatHelpingHand} onChange={() => updateSimulator({ threatHelpingHand: !threatHelpingHand })} /><span>Enemy Help Hand</span></label>
                 </div>
               </div>
 
@@ -337,17 +364,29 @@ const LiveSimulator: React.FC = () => {
                 <div className="grid grid-cols-2 gap-2 text-xs">
                   <div>
                     <span className="text-blue-400 block mb-1">Ally Screens</span>
-                    <label className="flex items-center space-x-1"><input type="checkbox" checked={allyReflect} onChange={() => setAllyReflect(!allyReflect)} /><span>Reflect</span></label>
-                    <label className="flex items-center space-x-1"><input type="checkbox" checked={allyLightScreen} onChange={() => setAllyLightScreen(!allyLightScreen)} /><span>Light Screen</span></label>
-                    <label className="flex items-center space-x-1"><input type="checkbox" checked={allyAuroraVeil} onChange={() => setAllyAuroraVeil(!allyAuroraVeil)} /><span>Aurora Veil</span></label>
-                    <label className="flex items-center space-x-1 mt-1"><input type="checkbox" checked={allyBurn} onChange={() => setAllyBurn(!allyBurn)} /><span className="text-orange-400">Burn</span></label>
+                    <label className="flex items-center space-x-1"><input type="checkbox" checked={allyReflect} onChange={() => updateSimulator({ allyReflect: !allyReflect })} /><span>Reflect</span></label>
+                    <label className="flex items-center space-x-1"><input type="checkbox" checked={allyLightScreen} onChange={() => updateSimulator({ allyLightScreen: !allyLightScreen })} /><span>Light Screen</span></label>
+                    <label className="flex items-center space-x-1"><input type="checkbox" checked={allyAuroraVeil} onChange={() => updateSimulator({ allyAuroraVeil: !allyAuroraVeil })} /><span>Aurora Veil</span></label>
                   </div>
                   <div>
                     <span className="text-red-400 block mb-1">Enemy Screens</span>
-                    <label className="flex items-center space-x-1"><input type="checkbox" checked={threatReflect} onChange={() => setThreatReflect(!threatReflect)} /><span>Reflect</span></label>
-                    <label className="flex items-center space-x-1"><input type="checkbox" checked={threatLightScreen} onChange={() => setThreatLightScreen(!threatLightScreen)} /><span>Light Screen</span></label>
-                    <label className="flex items-center space-x-1"><input type="checkbox" checked={threatAuroraVeil} onChange={() => setThreatAuroraVeil(!threatAuroraVeil)} /><span>Aurora Veil</span></label>
-                    <label className="flex items-center space-x-1 mt-1"><input type="checkbox" checked={threatBurn} onChange={() => setThreatBurn(!threatBurn)} /><span className="text-orange-400">Burn</span></label>
+                    <label className="flex items-center space-x-1"><input type="checkbox" checked={threatReflect} onChange={() => updateSimulator({ threatReflect: !threatReflect })} /><span>Reflect</span></label>
+                    <label className="flex items-center space-x-1"><input type="checkbox" checked={threatLightScreen} onChange={() => updateSimulator({ threatLightScreen: !threatLightScreen })} /><span>Light Screen</span></label>
+                    <label className="flex items-center space-x-1"><input type="checkbox" checked={threatAuroraVeil} onChange={() => updateSimulator({ threatAuroraVeil: !threatAuroraVeil })} /><span>Aurora Veil</span></label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-800 p-4 rounded-xl border border-orange-700">
+                <h2 className="text-orange-400 font-bold mb-3 text-center">⚕️ Status Conditions</h2>
+                <div className="grid grid-cols-2 gap-2 text-xs">
+                  <div>
+                    <span className="text-blue-400 block mb-1">Ally</span>
+                    <label className="flex items-center space-x-1"><input type="checkbox" checked={allyBurn} onChange={() => updateSimulator({ allyBurn: !allyBurn })} /><span className="text-orange-400">🔥 Burn (Atk×½)</span></label>
+                  </div>
+                  <div>
+                    <span className="text-red-400 block mb-1">Enemy</span>
+                    <label className="flex items-center space-x-1"><input type="checkbox" checked={threatBurn} onChange={() => updateSimulator({ threatBurn: !threatBurn })} /><span className="text-orange-400">🔥 Burn (Atk×½)</span></label>
                   </div>
                 </div>
               </div>
@@ -376,7 +415,7 @@ const LiveSimulator: React.FC = () => {
                   ...linkedThreats.map(t => ({ id: t.id, label: `🔗 ${t.name}` })),
                   ...otherThreats.map(t => ({ id: t.id, label: t.name })),
                 ]}
-                onChange={(val) => setActiveThreatId(val)}
+                onChange={(val) => updateSimulator({ activeThreatId: val })}
               />
 
               {activeThreat && calcs && (
@@ -385,15 +424,36 @@ const LiveSimulator: React.FC = () => {
                     <img 
                       src={getShowdownSpriteUrl(calcs.threatDef?.name || activeThreat.name)}
                       alt={activeThreat.name}
-                      className="w-12 h-12 bg-gray-700 rounded-full"
+                      className="w-40 h-40 bg-gray-700 rounded-full"
                       onError={(e) => { (e.target as HTMLImageElement).src = 'https://play.pokemonshowdown.com/sprites/items/poke-ball.png'; }}
                     />
-                    <div>
+                    <div className="ml-3">
                       <div className="font-bold">{calcs.threatDef.name}</div>
-                      <div className="text-xs text-gray-500">{calcs.threatDef.types?.join(' / ')}</div>
+                      <div className="flex space-x-1 mt-1">
+                        {(calcs.threatDef.types || []).map((t: string) => <TypeChip key={t} type={t} />)}
+                      </div>
                     </div>
                   </div>
-                  {STAT_NAMES.map(s => renderStatRow(s, s, calcs.pThreat, activeThreat.sps, activeThreat.nature, threatBoosts[s] || 0, false))}
+                  {STAT_NAMES.map(s => renderStatRow(s, s, calcs.pThreat, threatSps, activeThreat.nature, threatBoosts[s] || 0, false))}
+                  <div className="mt-3 pt-3 border-t border-gray-700">
+                    <h4 className="text-xs font-bold text-gray-400 mb-2">SP Tweaker (local)</h4>
+                    {STAT_NAMES.map(s => {
+                      const val = threatSps[s] || 0;
+                      return (
+                        <div key={s} className="flex items-center text-xs mb-1">
+                          <span className="w-8 uppercase text-gray-500">{s}</span>
+                          <input type="range" min="0" max="32" value={val}
+                            onChange={(e) => updateSimulator({ threatSps: { ...threatSps, [s]: parseInt(e.target.value) } })}
+                            className="mx-1 flex-1 accent-red-500" />
+                          <span className="w-6 text-right font-mono text-red-400">{val}</span>
+                        </div>
+                      );
+                    })}
+                    <button onClick={() => updateThreat(activeThreat.id, { sps: threatSps as any })} 
+                      className="w-full mt-2 px-2 py-1 bg-red-600 hover:bg-red-500 text-white text-xs rounded">
+                      💾 Save to {activeThreat.name}
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
