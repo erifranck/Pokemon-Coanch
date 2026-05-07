@@ -37,6 +37,7 @@ const LiveSimulator: React.FC = () => {
     fairyAura, darkAura,
     allyBoosts, threatBoosts,
     allySps, threatSps,
+    gravity,
     updateSimulator, resetSimulator,
   } = sim;
 
@@ -44,15 +45,15 @@ const LiveSimulator: React.FC = () => {
   const activeThreat = threats.find(t => t.id === activeThreatId);
   const activeFormat = (formatData as any)[regulation];
 
-  // Initialize local SPs from card data
+  // Initialize local SPs from card data when ally/threat changes
   useEffect(() => {
-    if (activeAlly && (!allySps || Object.keys(allySps).length === 0)) {
+    if (activeAlly) {
       updateSimulator({ allySps: { ...activeAlly.sps } });
     }
   }, [activeAllyId]);
 
   useEffect(() => {
-    if (activeThreat && (!threatSps || Object.keys(threatSps).length === 0)) {
+    if (activeThreat) {
       updateSimulator({ threatSps: { ...activeThreat.sps } });
     }
   }, [activeThreatId]);
@@ -86,14 +87,14 @@ const LiveSimulator: React.FC = () => {
 
     const pAlly = createChampionsPokemon(gen, allyDef.name, allyDef.baseStats, allySps, activeAlly.nature, {
       item: activeAlly.item,
-      ability: Object.values(allyDef.abilities || {})[0] as string,
+      ability: activeAlly.ability || Object.values(allyDef.abilities || {})[0] as string,
       boosts: allyBoosts,
       status: allyBurn ? 'brn' : '',
     });
 
     const pThreat = createChampionsPokemon(gen, threatDef.name, threatDef.baseStats, threatSps, activeThreat.nature, {
       item: activeThreat.item,
-      ability: Object.values(threatDef.abilities || {})[0] as string,
+      ability: activeThreat.ability || Object.values(threatDef.abilities || {})[0] as string,
       boosts: threatBoosts,
       status: threatBurn ? 'brn' : '',
     });
@@ -106,6 +107,7 @@ const LiveSimulator: React.FC = () => {
       defenderSide: { isTailwind: threatTailwind, isReflect: threatReflect, isLightScreen: threatLightScreen, isAuroraVeil: threatAuroraVeil },
       isFairyAura: fairyAura,
       isDarkAura: darkAura,
+      isGravity: gravity,
     });
 
     // Field for threat attacking ally
@@ -116,6 +118,7 @@ const LiveSimulator: React.FC = () => {
       defenderSide: { isTailwind: allyTailwind, isReflect: allyReflect, isLightScreen: allyLightScreen, isAuroraVeil: allyAuroraVeil },
       isFairyAura: fairyAura,
       isDarkAura: darkAura,
+      isGravity: gravity,
     });
 
     // Speed
@@ -167,7 +170,7 @@ const LiveSimulator: React.FC = () => {
   const calcs = useMemo(() => runCalcs(), [
     activeAlly, activeThreat, weather, terrain, allyTailwind, threatTailwind,
     allyReflect, allyLightScreen, allyAuroraVeil, threatReflect, threatLightScreen, threatAuroraVeil,
-    allyBurn, threatBurn, allyHelpingHand, threatHelpingHand, allyBoosts, threatBoosts, fairyAura, darkAura, allySps, threatSps
+    allyBurn, threatBurn, allyHelpingHand, threatHelpingHand, allyBoosts, threatBoosts, fairyAura, darkAura, allySps, threatSps, gravity
   ]);
 
   const boostSetter = (isAlly: boolean, stat: string) => ({
@@ -316,8 +319,12 @@ const LiveSimulator: React.FC = () => {
                         </div>
                       );
                     })}
+                    <button onClick={() => updateSimulator({ allySps: { ...activeAlly.sps } })} 
+                      className="w-full mt-1 px-2 py-1 bg-gray-600 hover:bg-gray-500 text-white text-xs rounded">
+                      ↩️ Reset to original
+                    </button>
                     <button onClick={() => updateTeamMember(activeAlly.id, { sps: allySps as any })} 
-                      className="w-full mt-2 px-2 py-1 bg-blue-600 hover:bg-blue-500 text-white text-xs rounded">
+                      className="w-full mt-1 px-2 py-1 bg-blue-600 hover:bg-blue-500 text-white text-xs rounded">
                       💾 Save to {activeAlly.name}
                     </button>
                   </div>
@@ -352,6 +359,7 @@ const LiveSimulator: React.FC = () => {
                 <div className="grid grid-cols-2 gap-1 text-xs">
                   <label className="flex items-center space-x-1"><input type="checkbox" checked={fairyAura} onChange={() => updateSimulator({ fairyAura: !fairyAura })} /><span className="text-pink-400">Fairy Aura</span></label>
                   <label className="flex items-center space-x-1"><input type="checkbox" checked={darkAura} onChange={() => updateSimulator({ darkAura: !darkAura })} /><span className="text-purple-400">Dark Aura</span></label>
+                  <label className="flex items-center space-x-1"><input type="checkbox" checked={gravity} onChange={() => updateSimulator({ gravity: !gravity })} /><span className="text-amber-400">Gravity</span></label>
                   <label className="flex items-center space-x-1"><input type="checkbox" checked={allyTailwind} onChange={() => updateSimulator({ allyTailwind: !allyTailwind })} /><span>Ally Tailwind</span></label>
                   <label className="flex items-center space-x-1"><input type="checkbox" checked={threatTailwind} onChange={() => updateSimulator({ threatTailwind: !threatTailwind })} /><span>Enemy Tailwind</span></label>
                   <label className="flex items-center space-x-1"><input type="checkbox" checked={allyHelpingHand} onChange={() => updateSimulator({ allyHelpingHand: !allyHelpingHand })} /><span>Ally Help Hand</span></label>
@@ -449,8 +457,12 @@ const LiveSimulator: React.FC = () => {
                         </div>
                       );
                     })}
+                    <button onClick={() => updateSimulator({ threatSps: { ...activeThreat.sps } })} 
+                      className="w-full mt-1 px-2 py-1 bg-gray-600 hover:bg-gray-500 text-white text-xs rounded">
+                      ↩️ Reset to original
+                    </button>
                     <button onClick={() => updateThreat(activeThreat.id, { sps: threatSps as any })} 
-                      className="w-full mt-2 px-2 py-1 bg-red-600 hover:bg-red-500 text-white text-xs rounded">
+                      className="w-full mt-1 px-2 py-1 bg-red-600 hover:bg-red-500 text-white text-xs rounded">
                       💾 Save to {activeThreat.name}
                     </button>
                   </div>

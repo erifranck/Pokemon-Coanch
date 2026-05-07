@@ -23,6 +23,7 @@ interface SimState {
   threatHelpingHand: boolean;
   fairyAura: boolean;
   darkAura: boolean;
+  gravity: boolean;
   allyBoosts: Record<string, number>;
   threatBoosts: Record<string, number>;
 }
@@ -48,6 +49,7 @@ const defaultState: SimState = {
   threatHelpingHand: false,
   fairyAura: false,
   darkAura: false,
+  gravity: false,
   allyBoosts: {},
   threatBoosts: {},
 };
