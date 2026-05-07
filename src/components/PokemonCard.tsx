@@ -28,7 +28,16 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
   if (!activeFormat) return <div className="p-4 bg-gray-800 rounded-lg border border-red-500 text-red-400 text-sm">Format data not found for {regulation}. Run update script.</div>;
 
   const basePokemonDef = activeFormat.pokemon[card.pokemonId];
-  if (!basePokemonDef) return <div className="p-4 bg-gray-800 rounded-lg border border-yellow-500 text-yellow-400 text-sm">Pokémon {card.pokemonId} not found in {regulation} Dex.</div>;
+  if (!basePokemonDef) return (
+    <div className="p-4 bg-gray-800 rounded-lg border border-yellow-500 text-yellow-400 text-sm">
+      Pokémon {card.name || card.pokemonId} is not legal in {regulation}.
+      {onRemove && (
+        <button onClick={onRemove} className="ml-3 px-2 py-1 bg-red-600 hover:bg-red-500 text-white text-xs rounded">
+          Remove Illegal
+        </button>
+      )}
+    </div>
+  );
 
   const itemDefObj = card.item ? Object.values(activeFormat.items || {}).find((i: any) => i.name === card.item) as any : null;
   
