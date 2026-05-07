@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 const SIM_KEY = 'poke-coach-simulator';
 
@@ -68,18 +68,31 @@ function saveState(state: SimState) {
 
 export function useSimulatorState() {
   const [state, setState] = useState<SimState>(loadState);
+  const stateRef = useRef(state);
+  stateRef.current = state;
 
   useEffect(() => {
     saveState(state);
   }, [state]);
 
-  const update = (updates: Partial<SimState>) => {
+  const update = useCallback((updates: Partial<SimState>) => {
     setState(prev => ({ ...prev, ...updates }));
-  };
+  }, []);
 
-  const reset = () => {
+  // Stable SP change handler that reads latest state via ref (avoids stale closure on rapid slider drags)
+  const setAllySp = useCallback((stat: string, val: number) => {
+    const current = stateRef.current;
+    update({ allySps: { ...current.allySps, [stat]: val } });
+  }, [update]);
+
+  const setThreatSp = useCallback((stat: string, val: number) => {
+    const current = stateRef.current;
+    update({ threatSps: { ...current.threatSps, [stat]: val } });
+  }, [update]);
+
+  const reset = useCallback(() => {
     setState({ ...defaultState });
-  };
+  }, []);
 
-  return { ...state, updateSimulator: update, resetSimulator: reset };
+  return { ...state, updateSimulator: update, resetSimulator: reset, setAllySp, setThreatSp };
 }

@@ -39,6 +39,7 @@ const LiveSimulator: React.FC = () => {
     allySps, threatSps,
     gravity,
     updateSimulator, resetSimulator,
+    setAllySp, setThreatSp,
   } = sim;
 
   const activeAlly = team.find(t => t.id === activeAllyId);
@@ -123,12 +124,14 @@ const LiveSimulator: React.FC = () => {
 
     // Speed
     let allySpe = pAlly.stats.spe;
+    if (activeAlly.item?.toLowerCase() === 'Choice Scarf') allySpe = Math.floor(allySpe * 1.5);
     if (allyTailwind) allySpe *= 2;
     if (weather === 'Rain' && pAlly.ability === 'Swift Swim') allySpe *= 2;
     if (weather === 'Sun' && pAlly.ability === 'Chlorophyll') allySpe *= 2;
     if (allyBoosts['spe']) allySpe = Math.floor(allySpe * (Math.max(2, 2 + allyBoosts['spe']) / 2));
 
     let threatSpe = pThreat.stats.spe;
+    if (activeThreat.item?.toLowerCase() === 'Choice Scarf') threatSpe = Math.floor(threatSpe * 1.5);
     if (threatTailwind) threatSpe *= 2;
     if (weather === 'Rain' && pThreat.ability === 'Swift Swim') threatSpe *= 2;
     if (weather === 'Sun' && pThreat.ability === 'Chlorophyll') threatSpe *= 2;
@@ -313,7 +316,7 @@ const LiveSimulator: React.FC = () => {
                         <div key={s} className="flex items-center text-xs mb-1">
                           <span className="w-8 uppercase text-gray-500">{s}</span>
                           <input type="range" min="0" max="32" value={val}
-                            onChange={(e) => updateSimulator({ allySps: { ...allySps, [s]: parseInt(e.target.value) } })}
+                            onChange={(e) => setAllySp(s, parseInt(e.target.value))}
                             className="mx-1 flex-1 accent-blue-500" />
                           <span className="w-6 text-right font-mono text-blue-400">{val}</span>
                         </div>
@@ -451,7 +454,7 @@ const LiveSimulator: React.FC = () => {
                         <div key={s} className="flex items-center text-xs mb-1">
                           <span className="w-8 uppercase text-gray-500">{s}</span>
                           <input type="range" min="0" max="32" value={val}
-                            onChange={(e) => updateSimulator({ threatSps: { ...threatSps, [s]: parseInt(e.target.value) } })}
+                            onChange={(e) => setThreatSp(s, parseInt(e.target.value))}
                             className="mx-1 flex-1 accent-red-500" />
                           <span className="w-6 text-right font-mono text-red-400">{val}</span>
                         </div>

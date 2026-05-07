@@ -85,7 +85,10 @@ export const createChampionsPokemon = (
   const status = options.status || '';
   const ability = options.ability || '';
   
-  // 1. Calculate raw stats based on SPs
+  // Convert SPs to EVs: 1 SP ≈ 8 EVs at level 50, capped at 252
+  const toEv = (sp: number) => Math.min(252, (sp || 0) * 8);
+
+  // Compute raw stats for display (includes nature + item modifiers)
   const rawStats = {
     hp: calculateFinalStat('hp', baseStats.hp, sps.hp || 0, 1.0, item),
     atk: calculateFinalStat('atk', baseStats.atk, sps.atk || 0, getNatureModifier('atk', nature), item),
@@ -95,28 +98,24 @@ export const createChampionsPokemon = (
     spe: calculateFinalStat('spe', baseStats.spe, sps.spe || 0, getNatureModifier('spe', nature), item)
   };
 
-  // 2. Instantiate Pokemon with all modifiers
+  // 2. Instantiate Pokemon with EVs (this makes @smogon/calc use correct stats internally)
   const pokeOptions: any = {
     ...options,
     level: 50,
     nature: nature,
     ivs: { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 },
-    evs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 }
+    evs: { hp: toEv(sps.hp), atk: toEv(sps.atk), def: toEv(sps.def), spa: toEv(sps.spa), spd: toEv(sps.spd), spe: toEv(sps.spe) }
   };
   
-  // Pass ability and boosts to @smogon/calc if provided
+  if (item) pokeOptions.item = item;
   if (ability) pokeOptions.ability = ability;
   if (Object.keys(boosts).length > 0) pokeOptions.boosts = boosts;
+  if (status) pokeOptions.status = status;
 
   const poke = new Pokemon(generation, name, pokeOptions);
   
-  poke.rawStats = rawStats;
-  poke.stats = rawStats;
-  
-  // Apply status
-  if (status) {
-    (poke as any).status = status;
-  }
+  // Store computed stats for display purposes
+  (poke as any).rawStats = rawStats;
   
   return poke;
 };
