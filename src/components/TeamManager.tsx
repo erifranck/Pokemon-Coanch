@@ -6,11 +6,13 @@ import { getShowdownSpriteUrl } from '../utils/spriteUtils';
 import { parsePokePaste, exportToPokePaste } from '../utils/pokepaste';
 
 export const TeamManager: React.FC = () => {
-  const { teams, activeTeamId, setActiveTeam, createTeam, cloneTeam, deleteTeam, updateTeamRegulation } = useAppStore();
+  const { teams, activeTeamId, setActiveTeam, createTeam, cloneTeam, deleteTeam, updateTeamRegulation, renameTeam } = useAppStore();
   const activeTeam = teams[activeTeamId];
   const [showImport, setShowImport] = useState(false);
   const [importText, setImportText] = useState('');
   const [importMsg, setImportMsg] = useState('');
+  const [editingName, setEditingName] = useState(false);
+  const [editName, setEditName] = useState('');
 
   if (!activeTeam) return null;
 
@@ -63,7 +65,29 @@ export const TeamManager: React.FC = () => {
           ))}
         </select>
 
-        <select 
+        {editingName ? (
+          <input
+            className="bg-gray-700 text-white p-1 rounded border border-blue-500 text-sm max-w-[140px]"
+            value={editName}
+            autoFocus
+            onChange={(e) => setEditName(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') { renameTeam(activeTeamId, editName); setEditingName(false); }
+              if (e.key === 'Escape') setEditingName(false);
+            }}
+            onBlur={() => { renameTeam(activeTeamId, editName); setEditingName(false); }}
+          />
+        ) : (
+          <button
+            onClick={() => { setEditName(activeTeam.name); setEditingName(true); }}
+            className="text-gray-500 hover:text-yellow-400 text-xs"
+            title="Rename team"
+          >
+            ✏️
+          </button>
+        )}
+
+        <select
           className="bg-gray-800 text-gray-300 p-1.5 rounded-lg border border-gray-700 focus:outline-none focus:border-blue-500 text-xs max-w-[140px]"
           value={activeTeam.regulation || 'gen9championsvgc2026regma'}
           onChange={(e) => updateTeamRegulation(activeTeamId, e.target.value)}

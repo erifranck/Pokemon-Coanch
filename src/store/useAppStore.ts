@@ -14,6 +14,7 @@ interface AppState {
   deleteTeam: (id: string) => void;
   setActiveTeam: (id: string) => void;
   updateTeamRegulation: (id: string, regulation: string) => void;
+  renameTeam: (id: string, name: string) => void;
   
   // Active Team Member Actions
   addTeamMember: (card: Omit<TeamCard, 'id' | 'isTeamMember'>) => void;
@@ -99,6 +100,14 @@ export const useAppStore = create<AppState>()(
         if (!team) return state;
         return {
           teams: { ...state.teams, [id]: { ...team, regulation } }
+        };
+      }),
+
+      renameTeam: (id, name) => set((state) => {
+        const team = state.teams[id];
+        if (!team || !name.trim()) return state;
+        return {
+          teams: { ...state.teams, [id]: { ...team, name: name.trim() } }
         };
       }),
 

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import formatData from '../data/format_data.json';
+import movesData from '../data/moves.json';
 import type { PokemonCard as PokemonCardType, StatMap } from '../types/store';
 import { calculateFinalStat, getNatureModifier } from '../utils/calcAdapter';
 import { getMegaFormId } from '../utils/megaUtils';
 import { getShowdownSpriteUrl } from '../utils/spriteUtils';
 import { TypeChip } from './TypeChip';
 import { Combobox } from './Combobox';
+import { MoveSelector, type MoveOption } from './MoveSelector';
 import { checkLegality } from '../utils/legality';
 import { useAppStore } from '../store/useAppStore';
 
@@ -156,22 +158,38 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
         <div className="space-y-2 text-sm">
           {[0, 1, 2, 3].map((idx) => {
             const moveId = card.moves[idx] || '';
+            
+            // Build enriched move options with inline details
+            const buildMoveOptions = (): MoveOption[] => {
+              const allowedMoves = basePokemonDef.allowedMoves || [];
+              const allMoves = Object.values(activeFormat.moves || {}) as any[];
+              const movesDict = (movesData as Record<string, any>);
+              
+              let filteredMoves = allMoves;
+              if (allowedMoves.length > 0) {
+                const allowedSet = new Set(allowedMoves);
+                filteredMoves = allMoves.filter((m: any) => allowedSet.has(m.id));
+              }
+              
+              return filteredMoves.map((m: any) => {
+                const fullMoveData = movesDict[m.id];
+                return {
+                  id: m.id,
+                  name: m.name,
+                  type: m.type || (fullMoveData?.type ?? 'Normal'),
+                  basePower: m.basePower ?? (fullMoveData?.basePower ?? 0),
+                  category: m.category || (fullMoveData?.category ?? 'Status'),
+                  accuracy: fullMoveData?.accuracy ?? true,
+                };
+              });
+            };
+            
             return (
               <div key={idx}>
-                <Combobox 
+                <MoveSelector 
                   label={`Move ${idx + 1}`}
                   value={moveId}
-                  options={(() => {
-                    const allowedMoves = basePokemonDef.allowedMoves || [];
-                    const allMoves = Object.values(activeFormat.moves || {}) as any[];
-                    if (allowedMoves.length > 0) {
-                      // Filter to only learnable moves
-                      const allowedSet = new Set(allowedMoves);
-                      return allMoves.filter((m: any) => allowedSet.has(m.id)).map((m: any) => ({ id: m.id, label: m.name }));
-                    }
-                    // Fallback: show all format moves
-                    return allMoves.map((m: any) => ({ id: m.id, label: m.name }));
-                  })()}
+                  options={buildMoveOptions()}
                   onChange={(val) => {
                     const newMoves = [...card.moves] as [string, string, string, string];
                     newMoves[idx] = val;
