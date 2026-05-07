@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "pokemon-coach": {
+      "type": "stdio",
+      "command": "/Users/erifranck/PersonalProjects/pokemonTeamBuilderAICoach/.venv/bin/python3",
+      "args": ["-m", "mcp_server.server"],
+      "cwd": "/Users/erifranck/PersonalProjects/pokemonTeamBuilderAICoach",
+      "env": {}
+    }
+  }
+}
