@@ -37,7 +37,7 @@ const LiveSimulator: React.FC = () => {
     fairyAura, darkAura,
     allyBoosts, threatBoosts,
     allySps, threatSps,
-    gravity,
+    gravity, gameType,
     updateSimulator, resetSimulator,
     setAllySp, setThreatSp,
   } = sim;
@@ -102,6 +102,7 @@ const LiveSimulator: React.FC = () => {
 
     // Field for ally attacking threat
     const allyField = new Field({
+      gameType,
       weather: (weather || undefined) as any,
       terrain: (terrain || undefined) as any,
       attackerSide: { isTailwind: allyTailwind, isHelpingHand: allyHelpingHand },
@@ -113,6 +114,7 @@ const LiveSimulator: React.FC = () => {
 
     // Field for threat attacking ally
     const threatField = new Field({
+      gameType,
       weather: (weather || undefined) as any,
       terrain: (terrain || undefined) as any,
       attackerSide: { isTailwind: threatTailwind, isHelpingHand: threatHelpingHand },
@@ -173,7 +175,7 @@ const LiveSimulator: React.FC = () => {
   const calcs = useMemo(() => runCalcs(), [
     activeAlly, activeThreat, weather, terrain, allyTailwind, threatTailwind,
     allyReflect, allyLightScreen, allyAuroraVeil, threatReflect, threatLightScreen, threatAuroraVeil,
-    allyBurn, threatBurn, allyHelpingHand, threatHelpingHand, allyBoosts, threatBoosts, fairyAura, darkAura, allySps, threatSps, gravity
+    allyBurn, threatBurn, allyHelpingHand, threatHelpingHand, allyBoosts, threatBoosts, fairyAura, darkAura, allySps, threatSps, gravity, gameType
   ]);
 
   const boostSetter = (isAlly: boolean, stat: string) => ({
@@ -341,9 +343,37 @@ const LiveSimulator: React.FC = () => {
                 🔄 Reset All Modifiers
               </button>
 
-              <div className="bg-gray-800 p-4 rounded-xl border border-gray-700">
-                <h2 className="text-gray-300 font-bold mb-3 text-center">Field Conditions</h2>
-                <div className="grid grid-cols-2 gap-2 text-sm mb-3">
+               <div className="bg-gray-800 p-4 rounded-xl border border-gray-700">
+                 <h2 className="text-gray-300 font-bold mb-3 text-center">Field Conditions</h2>
+                 
+                 {/* Battle Format Toggle */}
+                 <div className="mb-3">
+                   <p className="text-xs text-gray-400 text-center mb-1.5">Battle Format</p>
+                   <div className="flex rounded overflow-hidden border border-gray-600">
+                     <button
+                       onClick={() => updateSimulator({ gameType: 'Singles' })}
+                       className={`flex-1 py-1 text-xs font-bold transition-colors ${
+                         gameType === 'Singles' 
+                           ? 'bg-blue-600 text-white' 
+                           : 'bg-gray-700 text-gray-400 hover:bg-gray-600'
+                       }`}
+                     >
+                       Singles
+                     </button>
+                     <button
+                       onClick={() => updateSimulator({ gameType: 'Doubles' })}
+                       className={`flex-1 py-1 text-xs font-bold transition-colors ${
+                         gameType === 'Doubles' 
+                           ? 'bg-blue-600 text-white' 
+                           : 'bg-gray-700 text-gray-400 hover:bg-gray-600'
+                       }`}
+                     >
+                       Doubles
+                     </button>
+                   </div>
+                 </div>
+
+                 <div className="grid grid-cols-2 gap-2 text-sm mb-3">
                   <select className="bg-gray-700 p-1 rounded" value={weather} onChange={(e) => updateSimulator({ weather: e.target.value })}>
                     <option value="">No Weather</option>
                     <option value="Sun">Sun</option>

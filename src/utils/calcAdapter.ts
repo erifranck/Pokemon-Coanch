@@ -45,23 +45,37 @@ export const calculateFinalStat = (
 // Map of nature modifiers
 // { natureName: [increasedStat, decreasedStat] }
 export const NATURES: Record<string, [string, string] | null> = {
+  // +Atk
   Adamant: ['atk', 'spa'],
-  Bold: ['def', 'atk'],
-  Brave: ['atk', 'spe'],
-  Calm: ['spd', 'atk'],
-  Careful: ['spd', 'spa'],
-  Impish: ['def', 'spa'],
-  Jolly: ['spe', 'spa'],
-  Modest: ['spa', 'atk'],
-  Quiet: ['spa', 'spe'],
+  Brave:   ['atk', 'spe'],
+  Lonely:  ['atk', 'def'],
+  Naughty: ['atk', 'spd'],
+  // +Def
+  Bold:    ['def', 'atk'],
+  Impish:  ['def', 'spa'],
+  Lax:     ['def', 'spd'],
   Relaxed: ['def', 'spe'],
-  Sassy: ['spd', 'spe'],
-  Timid: ['spe', 'atk'],
-  Hardy: null,
-  Docile: null,
+  // +SpA
+  Mild:    ['spa', 'def'],
+  Modest:  ['spa', 'atk'],
+  Quiet:   ['spa', 'spe'],
+  Rash:    ['spa', 'spd'],
+  // +SpD
+  Calm:    ['spd', 'atk'],
+  Careful: ['spd', 'spa'],
+  Gentle:  ['spd', 'def'],
+  Sassy:   ['spd', 'spe'],
+  // +Spe
+  Hasty:   ['spe', 'def'],
+  Jolly:   ['spe', 'spa'],
+  Naive:   ['spe', 'spd'],
+  Timid:   ['spe', 'atk'],
+  // Neutral
+  Hardy:   null,
+  Docile:  null,
   Serious: null,
   Bashful: null,
-  Quirky: null
+  Quirky:  null
 };
 
 export const getNatureModifier = (statName: string, nature: string): number => {

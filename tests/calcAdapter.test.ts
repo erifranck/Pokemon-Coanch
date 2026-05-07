@@ -116,8 +116,8 @@ describe('calculateFinalStat', () => {
 });
 
 describe('NATURES lookup', () => {
-  it('has 17 entries (12 beneficial + 5 neutral)', () => {
-    expect(Object.keys(NATURES)).toHaveLength(17);
+  it('has 25 entries (20 beneficial + 5 neutral)', () => {
+    expect(Object.keys(NATURES)).toHaveLength(25);
   });
 
   it('neutral natures return null effect', () => {

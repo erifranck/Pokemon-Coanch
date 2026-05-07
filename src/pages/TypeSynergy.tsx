@@ -6,6 +6,7 @@ import { getMegaFormId } from '../utils/megaUtils';
 import { getImmunityTypes } from '../utils/abilityImmunities';
 import { getShowdownSpriteUrl } from '../utils/spriteUtils';
 import { TypeChip } from '../components/TypeChip';
+import CoreAnalysisModal from '../components/CoreAnalysisModal';
 
 const getMultiplierColor = (mult: number) => {
   if (mult === 0) return 'bg-gray-600';
@@ -30,6 +31,7 @@ const TypeSynergy: React.FC = () => {
   const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
   const [useTera, setUseTera] = useState(false);
   const [useAbilities, setUseAbilities] = useState(false);
+  const [showCoreModal, setShowCoreModal] = useState(false);
 
   const activeFormat = (formatData as any)[regulation];
 
@@ -94,6 +96,12 @@ const TypeSynergy: React.FC = () => {
               Consider Abilities
             </label>
           </div>
+          <button
+            onClick={() => setShowCoreModal(true)}
+            className="flex items-center space-x-2 bg-gray-800 p-2 rounded-lg border border-yellow-700 hover:border-yellow-500 text-yellow-400 font-bold text-sm"
+          >
+            🔍 Analyze Cores
+          </button>
         </div>
       </div>
 
@@ -166,7 +174,7 @@ const TypeSynergy: React.FC = () => {
                   return { id: member.id, mult, isAbilityImmune };
                 });
 
-                const isWarning = rowWeaks >= 3 && rowResis <= 1;
+                const isWarning = rowWeaks >= 3 && rowResis <= rowWeaks - 1;
 
                 return (
                   <tr key={attackingType} className="border-b border-gray-700">
@@ -194,6 +202,13 @@ const TypeSynergy: React.FC = () => {
           </table>
         </div>
       )}
+
+      <CoreAnalysisModal
+        team={team}
+        activeFormat={activeFormat}
+        isOpen={showCoreModal}
+        onClose={() => setShowCoreModal(false)}
+      />
     </div>
   );
 };

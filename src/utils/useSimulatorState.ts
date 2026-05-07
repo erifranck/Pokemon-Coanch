@@ -26,6 +26,7 @@ interface SimState {
   gravity: boolean;
   allyBoosts: Record<string, number>;
   threatBoosts: Record<string, number>;
+  gameType: 'Singles' | 'Doubles';
 }
 
 const defaultState: SimState = {
@@ -52,6 +53,7 @@ const defaultState: SimState = {
   gravity: false,
   allyBoosts: {},
   threatBoosts: {},
+  gameType: 'Doubles' as const,
 };
 
 function loadState(): SimState {

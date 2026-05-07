@@ -21,6 +21,12 @@ const Layout: React.FC = () => {
               Type Synergy
             </NavLink>
             <NavLink 
+              to="/coverage" 
+              className={({ isActive }) => `px-3 py-2 rounded-md ${isActive ? 'bg-gray-700 text-white' : 'text-gray-300 hover:bg-gray-700'}`}
+            >
+              Offensive Cvrg
+            </NavLink>
+            <NavLink 
               to="/threats" 
               className={({ isActive }) => `px-3 py-2 rounded-md ${isActive ? 'bg-gray-700 text-white' : 'text-gray-300 hover:bg-gray-700'}`}
             >

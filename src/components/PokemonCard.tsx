@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import formatData from '../data/format_data.json';
 import movesData from '../data/moves.json';
 import type { PokemonCard as PokemonCardType, StatMap } from '../types/store';
-import { calculateFinalStat, getNatureModifier } from '../utils/calcAdapter';
+import { calculateFinalStat, getNatureModifier, NATURES } from '../utils/calcAdapter';
 import { getMegaFormId } from '../utils/megaUtils';
 import { getShowdownSpriteUrl } from '../utils/spriteUtils';
 import { TypeChip } from './TypeChip';
@@ -18,6 +18,24 @@ interface Props {
 }
 
 const STAT_NAMES = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'] as const;
+const STAT_LABELS: Record<string, string> = {
+  hp: 'HP', atk: 'Atk', def: 'Def', spa: 'SpA', spd: 'SpD', spe: 'Spe'
+};
+
+// Reverse lookup: "increased,decreased" → nature name
+const NATURE_REVERSE: Record<string, string> = {};
+for (const [name, effect] of Object.entries(NATURES)) {
+  if (effect) {
+    NATURE_REVERSE[`${effect[0]},${effect[1]}`] = name;
+  }
+}
+
+// All natures for the dropdown with their effects
+const ALL_NATURE_OPTIONS = Object.entries(NATURES).map(([name, effect]) => ({
+  name,
+  plus: effect ? effect[0] : null,
+  minus: effect ? effect[1] : null,
+}));
 
 export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
   const { teams, activeTeamId } = useAppStore();
@@ -69,6 +87,65 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
     onUpdate({ sps: { ...card.sps, [stat]: newVal } });
   };
 
+  // Nature effect breakdown for toggles — local state to allow temporary deviation
+  const natureEffect = NATURES[card.nature];
+  const derivedPlus: string | null = natureEffect ? natureEffect[0] : null;
+  const derivedMinus: string | null = natureEffect ? natureEffect[1] : null;
+  
+  const [togglePlus, setTogglePlus] = useState<string | null>(derivedPlus);
+  const [toggleMinus, setToggleMinus] = useState<string | null>(derivedMinus);
+
+  // Sync local toggles when nature changes from dropdown
+  useEffect(() => {
+    setTogglePlus(derivedPlus);
+    setToggleMinus(derivedMinus);
+  }, [card.nature, derivedPlus, derivedMinus]);
+
+  // Toggle handler: single button cycles neutral → + → – → neutral
+  // Rules: only 1 plus and 1 minus at a time. When cycling +→–, old minus clears.
+  const handleNatureToggle = (stat: string) => {
+    let newPlus = togglePlus;
+    let newMinus = toggleMinus;
+
+    if (togglePlus === stat) {
+      // Currently + → toggle to – (old minus gets replaced)
+      newPlus = null;
+      newMinus = stat;
+    } else if (toggleMinus === stat) {
+      // Currently – → toggle to neutral
+      newMinus = null;
+    } else if (togglePlus !== null) {
+      // Clicking + on a different stat → replace old +, keep old –
+      newPlus = stat;
+    } else {
+      // Neutral → toggle to +
+      newPlus = stat;
+    }
+
+    // Safety: can't have same stat as both + and –
+    if (newPlus === newMinus) {
+      newPlus = null;
+      newMinus = null;
+    }
+
+    // Update local toggle state immediately (always responsive)
+    setTogglePlus(newPlus);
+    setToggleMinus(newMinus);
+
+    // Only update nature when BOTH are set (valid combo) or NEITHER is set
+    if (newPlus && newMinus) {
+      const key = `${newPlus},${newMinus}`;
+      const resolved = NATURE_REVERSE[key];
+      if (resolved) {
+        onUpdate({ nature: resolved }); // Valid combo → update nature (triggers useEffect sync)
+      }
+      // Invalid combo (no nature exists for this pair): keep toggles, don't touch nature
+    } else if (!newPlus && !newMinus) {
+      onUpdate({ nature: 'Serious' }); // All clear → neutral
+    }
+    // If only one toggle active → keep current nature, don't touch it
+  };
+
   return (
     <div className={`bg-gray-800 p-4 rounded-xl shadow-lg border flex flex-col space-y-4 ${isHoldingMegaStone && previewMode === 'mega' ? 'border-purple-500 shadow-purple-900/20' : 'border-gray-700'}`}>
       <div className="flex justify-between items-start">
@@ -108,15 +185,18 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
       <div className="grid grid-cols-2 gap-4">
         {/* Basic Info */}
         <div className="space-y-2 text-sm">
+          {/* Nature selector with stat indicators */}
           <div>
             <label className="block text-gray-400 text-xs">Nature</label>
             <select 
-              className="w-full bg-gray-700 rounded p-1"
+              className="w-full bg-gray-700 rounded p-1 text-sm"
               value={card.nature}
               onChange={(e) => onUpdate({ nature: e.target.value })}
             >
-              {['Adamant', 'Bold', 'Brave', 'Calm', 'Careful', 'Impish', 'Jolly', 'Modest', 'Quiet', 'Relaxed', 'Sassy', 'Timid'].map(n => (
-                <option key={n} value={n}>{n}</option>
+              {ALL_NATURE_OPTIONS.map(({ name, plus, minus }) => (
+                <option key={name} value={name}>
+                  {name}{plus ? ` (↑${STAT_LABELS[plus]} / ↓${STAT_LABELS[minus!]})` : ' (neutral)'}
+                </option>
               ))}
             </select>
           </div>
@@ -203,7 +283,7 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
         </div>
       </div>
 
-      {/* SP Allocation */}
+      {/* SP Allocation with Nature Toggles */}
       <div className="mt-4 pt-4 border-t border-gray-700">
         <div className="flex justify-between items-center mb-2">
           <h3 className="font-semibold text-gray-300">Stat Points (SP)</h3>
@@ -214,7 +294,32 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
         
         <div className="space-y-1">
           {STAT_NAMES.map(stat => {
+            // HP can't be modified by nature
+            if (stat === 'hp') {
+              const spVal = card.sps[stat] || 0;
+              const totalFinal = calculateFinalStat(stat, activePokemonDef.baseStats[stat], spVal, 1.0, card.item);
+              return (
+                <div key={stat} className="flex items-center text-xs">
+                  <span className="w-6 font-bold uppercase text-gray-400">{STAT_LABELS[stat]}</span>
+                  {/* HP toggle placeholder (same width as toggle button) */}
+                  <span className="w-8 flex-shrink-0" />
+                  <span className="w-8 text-right font-mono text-gray-300">{totalFinal}</span>
+                  <input 
+                    type="range" 
+                    min="0" 
+                    max="32" 
+                    value={spVal}
+                    onChange={(e) => handleSpChange(stat, parseInt(e.target.value))}
+                    className="mx-2 flex-1 accent-blue-500"
+                  />
+                  <span className="w-6 text-right font-mono text-blue-400">{spVal}</span>
+                </div>
+              );
+            }
+
             const spVal = card.sps[stat] || 0;
+            const isPlus = togglePlus === stat;
+            const isMinus = toggleMinus === stat;
             const natureMod = getNatureModifier(stat, card.nature);
             
             // Calculate stat WITHOUT item to check for modification
@@ -226,9 +331,30 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
 
             return (
               <div key={stat} className="flex items-center text-xs">
-                <span className={`w-8 font-bold uppercase ${natureMod > 1 ? 'text-red-400' : natureMod < 1 ? 'text-blue-400' : 'text-gray-400'}`}>
-                  {stat}
+                <span className={`w-6 font-bold uppercase ${natureMod > 1 ? 'text-red-400' : natureMod < 1 ? 'text-blue-400' : 'text-gray-400'}`}>
+                  {STAT_LABELS[stat]}
                 </span>
+                
+                {/* Nature toggle: single button cycling neutral → + → – → neutral */}
+                <span className="w-8 flex items-center justify-center flex-shrink-0">
+                  <button
+                    onClick={() => handleNatureToggle(stat)}
+                    className={`w-5 h-5 rounded text-[10px] font-bold leading-none flex items-center justify-center transition-all
+                      ${isPlus 
+                        ? 'bg-red-500 text-white shadow-sm shadow-red-500/30 scale-110' 
+                        : isMinus
+                        ? 'bg-blue-500 text-white shadow-sm shadow-blue-500/30 scale-110'
+                        : 'bg-gray-700 text-gray-500 hover:bg-gray-600 hover:text-gray-300'}`}
+                    title={
+                      isPlus ? `↑${STAT_LABELS[stat]} — click for ↓${STAT_LABELS[stat]}` 
+                      : isMinus ? `↓${STAT_LABELS[stat]} — click to clear`
+                      : `Set nature boost for ${STAT_LABELS[stat]}`
+                    }
+                  >
+                    {isMinus ? '–' : '+'}
+                  </button>
+                </span>
+                
                 <span className={`w-8 text-right font-mono ${isModified ? 'text-green-400 font-bold' : 'text-gray-300'}`}>
                   {totalFinal}
                 </span>
