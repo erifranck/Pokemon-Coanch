@@ -12,8 +12,10 @@
 export function getShowdownSpriteId(name: string): string {
   let id = name.toLowerCase();
   // Fix mega X/Y forms: remove dash before X/Y
-  // "charizard-mega-x" → "charizard-megax", "charizard-mega-y" → "charizard-megay"
   id = id.replace(/-mega-x$/, '-megax').replace(/-mega-y$/, '-megay');
+  // Fix Paldean forms: Showdown CDN removes dash between paldea and the form suffix
+  // "tauros-paldea-aqua" → "tauros-paldeaaqua"
+  id = id.replace(/-paldea-(blaze|aqua|combat)$/, '-paldea$1');
   return id;
 }
 
