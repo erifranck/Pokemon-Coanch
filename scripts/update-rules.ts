@@ -1,5 +1,5 @@
 import pkg from 'pokemon-showdown';
-const { Dex, TeamValidator } = pkg;
+const { Dex } = pkg;
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
@@ -58,29 +58,38 @@ async function extractRules() {
             // We just ensure they exist in Gen 9 and are not explicitly banned.
             if (species.gen > 9) continue;
             
-            // "Past" is tricky. Some "Past" mons are transferable via HOME and legal, some aren't.
-            // If they are marked 'Past', they might not be in Gen 9 at all.
             if (species.isNonstandard === 'Past') {
                 continue; 
-            }
-            
-            // Wait, why is it finding 0? Let's debug inside the loop!
-            if (species.name === 'Pikachu') {
-                 console.log('Pikachu debug:', { 
-                     isNonstandard: species.isNonstandard, 
-                     tier: species.tier,
-                     isBannedByRuleTable: ruleTable.isBannedSpecies(species)
-                 });
             }
             
             // Wait, formatDex.data.Species might be empty if we don't call includeData!
             // Actually `formatDex.species.all()` is the proper way to get all species
 
             
-            // We can skip the learnset for now to make this faster and less error prone.
-            // Move legality is extremely complex in VGC (egg moves, event moves, etc).
-            // A basic team builder usually just uses all learnable moves by getting them from a static pokedex API or we just omit them for now.
+            // Extract learnset: get all move IDs this species can learn
             const allowedMoves: string[] = [];
+            try {
+                // Access learnsets via data.Learnsets directly
+                const speciesLearnset = (formatDex.data as any).Learnsets?.[species.id];
+                if (speciesLearnset && speciesLearnset.learnset) {
+                    for (const moveId of Object.keys(speciesLearnset.learnset)) {
+                        allowedMoves.push(moveId);
+                    }
+                }
+                
+                // For alternate forms (Mega, regional), inherit base species learnset
+                if (allowedMoves.length === 0 && species.baseSpecies && species.baseSpecies !== species.name) {
+                    const baseId = species.baseSpecies.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    const baseLearnset = (formatDex.data as any).Learnsets?.[baseId];
+                    if (baseLearnset && baseLearnset.learnset) {
+                        for (const moveId of Object.keys(baseLearnset.learnset)) {
+                            allowedMoves.push(moveId);
+                        }
+                    }
+                }
+            } catch (e) {
+                // Learnset extraction failed; leave empty as fallback
+            }
             
             legalPokemon[species.id] = {
                 id: species.id,

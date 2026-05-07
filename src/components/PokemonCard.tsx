@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import formatData from '../data/format_data.json';
 import type { PokemonCard as PokemonCardType, StatMap } from '../types/store';
 import { calculateFinalStat, getNatureModifier } from '../utils/calcAdapter';
+import { getMegaFormId } from '../utils/megaUtils';
 import { TypeChip } from './TypeChip';
 import { Combobox } from './Combobox';
 import { checkLegality } from '../utils/legality';
@@ -30,18 +31,8 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
 
   const itemDefObj = card.item ? Object.values(activeFormat.items || {}).find((i: any) => i.name === card.item) as any : null;
   
-   // Determine if it holds its own mega stone.
-  // megaStone is an object like { "Charizard": "Charizard-Mega-X" } mapping base species -> mega form name.
-  let megaFormId = null;
-  if (itemDefObj && itemDefObj.megaStone) {
-      const megaStoneObj = itemDefObj.megaStone;
-      if (typeof megaStoneObj === 'object' && megaStoneObj[basePokemonDef.name]) {
-          const targetName = megaStoneObj[basePokemonDef.name];
-          if (typeof targetName === 'string') {
-              megaFormId = targetName.toLowerCase().replace(/[^a-z0-9]/g, '');
-          }
-      }
-  }
+  // Use shared mega detection utility
+  const megaFormId = getMegaFormId(itemDefObj, basePokemonDef);
   
   const isHoldingMegaStone = megaFormId !== null;
   
@@ -160,8 +151,17 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
                 <Combobox 
                   label={`Move ${idx + 1}`}
                   value={moveId}
-                  options={Object.values(activeFormat.moves || {})
-                    .map((move: any) => ({ id: move.id, label: move.name }))}
+                  options={(() => {
+                    const allowedMoves = basePokemonDef.allowedMoves || [];
+                    const allMoves = Object.values(activeFormat.moves || {}) as any[];
+                    if (allowedMoves.length > 0) {
+                      // Filter to only learnable moves
+                      const allowedSet = new Set(allowedMoves);
+                      return allMoves.filter((m: any) => allowedSet.has(m.id)).map((m: any) => ({ id: m.id, label: m.name }));
+                    }
+                    // Fallback: show all format moves
+                    return allMoves.map((m: any) => ({ id: m.id, label: m.name }));
+                  })()}
                   onChange={(val) => {
                     const newMoves = [...card.moves] as [string, string, string, string];
                     newMoves[idx] = val;

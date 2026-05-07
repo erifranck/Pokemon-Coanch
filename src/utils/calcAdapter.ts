@@ -81,6 +81,10 @@ export const createChampionsPokemon = (
   options: any = {}
 ) => {
   const item = options.item || '';
+  const boosts = options.boosts || {};
+  const status = options.status || '';
+  const ability = options.ability || '';
+  
   // 1. Calculate raw stats based on SPs
   const rawStats = {
     hp: calculateFinalStat('hp', baseStats.hp, sps.hp || 0, 1.0, item),
@@ -91,17 +95,28 @@ export const createChampionsPokemon = (
     spe: calculateFinalStat('spe', baseStats.spe, sps.spe || 0, getNatureModifier('spe', nature), item)
   };
 
-  // 2. Instantiate Pokemon and forcefully override the calculated stats
-  const poke = new Pokemon(generation, name, {
+  // 2. Instantiate Pokemon with all modifiers
+  const pokeOptions: any = {
     ...options,
     level: 50,
     nature: nature,
     ivs: { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 },
     evs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 }
-  });
+  };
+  
+  // Pass ability and boosts to @smogon/calc if provided
+  if (ability) pokeOptions.ability = ability;
+  if (Object.keys(boosts).length > 0) pokeOptions.boosts = boosts;
+
+  const poke = new Pokemon(generation, name, pokeOptions);
   
   poke.rawStats = rawStats;
   poke.stats = rawStats;
+  
+  // Apply status
+  if (status) {
+    (poke as any).status = status;
+  }
   
   return poke;
 };
@@ -114,4 +129,56 @@ export const calculateChampionsDamage = (
   field: Field
 ) => {
   return calculate(gen, attacker, defender, move, field);
+};
+
+/**
+ * Full damage calculation result with 16 damage rolls.
+ * Returns HP values, percentages, and KO indicators.
+ */
+export interface DamageResult {
+  rolls: number[];
+  minHp: number;
+  maxHp: number;
+  minPct: number;
+  maxPct: number;
+  defenderHp: number;
+  isOhko: boolean;
+  is2hko: boolean;
+  is3hko: boolean;
+}
+
+export const calculateFullDamageResult = (
+  gen: Generation,
+  attacker: Pokemon,
+  defender: Pokemon,
+  move: Move,
+  field: Field
+): DamageResult | null => {
+  const result = calculate(gen, attacker, defender, move, field);
+  
+  if (!result || !result.damage || !Array.isArray(result.damage)) return null;
+
+  const rolls = result.damage as number[];
+  const defenderHp = defender.stats.hp;
+  
+  const minHp = Math.min(...rolls);
+  const maxHp = Math.max(...rolls);
+  const minPct = Math.round((minHp / defenderHp) * 1000) / 10;
+  const maxPct = Math.round((maxHp / defenderHp) * 1000) / 10;
+  
+  const isOhko = minHp >= defenderHp;
+  const is2hko = !isOhko && minHp * 2 >= defenderHp;
+  const is3hko = !isOhko && !is2hko && minHp * 3 >= defenderHp;
+
+  return {
+    rolls,
+    minHp,
+    maxHp,
+    minPct,
+    maxPct,
+    defenderHp,
+    isOhko,
+    is2hko,
+    is3hko,
+  };
 };

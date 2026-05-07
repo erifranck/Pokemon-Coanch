@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { PokemonCard } from '../components/PokemonCard';
+import { MetaSidebar } from '../components/MetaSidebar';
 import formatData from '../data/format_data.json';
 
 const ThreatMatrix: React.FC = () => {
@@ -37,10 +38,12 @@ const ThreatMatrix: React.FC = () => {
     .slice(0, 10) : [];
 
   return (
-    <div className="space-y-6">
-      <div className="flex justify-between items-end">
-        <div>
-          <h1 className="text-3xl font-bold mb-2">Threat Matrix</h1>
+    <div className="flex gap-6">
+      <MetaSidebar />
+      <div className="flex-1 space-y-6 min-w-0">
+        <div className="flex justify-between items-end">
+          <div>
+            <h1 className="text-3xl font-bold mb-2">Threat Matrix</h1>
           <p className="text-gray-400">Manage common meta threats and link them to your team members.</p>
         </div>
       </div>
@@ -114,6 +117,7 @@ const ThreatMatrix: React.FC = () => {
             No threats saved. Add common enemy sets to test your team against.
           </div>
         )}
+      </div>
       </div>
     </div>
   );

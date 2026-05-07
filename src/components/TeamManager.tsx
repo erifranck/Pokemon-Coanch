@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAppStore } from '../store/useAppStore';
 import formatData from '../data/format_data.json';
+import { getMegaFormId } from '../utils/megaUtils';
 
 export const TeamManager: React.FC = () => {
   const { teams, activeTeamId, setActiveTeam, createTeam, cloneTeam, deleteTeam, updateTeamRegulation } = useAppStore();
@@ -48,16 +49,8 @@ export const TeamManager: React.FC = () => {
               let activeId = basePokemonId;
               
               const baseDef = activeFormat.pokemon[basePokemonId];
-              if (itemDef && itemDef.megaStone && baseDef) {
-                  // megaStone is an object like { "Charizard": "Charizard-Mega-X" }
-                  const megaStoneObj = itemDef.megaStone;
-                  if (typeof megaStoneObj === 'object' && megaStoneObj[baseDef.name]) {
-                      const targetName = megaStoneObj[baseDef.name];
-                      if (typeof targetName === 'string') {
-                          activeId = targetName.toLowerCase().replace(/[^a-z0-9]/g, '');
-                      }
-                  }
-              }
+              const megaId = getMegaFormId(itemDef, baseDef);
+              if (megaId) activeId = megaId;
 
               return (
                 <img 

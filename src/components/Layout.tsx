@@ -38,6 +38,12 @@ const Layout: React.FC = () => {
       <main className="flex-1 max-w-7xl mx-auto w-full p-4">
         <Outlet />
       </main>
+      <footer className="bg-gray-800 border-t border-gray-700 p-3 text-center">
+        <p className="text-xs text-gray-500">
+          Powered by <span className="text-yellow-500 font-bold">Pokémon Showdown</span> &amp; <span className="text-pink-500 font-bold">Munchstats</span>
+          {' '}— Data sourced from community-driven competitive Pokémon resources.
+        </p>
+      </footer>
     </div>
   );
 };
