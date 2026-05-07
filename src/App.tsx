@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import TeamBuilder from './pages/TeamBuilder'
 import ThreatMatrix from './pages/ThreatMatrix'
@@ -7,7 +7,7 @@ import TypeSynergy from './pages/TypeSynergy'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<TeamBuilder />} />
@@ -16,7 +16,7 @@ function App() {
           <Route path="simulator" element={<LiveSimulator />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

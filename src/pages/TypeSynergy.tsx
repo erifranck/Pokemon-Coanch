@@ -4,6 +4,7 @@ import { TYPES, calculateDefensiveMultiplier } from '../utils/typeChart';
 import formatData from '../data/format_data.json';
 import { getMegaFormId } from '../utils/megaUtils';
 import { getImmunityTypes } from '../utils/abilityImmunities';
+import { getShowdownSpriteUrl } from '../utils/spriteUtils';
 import { TypeChip } from '../components/TypeChip';
 
 const getMultiplierColor = (mult: number) => {
@@ -111,7 +112,7 @@ const TypeSynergy: React.FC = () => {
                     <th key={member.id} className="p-2 border-b border-gray-700 w-16">
                       <div className="flex flex-col items-center justify-center space-y-1">
                         <img 
-                          src={`https://play.pokemonshowdown.com/sprites/gen5/${activeId}.png`}
+                          src={getShowdownSpriteUrl(activeFormat?.pokemon?.[activeId]?.name || activeId)}
                           alt={member.name}
                           className="w-12 h-12 bg-gray-800 rounded-full"
                           onError={(e) => { (e.target as HTMLImageElement).src = 'https://play.pokemonshowdown.com/sprites/items/poke-ball.png'; }}
@@ -144,9 +145,10 @@ const TypeSynergy: React.FC = () => {
 
                   // Apply ability-based immunities if toggle is active
                   if (useAbilities && mult !== 0) {
-                    const baseDef = activeFormat?.pokemon?.[member.pokemonId];
-                    if (baseDef) {
-                      const abilities = Object.values(baseDef.abilities || {});
+                    const activeId = getActiveFormId(member);
+                    const activeDef = activeFormat?.pokemon?.[activeId];
+                    if (activeDef) {
+                      const abilities = Object.values(activeDef.abilities || {});
                       for (const ability of abilities) {
                         const immunityTypes = getImmunityTypes(ability as string);
                         if (immunityTypes.includes(attackingType)) {

@@ -3,6 +3,8 @@ import { useAppStore } from '../store/useAppStore';
 import { createChampionsPokemon, calculateFullDamageResult, getNatureModifier } from '../utils/calcAdapter';
 import formatData from '../data/format_data.json';
 import { getMegaFormId } from '../utils/megaUtils';
+import { getShowdownSpriteUrl } from '../utils/spriteUtils';
+import { Combobox } from '../components/Combobox';
 import { Field, Generations, Move } from '@smogon/calc';
 
 const gen = Generations.get(9);
@@ -273,19 +275,19 @@ const LiveSimulator: React.FC = () => {
             {/* LEFT: ALLY */}
             <div className="bg-gray-800 p-4 rounded-xl shadow-lg border-2 border-blue-900">
               <h2 className="text-blue-400 font-bold mb-4">Your Field</h2>
-              <select 
-                className="w-full bg-gray-700 p-2 rounded mb-4 text-white font-bold"
+              <Combobox
+                label="Select Ally"
+                className="mb-5"
                 value={activeAllyId}
-                onChange={(e) => setActiveAllyId(e.target.value)}
-              >
-                {team.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
-              </select>
+                options={team.map(t => ({ id: t.id, label: t.name }))}
+                onChange={(val) => setActiveAllyId(val)}
+              />
 
               {activeAlly && calcs && (
                 <div className="space-y-2 text-sm">
                   <div className="flex items-center space-x-2 mb-2">
                     <img 
-                      src={`https://play.pokemonshowdown.com/sprites/gen5/${calcs.allyResolved?.megaId || activeAlly.pokemonId}.png`}
+                      src={getShowdownSpriteUrl(calcs.allyDef?.name || activeAlly.name)}
                       alt={activeAlly.name}
                       className="w-12 h-12 bg-gray-700 rounded-full"
                       onError={(e) => { (e.target as HTMLImageElement).src = 'https://play.pokemonshowdown.com/sprites/items/poke-ball.png'; }}
@@ -366,25 +368,22 @@ const LiveSimulator: React.FC = () => {
             {/* RIGHT: THREAT */}
             <div className="bg-gray-800 p-4 rounded-xl shadow-lg border-2 border-red-900">
               <h2 className="text-red-400 font-bold mb-4">Enemy Field</h2>
-              <select 
-                className="w-full bg-gray-700 p-2 rounded mb-4 text-white font-bold"
+              <Combobox
+                label="Select Threat"
                 value={activeThreatId}
-                onChange={(e) => setActiveThreatId(e.target.value)}
-              >
-                <option value="" disabled>Select Threat...</option>
-                {linkedThreats.length > 0 && <optgroup label="Linked to your Ally">
-                  {linkedThreats.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
-                </optgroup>}
-                <optgroup label="Other Threats">
-                  {otherThreats.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
-                </optgroup>
-              </select>
+                className="mb-5"
+                options={[
+                  ...linkedThreats.map(t => ({ id: t.id, label: `🔗 ${t.name}` })),
+                  ...otherThreats.map(t => ({ id: t.id, label: t.name })),
+                ]}
+                onChange={(val) => setActiveThreatId(val)}
+              />
 
               {activeThreat && calcs && (
                 <div className="space-y-2 text-sm">
                   <div className="flex items-center space-x-2 mb-2">
                     <img 
-                      src={`https://play.pokemonshowdown.com/sprites/gen5/${calcs.threatResolved?.megaId || activeThreat.pokemonId}.png`}
+                      src={getShowdownSpriteUrl(calcs.threatDef?.name || activeThreat.name)}
                       alt={activeThreat.name}
                       className="w-12 h-12 bg-gray-700 rounded-full"
                       onError={(e) => { (e.target as HTMLImageElement).src = 'https://play.pokemonshowdown.com/sprites/items/poke-ball.png'; }}

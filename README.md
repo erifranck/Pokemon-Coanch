@@ -1,73 +1,36 @@
-# React + TypeScript + Vite
+# Pokémon Coach — Competitive Team Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[🇪🇸 Español](README.es.md)
 
-Currently, two official plugins are available:
+A professional Pokémon VGC team builder for the **Pokémon Champions** format (Regulation M-A), powered by **Pokémon Showdown** and **Munchstats**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Team Builder** — Build 6-Pokémon teams using the 66-SP stat system with full legality validation
+- **Mega Evolution Toggle** — Automatic Mega form detection with base/mega stat comparison
+- **Type Synergy Matrix** — Defensive type chart with ability-based immunity overrides (Levitate, Water Absorb, etc.)
+- **Threat Matrix** — Manage meta threats with pre-built sets from Munchstats usage data
+- **Live Damage Simulator** — Calculate damage with 16 rolls, stat stages, screens, weather, terrain, burn, Helping Hand, Fairy/Dark Aura
+- **Unit Tests** — 55 tests covering stat math, type chart, mega detection, and ability immunities
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Powered By
 
-## Expanding the ESLint configuration
+| Source | Data |
+|---|---|
+| [Pokémon Showdown](https://pokemonshowdown.com/) | Pokémon data, learnsets, format rules, sprites |
+| [Munchstats](https://munchstats.com/) | Competitive usage statistics, common sets |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Development
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run update-data    # Extract format rules from Showdown
+npm run dev            # Start dev server
+npm test               # Run tests
+npm run build          # Production build
+npm run deploy         # Deploy to GitHub Pages
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+React 19 · TypeScript · Zustand · Tailwind CSS · @smogon/calc · Vitest

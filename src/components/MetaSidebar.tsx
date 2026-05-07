@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import metaSetsData from '../data/meta_sets.json';
+import { getShowdownSpriteUrl } from '../utils/spriteUtils';
 
 export const MetaSidebar: React.FC = () => {
   const { addThreat } = useAppStore();
@@ -55,7 +56,7 @@ export const MetaSidebar: React.FC = () => {
                   onClick={() => setExpandedId(isExpanded ? null : meta.id)}
                 >
                   <img
-                    src={`https://play.pokemonshowdown.com/sprites/gen5/${meta.id}.png`}
+                    src={getShowdownSpriteUrl(meta.name)}
                     alt={meta.name}
                     className="w-8 h-8 bg-gray-700 rounded-full mr-2"
                     onError={(e) => { (e.target as HTMLImageElement).src = 'https://play.pokemonshowdown.com/sprites/items/poke-ball.png'; }}
@@ -99,11 +100,13 @@ export const MetaSidebar: React.FC = () => {
         </div>
       )}
 
+      {!collapsed && (
       <div className="p-2 border-t border-gray-700 text-center">
         <p className="text-[10px] text-gray-500">
           Powered by Pokémon Showdown &amp; Munchstats
         </p>
       </div>
+      )}
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import { useAppStore } from '../store/useAppStore';
 import formatData from '../data/format_data.json';
 import { getMegaFormId } from '../utils/megaUtils';
+import { getShowdownSpriteUrl } from '../utils/spriteUtils';
 
 export const TeamManager: React.FC = () => {
   const { teams, activeTeamId, setActiveTeam, createTeam, cloneTeam, deleteTeam, updateTeamRegulation } = useAppStore();
@@ -55,7 +56,7 @@ export const TeamManager: React.FC = () => {
               return (
                 <img 
                   key={m.id}
-                  src={`https://play.pokemonshowdown.com/sprites/gen5/${activeId}.png`}
+                  src={getShowdownSpriteUrl(activeFormat?.pokemon?.[activeId]?.name || activeId)}
                   alt={m.name}
                   className="w-10 h-10 bg-gray-700 rounded-full"
                   onError={(e) => { (e.target as HTMLImageElement).src = 'https://play.pokemonshowdown.com/sprites/items/poke-ball.png'; }}

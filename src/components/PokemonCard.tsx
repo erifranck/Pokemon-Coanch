@@ -3,6 +3,7 @@ import formatData from '../data/format_data.json';
 import type { PokemonCard as PokemonCardType, StatMap } from '../types/store';
 import { calculateFinalStat, getNatureModifier } from '../utils/calcAdapter';
 import { getMegaFormId } from '../utils/megaUtils';
+import { getShowdownSpriteUrl } from '../utils/spriteUtils';
 import { TypeChip } from './TypeChip';
 import { Combobox } from './Combobox';
 import { checkLegality } from '../utils/legality';
@@ -62,7 +63,7 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
       <div className="flex justify-between items-start">
         <div className="flex items-center space-x-3">
           <img 
-            src={`https://play.pokemonshowdown.com/sprites/gen5/${activePokemonDef.id}.png`} 
+            src={getShowdownSpriteUrl(activePokemonDef.name)} 
             alt={activePokemonDef.name}
             className="w-16 h-16 bg-gray-700 rounded-full"
             onError={(e) => { (e.target as HTMLImageElement).src = 'https://play.pokemonshowdown.com/sprites/items/poke-ball.png'; }}

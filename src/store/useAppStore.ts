@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { TeamCard, ThreatCard, Relationships, PokemonCard, TeamProfile } from '../types/store';
+import type { TeamCard, ThreatCard, Relationships, TeamProfile } from '../types/store';
 
 interface AppState {
   teams: Record<string, TeamProfile>;
@@ -108,7 +108,7 @@ export const useAppStore = create<AppState>()(
         if (!activeTeam || activeTeam.members.length >= 6) return state;
         
         const id = generateId();
-        const newMembers = [...activeTeam.members, { ...card, id, isTeamMember: true }];
+        const newMembers = [...activeTeam.members, { ...card, id, isTeamMember: true as const }];
         
         return {
           teams: { ...state.teams, [state.activeTeamId]: { ...activeTeam, members: newMembers } },

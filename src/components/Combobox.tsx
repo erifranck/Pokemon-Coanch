@@ -11,9 +11,10 @@ interface Props {
   options: ComboboxOption[];
   onChange: (id: string) => void;
   isIllegal?: boolean;
+  className?: string;
 }
 
-export const Combobox: React.FC<Props> = ({ label, value, options, onChange, isIllegal = false }) => {
+export const Combobox: React.FC<Props> = ({ label, className, value, options, onChange, isIllegal = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -49,7 +50,7 @@ export const Combobox: React.FC<Props> = ({ label, value, options, onChange, isI
     : "w-full bg-gray-700 border border-gray-600 rounded p-1 pl-2 focus:outline-none focus:ring-1 focus:ring-blue-500";
 
   return (
-    <div className="relative" ref={wrapperRef}>
+    <div className={ "relative " + className } ref={wrapperRef}>
       <label className="block text-gray-400 text-xs mb-0.5 flex justify-between">
         {label}
         {isIllegal && <span className="text-red-500 font-bold" title="Illegal in current format">⚠️</span>}

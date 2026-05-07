@@ -1,4 +1,4 @@
-import { calculate, Pokemon, Move, Field, Generation } from '@smogon/calc';
+import { calculate, Pokemon, Move, Field } from '@smogon/calc';
 
 // Standard Pokemon Stat Formula at Level 50 with 31 IVs
 // HP = Math.floor((2 * Base + 31 + Math.floor(EV / 4)) * 50 / 100) + 10 + 50
@@ -73,7 +73,7 @@ export const getNatureModifier = (statName: string, nature: string): number => {
 };
 
 export const createChampionsPokemon = (
-  generation: Generation,
+  generation: any,
   name: string,
   baseStats: Record<string, number>,
   sps: Record<string, number>,
@@ -122,7 +122,7 @@ export const createChampionsPokemon = (
 };
 
 export const calculateChampionsDamage = (
-  gen: Generation,
+  gen: any,
   attacker: Pokemon,
   defender: Pokemon,
   move: Move,
@@ -148,7 +148,7 @@ export interface DamageResult {
 }
 
 export const calculateFullDamageResult = (
-  gen: Generation,
+  gen: any,
   attacker: Pokemon,
   defender: Pokemon,
   move: Move,
