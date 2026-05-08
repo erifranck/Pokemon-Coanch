@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { PokemonCard } from '../components/PokemonCard';
 import { MetaSidebar } from '../components/MetaSidebar';
+import ThreatCoverageModal from '../components/ThreatCoverageModal';
 import formatData from '../data/format_data.json';
 
 const ThreatMatrix: React.FC = () => {
@@ -9,6 +10,7 @@ const ThreatMatrix: React.FC = () => {
   const team = teams[activeTeamId]?.members || [];
   const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
   const [search, setSearch] = useState('');
+  const [showCoverage, setShowCoverage] = useState(false);
 
   const activeFormat = (formatData as any)[regulation];
 
@@ -46,6 +48,12 @@ const ThreatMatrix: React.FC = () => {
             <h1 className="text-3xl font-bold mb-2">Threat Matrix</h1>
           <p className="text-gray-400">Manage common meta threats and link them to your team members.</p>
         </div>
+        <button
+          onClick={() => setShowCoverage(true)}
+          className="px-4 py-2 bg-red-600 hover:bg-red-500 text-white text-sm font-bold rounded-lg flex items-center gap-2"
+        >
+          🔍 Analyze Coverage
+        </button>
       </div>
 
       <div className="relative z-10">
@@ -119,6 +127,14 @@ const ThreatMatrix: React.FC = () => {
         )}
       </div>
       </div>
+
+      <ThreatCoverageModal
+        team={team}
+        threats={threats}
+        activeFormat={activeFormat}
+        isOpen={showCoverage}
+        onClose={() => setShowCoverage(false)}
+      />
     </div>
   );
 };

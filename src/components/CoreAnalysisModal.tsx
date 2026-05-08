@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import type { TeamCard } from '../types/store';
+import type { PokemonCard } from '../types/store';
 import { analyzeTeamCores, type CoreEntry, getEffectiveSpriteName, getEffectiveTypes } from '../utils/coreAnalysis';
 import { getShowdownSpriteUrl } from '../utils/spriteUtils';
 import { TypeChip } from './TypeChip';
 
 interface Props {
-  team: TeamCard[];
+  team: PokemonCard[];
   activeFormat: any;
   isOpen: boolean;
   onClose: () => void;
@@ -39,7 +39,7 @@ const CoreAnalysisModal: React.FC<Props> = ({ team, activeFormat, isOpen, onClos
     });
   };
 
-  const renderMemberList = (members: TeamCard[]) => (
+  const renderMemberList = (members: PokemonCard[]) => (
     <div className="flex items-center gap-2 flex-wrap">
       {members.map((m, i) => {
         const spriteName = getEffectiveSpriteName(m, activeFormat);

@@ -1,20 +1,20 @@
 import { TYPE_CHART, TYPES } from './typeChart';
 import { getImmunityTypes } from './abilityImmunities';
 import { getMegaFormId } from './megaUtils';
-import type { TeamCard } from '../types/store';
+import type { PokemonCard } from '../types/store';
 
 // ── Types ──
 
 export interface CoreEntry {
   name: string;
   icon: string;
-  members: TeamCard[];
+  members: PokemonCard[];
   score: number;
   details: MemberCoverageDetail[];
 }
 
 export interface MemberCoverageDetail {
-  member: TeamCard;
+  member: PokemonCard;
   weaknesses: string[];
   coveredBy: string[];  // which weaknesses are covered by teammates
   uncovered: string[];   // which weaknesses are NOT covered
@@ -28,7 +28,7 @@ export interface CoreAnalysis {
 
 // ── Helpers ──
 
-function getEffectiveTypes(member: TeamCard, activeFormat: any): string[] {
+function getEffectiveTypes(member: PokemonCard, activeFormat: any): string[] {
   const baseDef = activeFormat?.pokemon?.[member.pokemonId];
   if (!baseDef) return ['Normal'];
   const itemDef = member.item
@@ -41,7 +41,7 @@ function getEffectiveTypes(member: TeamCard, activeFormat: any): string[] {
   return baseDef.types || ['Normal'];
 }
 
-function getEffectiveSpriteName(member: TeamCard, activeFormat: any): string {
+function getEffectiveSpriteName(member: PokemonCard, activeFormat: any): string {
   const baseDef = activeFormat?.pokemon?.[member.pokemonId];
   if (!baseDef) return member.name;
   const itemDef = member.item
@@ -54,7 +54,7 @@ function getEffectiveSpriteName(member: TeamCard, activeFormat: any): string {
   return baseDef.name;
 }
 
-function getAbilityImmunities(member: TeamCard): string[] {
+function getAbilityImmunities(member: PokemonCard): string[] {
   if (!member.ability) return [];
   return getImmunityTypes(member.ability);
 }
@@ -84,7 +84,7 @@ function getDefensiveMultiplier(
 /**
  * Get all types that hit this member for ≥2x (weaknesses).
  */
-function getWeaknesses(member: TeamCard, activeFormat: any): string[] {
+function getWeaknesses(member: PokemonCard, activeFormat: any): string[] {
   const types = getEffectiveTypes(member, activeFormat);
   const immunities = getAbilityImmunities(member);
   const weak: string[] = [];
@@ -98,7 +98,7 @@ function getWeaknesses(member: TeamCard, activeFormat: any): string[] {
 /**
  * Get all types that this member resists (≤0.5x) or is immune to (0x).
  */
-function getResistances(member: TeamCard, activeFormat: any): string[] {
+function getResistances(member: PokemonCard, activeFormat: any): string[] {
   const types = getEffectiveTypes(member, activeFormat);
   const immunities = getAbilityImmunities(member);
   const resist: string[] = [];
@@ -112,7 +112,7 @@ function getResistances(member: TeamCard, activeFormat: any): string[] {
 // ── Weakness coverage detail ──
 
 function getCoverageDetail(
-  members: TeamCard[],
+  members: PokemonCard[],
   activeFormat: any
 ): MemberCoverageDetail[] {
   // Pre-compute weaknesses and resistances for all members
@@ -156,12 +156,12 @@ const RECOGNIZED_CORES = [
   { name: 'Dark/Fighting/Ghost', icon: '🌑👊👻', types: ['Dark', 'Fighting', 'Ghost'] },
 ];
 
-function detectRecognizedCores(team: TeamCard[], activeFormat: any): CoreEntry[] {
+function detectRecognizedCores(team: PokemonCard[], activeFormat: any): CoreEntry[] {
   const results: CoreEntry[] = [];
 
   for (const core of RECOGNIZED_CORES) {
     // For each type in the core, find ALL members that have that type
-    const membersByType: Map<string, TeamCard[]> = new Map();
+    const membersByType: Map<string, PokemonCard[]> = new Map();
     for (const t of core.types) {
       membersByType.set(t, []);
     }
@@ -207,14 +207,14 @@ function detectRecognizedCores(team: TeamCard[], activeFormat: any): CoreEntry[]
 
 // ── Pairs and triples ──
 
-function scorePair(a: TeamCard, b: TeamCard, activeFormat: any): CoreEntry {
+function scorePair(a: PokemonCard, b: PokemonCard, activeFormat: any): CoreEntry {
   const members = [a, b];
   const details = getCoverageDetail(members, activeFormat);
   const score = computeScore(details);
   return { name: `${a.name} + ${b.name}`, icon: '', members, score, details };
 }
 
-function scoreTriple(a: TeamCard, b: TeamCard, c: TeamCard, activeFormat: any): CoreEntry {
+function scoreTriple(a: PokemonCard, b: PokemonCard, c: PokemonCard, activeFormat: any): CoreEntry {
   const members = [a, b, c];
   const details = getCoverageDetail(members, activeFormat);
   const score = computeScore(details);
@@ -242,7 +242,7 @@ function combinations<T>(arr: T[], k: number): T[][] {
 
 // ── Main analysis ──
 
-export function analyzeTeamCores(team: TeamCard[], activeFormat: any): CoreAnalysis {
+export function analyzeTeamCores(team: PokemonCard[], activeFormat: any): CoreAnalysis {
   if (team.length < 2) {
     return { recognizedCores: [], topPairs: [], topTriples: [] };
   }

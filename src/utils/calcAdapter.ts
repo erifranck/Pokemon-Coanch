@@ -171,7 +171,15 @@ export const calculateFullDamageResult = (
   
   if (!result || !result.damage || !Array.isArray(result.damage)) return null;
 
-  const rolls = result.damage as number[];
+  // Handle multi-hit moves (e.g., Dual Wingbeat): damage is number[][] instead of number[]
+  let rolls: number[];
+  if (Array.isArray(result.damage[0])) {
+    // Flatten by summing each hit's rolls index-by-index
+    const hits = result.damage as number[][];
+    rolls = hits[0].map((_, i) => hits.reduce((sum, hit) => sum + (hit[i] || 0), 0));
+  } else {
+    rolls = result.damage as number[];
+  }
   const defenderHp = defender.stats.hp;
   
   const minHp = Math.min(...rolls);
