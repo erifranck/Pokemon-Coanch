@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
+import { CoachSidebar } from './CoachSidebar/CoachSidebar';
 
 const Layout: React.FC = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col">
       <header className="bg-gray-800 p-4 shadow-md">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <h1 className="text-xl font-bold text-yellow-400">PokeCoach Pro</h1>
-          <nav className="flex space-x-4">
+          <nav className="flex space-x-4 items-center">
             <NavLink 
               to="/" 
               className={({ isActive }) => `px-3 py-2 rounded-md ${isActive ? 'bg-gray-700 text-white' : 'text-gray-300 hover:bg-gray-700'}`}
@@ -38,12 +41,19 @@ const Layout: React.FC = () => {
             >
               Live Simulator
             </NavLink>
+            <button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              className={`px-3 py-2 rounded-md text-sm font-bold transition-colors ${sidebarOpen ? 'bg-purple-600 text-white' : 'bg-gray-700 text-purple-400 hover:bg-purple-600 hover:text-white'}`}
+            >
+              AI Coach
+            </button>
           </nav>
         </div>
       </header>
       <main className="flex-1 max-w-7xl mx-auto w-full p-4">
         <Outlet />
       </main>
+      <CoachSidebar />
       <footer className="bg-gray-800 border-t border-gray-700 p-3 text-center">
         <p className="text-xs text-gray-500">
           Powered by <span className="text-yellow-500 font-bold">Pokémon Showdown</span> &amp; <span className="text-pink-500 font-bold">Munchstats</span>

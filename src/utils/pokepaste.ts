@@ -28,15 +28,6 @@ export function parsePokePaste(text: string, regulation: string): { cards: Parti
     const pokemon = parsePokemonBlock(lines, regulation);
     if (!pokemon) continue;
 
-    // Check legality
-    const format = (formatData as any)[regulation];
-    const isLegal = format && format.pokemon[pokemon.pokemonId];
-    
-    if (!isLegal) {
-      dropped.push(pokemon.name || pokemon.pokemonId);
-      continue;
-    }
-
     cards.push(pokemon);
   }
 
@@ -64,7 +55,7 @@ function parsePokemonBlock(lines: string[], regulation: string): PartialTeamCard
   let displayName = species;
   
   if (format) {
-    // Try exact match on species name
+    // Try exact match on species name (regulation pool first, then all-Pokemon fallback)
     const lowerName = species.toLowerCase();
     for (const [id, def] of Object.entries(format.pokemon) as [string, any][]) {
       if (def.name.toLowerCase() === lowerName) {
@@ -73,12 +64,24 @@ function parsePokemonBlock(lines: string[], regulation: string): PartialTeamCard
         break;
       }
     }
+    if (!pokemonId) {
+      for (const [id, def] of Object.entries(format.allPokemon || {}) as [string, any][]) {
+        if (def.name.toLowerCase() === lowerName) {
+          pokemonId = id;
+          displayName = def.name;
+          break;
+        }
+      }
+    }
     // Try matching by ID directly
     if (!pokemonId) {
       const id = species.toLowerCase().replace(/[^a-z0-9]/g, '');
       if (format.pokemon[id]) {
         pokemonId = id;
         displayName = format.pokemon[id].name;
+      } else if (format.allPokemon?.[id]) {
+        pokemonId = id;
+        displayName = format.allPokemon[id].name;
       }
     }
   }
@@ -186,7 +189,7 @@ export function exportToPokePaste(team: { members: TeamCard[] }, regulation: str
   const blocks: string[] = [];
 
   for (const member of team.members) {
-    const def = format.pokemon[member.pokemonId];
+    const def = format.pokemon[member.pokemonId] || format.allPokemon?.[member.pokemonId];
     if (!def) continue;
 
     const lines: string[] = [];

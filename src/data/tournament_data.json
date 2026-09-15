@@ -1,0 +1,4640 @@
+{
+  "generatedAt": "2026-09-11T01:07:22.872Z",
+  "regulation": "gen9championsvgc2026regmc",
+  "dataSources": [
+    "Limitless TCG API (https://play.limitlesstcg.com/api/)"
+  ],
+  "topPokemon": [],
+  "recentTournaments": [
+    {
+      "name": "London Corviknights VGC Weekly Tour 12! (Reg M-C)",
+      "date": "2026-09-10",
+      "players": 46,
+      "regulation": "gen9championsvgc2026regmc",
+      "topCut": [],
+      "topPokemon": [
+        {
+          "id": "rillaboom",
+          "name": "Rillaboom",
+          "usagePercent": 15
+        },
+        {
+          "id": "incineroar",
+          "name": "Incineroar",
+          "usagePercent": 13
+        },
+        {
+          "id": "salamence",
+          "name": "Salamence",
+          "usagePercent": 11
+        },
+        {
+          "id": "sneasler",
+          "name": "Sneasler",
+          "usagePercent": 11
+        },
+        {
+          "id": "floetteeternal",
+          "name": "Eternal Flower Floette",
+          "usagePercent": 9
+        },
+        {
+          "id": "basculegion",
+          "name": "Basculegion",
+          "usagePercent": 7
+        },
+        {
+          "id": "raichu",
+          "name": "Raichu",
+          "usagePercent": 4
+        },
+        {
+          "id": "gholdengo",
+          "name": "Gholdengo",
+          "usagePercent": 4
+        },
+        {
+          "id": "ninetalesalola",
+          "name": "Alolan Ninetales",
+          "usagePercent": 4
+        },
+        {
+          "id": "charizard",
+          "name": "Charizard",
+          "usagePercent": 4
+        },
+        {
+          "id": "garchomp",
+          "name": "Garchomp",
+          "usagePercent": 4
+        },
+        {
+          "id": "pelipper",
+          "name": "Pelipper",
+          "usagePercent": 4
+        },
+        {
+          "id": "archaludon",
+          "name": "Archaludon",
+          "usagePercent": 4
+        },
+        {
+          "id": "sylveon",
+          "name": "Sylveon",
+          "usagePercent": 4
+        },
+        {
+          "id": "arcaninehisui",
+          "name": "Hisuian Arcanine",
+          "usagePercent": 2
+        }
+      ],
+      "teams": [
+        {
+          "placement": 1,
+          "player": "CptAuroOG",
+          "members": [
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "dazzlinggleam",
+                "drainingkiss",
+                "calmmind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "raichu",
+              "name": "Raichu",
+              "item": "Raichunite Y",
+              "ability": "Lightning Rod",
+              "nature": "Serious",
+              "moves": [
+                "zapcannon",
+                "focusblast",
+                "fakeout",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "gholdengo",
+              "name": "Gholdengo",
+              "item": "Grassy Seed",
+              "ability": "Good as Gold",
+              "nature": "Serious",
+              "moves": [
+                "makeitrain",
+                "shadowball",
+                "nastyplot",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Sitrus Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "grassyglide",
+                "drumbeating",
+                "highhorsepower",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "headsmash",
+                "extremespeed",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Life Orb",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "dracometeor",
+                "heatwave",
+                "tailwind",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 2,
+          "player": "MaxTrickRoom",
+          "members": [
+            {
+              "pokemonId": "indeedee",
+              "name": "Indeedee",
+              "item": "Focus Sash",
+              "ability": "Psychic Surge",
+              "nature": "Serious",
+              "moves": [
+                "trickroom",
+                "imprison",
+                "protect",
+                "expandingforce"
+              ]
+            },
+            {
+              "pokemonId": "glimmora",
+              "name": "Glimmora",
+              "item": "Glimmoranite",
+              "ability": "Toxic Debris",
+              "nature": "Serious",
+              "moves": [
+                "spikyshield",
+                "earthpower",
+                "powergem",
+                "sludgebomb"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Psychic Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "direclaw",
+                "protect",
+                "throatchop"
+              ]
+            },
+            {
+              "pokemonId": "ninetalesalola",
+              "name": "Alolan Ninetales",
+              "item": "Choice Scarf",
+              "ability": "Snow Cloak",
+              "nature": "Serious",
+              "moves": [
+                "moonblast",
+                "freezedry",
+                "blizzard",
+                "icywind"
+              ]
+            },
+            {
+              "pokemonId": "charizard",
+              "name": "Charizard",
+              "item": "Charizardite Y",
+              "ability": "Blaze",
+              "nature": "Serious",
+              "moves": [
+                "heatwave",
+                "protect",
+                "solarbeam",
+                "weatherball"
+              ]
+            },
+            {
+              "pokemonId": "garchomp",
+              "name": "Garchomp",
+              "item": "Life Orb",
+              "ability": "Rough Skin",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "dragonclaw",
+                "rockslide",
+                "stompingtantrum"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 3,
+          "player": "Amethyst_sys",
+          "members": [
+            {
+              "pokemonId": "absol",
+              "name": "Absol",
+              "item": "Absolite Z",
+              "ability": "Justified",
+              "nature": "Serious",
+              "moves": [
+                "nightslash",
+                "shadowclaw",
+                "closecombat",
+                "detect"
+              ]
+            },
+            {
+              "pokemonId": "garchomp",
+              "name": "Garchomp",
+              "item": "Garchompite Z",
+              "ability": "Rough Skin",
+              "nature": "Serious",
+              "moves": [
+                "dracometeor",
+                "powergem",
+                "flamethrower",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Life Orb",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "woodhammer",
+                "grassyglide",
+                "highhorsepower",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "direclaw",
+                "fakeout",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "pelipper",
+              "name": "Pelipper",
+              "item": "Focus Sash",
+              "ability": "Drizzle",
+              "nature": "Serious",
+              "moves": [
+                "hurricane",
+                "weatherball",
+                "tailwind",
+                "wideguard"
+              ]
+            },
+            {
+              "pokemonId": "archaludon",
+              "name": "Archaludon",
+              "item": "Leftovers",
+              "ability": "Stamina",
+              "nature": "Serious",
+              "moves": [
+                "electroshot",
+                "dragonpulse",
+                "flashcannon",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 4,
+          "player": "Maggrosbeat",
+          "members": [
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "dazzlinggleam",
+                "moonblast",
+                "calmmind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Occa Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "grassyglide",
+                "woodhammer",
+                "uturn"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "doubleedge",
+                "hypervoice",
+                "tailwind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Sitrus Berry",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "flareblitz",
+                "throatchop",
+                "partingshot"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Life Orb",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "wavecrash",
+                "lastrespects",
+                "aquajet",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "gholdengo",
+              "name": "Gholdengo",
+              "item": "Life Orb",
+              "ability": "Good as Gold",
+              "nature": "Serious",
+              "moves": [
+                "makeitrain",
+                "shadowball",
+                "nastyplot",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 5,
+          "player": "ThePhil",
+          "members": [
+            {
+              "pokemonId": "baxcalibur",
+              "name": "Baxcalibur",
+              "item": "Baxcalibrite",
+              "ability": "Thermal Exchange",
+              "nature": "Serious",
+              "moves": [
+                "glaiverush",
+                "iceshard",
+                "swordsdance",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "ninetalesalola",
+              "name": "Alolan Ninetales",
+              "item": "Light Clay",
+              "ability": "Snow Warning",
+              "nature": "Serious",
+              "moves": [
+                "auroraveil",
+                "blizzard",
+                "moonblast",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "direclaw",
+                "coaching",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Focus Sash",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "lastrespects",
+                "liquidation",
+                "aquajet",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "grassyglide",
+                "woodhammer",
+                "highhorsepower"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Sitrus Berry",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "flareblitz",
+                "darkestlariat",
+                "partingshot"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 6,
+          "player": "Zoph",
+          "members": [
+            {
+              "pokemonId": "grimmsnarl",
+              "name": "Grimmsnarl",
+              "item": "Light Clay",
+              "ability": "Prankster",
+              "nature": "Serious",
+              "moves": [
+                "foulplay",
+                "lightscreen",
+                "reflect",
+                "partingshot"
+              ]
+            },
+            {
+              "pokemonId": "venusaur",
+              "name": "Venusaur",
+              "item": "Focus Sash",
+              "ability": "Chlorophyll",
+              "nature": "Serious",
+              "moves": [
+                "sludgebomb",
+                "leafstorm",
+                "sleeppowder",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "archaludon",
+              "name": "Archaludon",
+              "item": "Leftovers",
+              "ability": "Stamina",
+              "nature": "Serious",
+              "moves": [
+                "electroshot",
+                "dragonpulse",
+                "flashcannon",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "charizard",
+              "name": "Charizard",
+              "item": "Charizardite Y",
+              "ability": "Blaze",
+              "nature": "Serious",
+              "moves": [
+                "weatherball",
+                "heatwave",
+                "hurricane",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "pelipper",
+              "name": "Pelipper",
+              "item": "Sitrus Berry",
+              "ability": "Drizzle",
+              "nature": "Serious",
+              "moves": [
+                "hurricane",
+                "weatherball",
+                "tailwind",
+                "wideguard"
+              ]
+            },
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "moonblast",
+                "dazzlinggleam",
+                "lightofruin",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 7,
+          "player": "Manraj Sidhu",
+          "members": [
+            {
+              "pokemonId": "raichu",
+              "name": "Raichu",
+              "item": "Raichunite Y",
+              "ability": "Lightning Rod",
+              "nature": "Serious",
+              "moves": [
+                "zapcannon",
+                "focusblast",
+                "fakeout",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "primarina",
+              "name": "Primarina",
+              "item": "Leftovers",
+              "ability": "Liquid Voice",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "moonblast",
+                "calmmind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Sitrus Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "woodhammer",
+                "grassyglide",
+                "highhorsepower"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "direclaw",
+                "rockslide",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "dragonpulse",
+                "tailwind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Chople Berry",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "throatchop",
+                "fakeout",
+                "partingshot"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 8,
+          "player": "FudiFudi",
+          "members": [
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "protect",
+                "dracometeor",
+                "tailwind"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "uturn",
+                "grassyglide",
+                "woodhammer",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "lucario",
+              "name": "Lucario",
+              "item": "Lucarionite Z",
+              "ability": "Inner Focus",
+              "nature": "Serious",
+              "moves": [
+                "aurasphere",
+                "steelbeam",
+                "protect",
+                "flashcannon"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Sitrus Berry",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "throatchop",
+                "flareblitz",
+                "partingshot"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Focus Sash",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "liquidation",
+                "lastrespects",
+                "aquajet",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "sylveon",
+              "name": "Sylveon",
+              "item": "Fairy Feather",
+              "ability": "Pixilate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "quickattack",
+                "hyperbeam",
+                "detect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 9,
+          "player": "IzuBrad",
+          "members": [
+            {
+              "pokemonId": "farigiraf",
+              "name": "Farigiraf",
+              "item": "Sitrus Berry",
+              "ability": "Armor Tail",
+              "nature": "Serious",
+              "moves": [
+                "twinbeam",
+                "thunderbolt",
+                "helpinghand",
+                "trickroom"
+              ]
+            },
+            {
+              "pokemonId": "camerupt",
+              "name": "Camerupt",
+              "item": "Cameruptite",
+              "ability": "Solid Rock",
+              "nature": "Serious",
+              "moves": [
+                "heatwave",
+                "earthpower",
+                "ancientpower",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "sylveon",
+              "name": "Sylveon",
+              "item": "Fairy Feather",
+              "ability": "Pixilate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "quickattack",
+                "hyperbeam",
+                "detect"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Life Orb",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "closecombat",
+                "flareblitz",
+                "throatchop"
+              ]
+            },
+            {
+              "pokemonId": "mawile",
+              "name": "Mawile",
+              "item": "Mawilite",
+              "ability": "Hyper Cutter",
+              "nature": "Serious",
+              "moves": [
+                "playrough",
+                "brickbreak",
+                "suckerpunch",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "toxtricitylowkey",
+              "name": "Low Key Toxtricity",
+              "item": "Focus Sash",
+              "ability": "Punk Rock",
+              "nature": "Serious",
+              "moves": [
+                "overdrive",
+                "sludgebomb",
+                "snarl",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 10,
+          "player": "Frankenstein99",
+          "members": [
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "dazzlinggleam",
+                "drainingkiss",
+                "calmmind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Life Orb",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "kowtowcleave",
+                "suckerpunch",
+                "swordsdance",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "woodhammer",
+                "grassyglide",
+                "uturn",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "dracometeor",
+                "tailwind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Rocky Helmet",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "flareblitz",
+                "partingshot",
+                "throatchop"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "poisonjab",
+                "closecombat",
+                "coaching",
+                "protect"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tenki's Cart Weekly #117 - Reg M-C",
+      "date": "2026-09-10",
+      "players": 148,
+      "regulation": "gen9championsvgc2026regmc",
+      "topCut": [],
+      "topPokemon": [
+        {
+          "id": "sneasler",
+          "name": "Sneasler",
+          "usagePercent": 6
+        },
+        {
+          "id": "salamence",
+          "name": "Salamence",
+          "usagePercent": 5
+        },
+        {
+          "id": "rillaboom",
+          "name": "Rillaboom",
+          "usagePercent": 5
+        },
+        {
+          "id": "arcaninehisui",
+          "name": "Hisuian Arcanine",
+          "usagePercent": 3
+        },
+        {
+          "id": "kingambit",
+          "name": "Kingambit",
+          "usagePercent": 3
+        },
+        {
+          "id": "basculegion",
+          "name": "Basculegion",
+          "usagePercent": 3
+        },
+        {
+          "id": "floetteeternal",
+          "name": "Eternal Flower Floette",
+          "usagePercent": 3
+        },
+        {
+          "id": "incineroar",
+          "name": "Incineroar",
+          "usagePercent": 2
+        },
+        {
+          "id": "metagross",
+          "name": "Metagross",
+          "usagePercent": 1
+        },
+        {
+          "id": "indeedee",
+          "name": "Indeedee",
+          "usagePercent": 1
+        },
+        {
+          "id": "milotic",
+          "name": "Milotic",
+          "usagePercent": 1
+        },
+        {
+          "id": "excadrill",
+          "name": "Excadrill",
+          "usagePercent": 1
+        },
+        {
+          "id": "tyranitar",
+          "name": "Tyranitar",
+          "usagePercent": 1
+        },
+        {
+          "id": "charizard",
+          "name": "Charizard",
+          "usagePercent": 1
+        },
+        {
+          "id": "sylveon",
+          "name": "Sylveon",
+          "usagePercent": 1
+        }
+      ],
+      "teams": [
+        {
+          "placement": 1,
+          "player": "LelloCartello",
+          "members": [
+            {
+              "pokemonId": "metagross",
+              "name": "Metagross",
+              "item": "Metagrossite",
+              "ability": "Clear Body",
+              "nature": "Serious",
+              "moves": [
+                "ironhead",
+                "psychicfangs",
+                "bodypress",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "indeedee",
+              "name": "Indeedee",
+              "item": "Choice Scarf",
+              "ability": "Psychic Surge",
+              "nature": "Serious",
+              "moves": [
+                "expandingforce",
+                "imprison",
+                "trick",
+                "trickroom"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Psychic Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "direclaw",
+                "rockslide",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "headsmash",
+                "rockslide",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "dragonpulse",
+                "heatwave",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "milotic",
+              "name": "Milotic",
+              "item": "Leftovers",
+              "ability": "Competitive",
+              "nature": "Serious",
+              "moves": [
+                "scald",
+                "icywind",
+                "recover",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 2,
+          "player": "Rusticolus",
+          "members": [
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "dracometeor",
+                "tailwind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "excadrill",
+              "name": "Excadrill",
+              "item": "Life Orb",
+              "ability": "Sand Rush",
+              "nature": "Serious",
+              "moves": [
+                "highhorsepower",
+                "ironhead",
+                "rockslide",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "tyranitar",
+              "name": "Tyranitar",
+              "item": "Tyranitarite",
+              "ability": "Sand Stream",
+              "nature": "Serious",
+              "moves": [
+                "rockslide",
+                "knockoff",
+                "lowkick",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "milotic",
+              "name": "Milotic",
+              "item": "Sitrus Berry",
+              "ability": "Competitive",
+              "nature": "Serious",
+              "moves": [
+                "scald",
+                "icebeam",
+                "icywind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Psychic Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "direclaw",
+                "throatchop",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "indeedee",
+              "name": "Indeedee",
+              "item": "Focus Sash",
+              "ability": "Psychic Surge",
+              "nature": "Serious",
+              "moves": [
+                "expandingforce",
+                "mysticalfire",
+                "fakeout",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 3,
+          "player": "Luca33",
+          "members": [
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "woodhammer",
+                "grassyglide",
+                "fakeout",
+                "uturn"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "protect",
+                "closecombat",
+                "direclaw"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Chople Berry",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "ironhead",
+                "suckerpunch",
+                "kowtowcleave",
+                "lowkick"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Mystic Water",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "wavecrash",
+                "aquajet",
+                "lastrespects",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "headsmash",
+                "flareblitz",
+                "extremespeed",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Aerilate",
+              "nature": "Serious",
+              "moves": [
+                "doubleedge",
+                "hypervoice",
+                "tailwind",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 4,
+          "player": "notsamantha111",
+          "members": [
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "doubleedge",
+                "tailwind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "charizard",
+              "name": "Charizard",
+              "item": "Charizardite Y",
+              "ability": "Blaze",
+              "nature": "Serious",
+              "moves": [
+                "heatwave",
+                "weatherball",
+                "ancientpower",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "sylveon",
+              "name": "Sylveon",
+              "item": "Fairy Feather",
+              "ability": "Pixilate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "hyperbeam",
+                "quickattack",
+                "detect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Sitrus Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "grassyglide",
+                "woodhammer",
+                "uturn",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "direclaw",
+                "fakeout",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Life Orb",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "kowtowcleave",
+                "suckerpunch",
+                "irondefense",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 5,
+          "player": "XenoVGC",
+          "members": [
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "moonblast",
+                "dazzlinggleam",
+                "calmmind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Sitrus Berry",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "darkestlariat",
+                "partingshot",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Choice Scarf",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "wavecrash",
+                "lastrespects",
+                "flipturn",
+                "aquajet"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "grassyglide",
+                "woodhammer",
+                "uturn",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "direclaw",
+                "swordsdance",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "garchomp",
+              "name": "Garchomp",
+              "item": "Life Orb",
+              "ability": "Rough Skin",
+              "nature": "Serious",
+              "moves": [
+                "dragonclaw",
+                "stompingtantrum",
+                "rocktomb",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 6,
+          "player": "jobushobus",
+          "members": [
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "flareblitz",
+                "headsmash",
+                "extremespeed"
+              ]
+            },
+            {
+              "pokemonId": "lucario",
+              "name": "Lucario",
+              "item": "Lucarionite Z",
+              "ability": "Inner Focus",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "aurasphere",
+                "flashcannon",
+                "calmmind"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Life Orb",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "wavecrash",
+                "lastrespects",
+                "aquajet"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Occa Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "woodhammer",
+                "grassyglide",
+                "uturn",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "hypervoice",
+                "dracometeor",
+                "tailwind"
+              ]
+            },
+            {
+              "pokemonId": "sylveon",
+              "name": "Sylveon",
+              "item": "Fairy Feather",
+              "ability": "Pixilate",
+              "nature": "Serious",
+              "moves": [
+                "detect",
+                "hypervoice",
+                "quickattack",
+                "hyperbeam"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 7,
+          "player": "Draxolotl",
+          "members": [
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "moonblast",
+                "drainingkiss",
+                "calmmind"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Rocky Helmet",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "flareblitz",
+                "helpinghand",
+                "partingshot"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Choice Scarf",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "wavecrash",
+                "lastrespects",
+                "flipturn",
+                "aquajet"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "woodhammer",
+                "grassyglide",
+                "uturn"
+              ]
+            },
+            {
+              "pokemonId": "dragonite",
+              "name": "Dragonite",
+              "item": "Dragoninite",
+              "ability": "Multiscale",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "dragonpulse",
+                "heatwave",
+                "tailwind"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "closecombat",
+                "direclaw",
+                "swordsdance"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 8,
+          "player": "marti10",
+          "members": [
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "dracometeor",
+                "tailwind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "rockslide",
+                "closecombat",
+                "direclaw",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Chople Berry",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "kowtowcleave",
+                "lowkick",
+                "suckerpunch",
+                "ironhead"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Life Orb",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "aquajet",
+                "lastrespects",
+                "wavecrash",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Occa Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "grassyglide",
+                "woodhammer",
+                "fakeout",
+                "highhorsepower"
+              ]
+            },
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "moonblast",
+                "dazzlinggleam",
+                "lightofruin",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 9,
+          "player": "Cleiton Bom de Guerra",
+          "members": [
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "doubleedge",
+                "dracometeor",
+                "tailwind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "headsmash",
+                "extremespeed",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "White Herb",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "gunkshot",
+                "closecombat",
+                "fakeout",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Chople Berry",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "kowtowcleave",
+                "suckerpunch",
+                "lowkick",
+                "ironhead"
+              ]
+            },
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "moonblast",
+                "dazzlinggleam",
+                "calmmind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Sitrus Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "woodhammer",
+                "grassyglide",
+                "uturn",
+                "fakeout"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 10,
+          "player": "AndreVGC",
+          "members": [
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "moonblast",
+                "dazzlinggleam",
+                "calmmind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Occa Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "grassyglide",
+                "woodhammer",
+                "uturn",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Sitrus Berry",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "fakeout",
+                "partingshot",
+                "helpinghand"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "direclaw",
+                "closecombat",
+                "acrobatics",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "gholdengo",
+              "name": "Gholdengo",
+              "item": "Focus Sash",
+              "ability": "Good as Gold",
+              "nature": "Serious",
+              "moves": [
+                "makeitrain",
+                "shadowball",
+                "powergem",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "flamethrower",
+                "tailwind",
+                "protect"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "˗ˋˏ❤︎ˎˊ˗ Pomelo Late Night Tour (M-C)",
+      "date": "2026-09-10",
+      "players": 23,
+      "regulation": "gen9championsvgc2026regmc",
+      "topCut": [],
+      "topPokemon": [
+        {
+          "id": "rillaboom",
+          "name": "Rillaboom",
+          "usagePercent": 39
+        },
+        {
+          "id": "sneasler",
+          "name": "Sneasler",
+          "usagePercent": 35
+        },
+        {
+          "id": "basculegion",
+          "name": "Basculegion",
+          "usagePercent": 22
+        },
+        {
+          "id": "salamence",
+          "name": "Salamence",
+          "usagePercent": 17
+        },
+        {
+          "id": "arcaninehisui",
+          "name": "Hisuian Arcanine",
+          "usagePercent": 13
+        },
+        {
+          "id": "kingambit",
+          "name": "Kingambit",
+          "usagePercent": 13
+        },
+        {
+          "id": "garchomp",
+          "name": "Garchomp",
+          "usagePercent": 13
+        },
+        {
+          "id": "incineroar",
+          "name": "Incineroar",
+          "usagePercent": 13
+        },
+        {
+          "id": "farigiraf",
+          "name": "Farigiraf",
+          "usagePercent": 9
+        },
+        {
+          "id": "floetteeternal",
+          "name": "Eternal Flower Floette",
+          "usagePercent": 9
+        },
+        {
+          "id": "indeedeef",
+          "name": "Indeedee ♀",
+          "usagePercent": 9
+        },
+        {
+          "id": "sylveon",
+          "name": "Sylveon",
+          "usagePercent": 4
+        },
+        {
+          "id": "arcanine",
+          "name": "Arcanine",
+          "usagePercent": 4
+        },
+        {
+          "id": "absol",
+          "name": "Absol",
+          "usagePercent": 4
+        },
+        {
+          "id": "froslass",
+          "name": "Froslass",
+          "usagePercent": 4
+        }
+      ],
+      "teams": [
+        {
+          "placement": 1,
+          "player": "AyoItsBenji",
+          "members": [
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Aerilate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "doubleedge",
+                "tailwind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Sitrus Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "woodhammer",
+                "grassyglide",
+                "uturn",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "direclaw",
+                "closecombat",
+                "fakeout",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "headsmash",
+                "extremespeed",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Chople Berry",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "kowtowcleave",
+                "ironhead",
+                "lowkick",
+                "suckerpunch"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Mystic Water",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "wavecrash",
+                "lastrespects",
+                "aquajet",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 2,
+          "player": "Nevada",
+          "members": [
+            {
+              "pokemonId": "farigiraf",
+              "name": "Farigiraf",
+              "item": "Sitrus Berry",
+              "ability": "Armor Tail",
+              "nature": "Serious",
+              "moves": [
+                "psychic",
+                "trickroom",
+                "helpinghand",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "sylveon",
+              "name": "Sylveon",
+              "item": "Fairy Feather",
+              "ability": "Pixilate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "hyperbeam",
+                "quickattack",
+                "detect"
+              ]
+            },
+            {
+              "pokemonId": "arcanine",
+              "name": "Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "headsmash",
+                "flareblitz",
+                "extremespeed",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "superpower",
+                "woodhammer",
+                "grassyglide"
+              ]
+            },
+            {
+              "pokemonId": "absol",
+              "name": "Absol",
+              "item": "Absolite Z",
+              "ability": "Justified",
+              "nature": "Serious",
+              "moves": [
+                "nightslash",
+                "closecombat",
+                "psychocut",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "garchomp",
+              "name": "Garchomp",
+              "item": "Garchompite Z",
+              "ability": "Rough Skin",
+              "nature": "Serious",
+              "moves": [
+                "dracometeor",
+                "powergem",
+                "protect",
+                "fireblast"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 3,
+          "player": "DodgeThiss",
+          "members": [
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Aerilate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "doubleedge",
+                "tailwind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Sitrus Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "woodhammer",
+                "grassyglide",
+                "uturn",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "direclaw",
+                "closecombat",
+                "fakeout",
+                "swordsdance"
+              ]
+            },
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "headsmash",
+                "extremespeed",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Chople Berry",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "kowtowcleave",
+                "ironhead",
+                "lowkick",
+                "suckerpunch"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Life Orb",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "wavecrash",
+                "lastrespects",
+                "aquajet",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 4,
+          "player": "MuffinGamer7568",
+          "members": [
+            {
+              "pokemonId": "froslass",
+              "name": "Froslass",
+              "item": "Froslassite",
+              "ability": "Cursed Body",
+              "nature": "Serious",
+              "moves": [
+                "blizzard",
+                "shadowball",
+                "auroraveil",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "White Herb",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "direclaw",
+                "fakeout",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "grassyglide",
+                "woodhammer",
+                "highhorsepower",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "cinderace",
+              "name": "Cinderace",
+              "item": "Life Orb",
+              "ability": "Libero",
+              "nature": "Serious",
+              "moves": [
+                "pyroball",
+                "smackdown",
+                "lowkick",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "garchomp",
+              "name": "Garchomp",
+              "item": "Sitrus Berry",
+              "ability": "Rough Skin",
+              "nature": "Serious",
+              "moves": [
+                "rockslide",
+                "dragonclaw",
+                "earthquake",
+                "stompingtantrum"
+              ]
+            },
+            {
+              "pokemonId": "farigiraf",
+              "name": "Farigiraf",
+              "item": "Grassy Seed",
+              "ability": "Armor Tail",
+              "nature": "Serious",
+              "moves": [
+                "twinbeam",
+                "helpinghand",
+                "trickroom",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 5,
+          "player": "Sooner",
+          "members": [
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "dazzlinggleam",
+                "calmmind",
+                "protect",
+                "moonblast"
+              ]
+            },
+            {
+              "pokemonId": "aerodactyl",
+              "name": "Aerodactyl",
+              "item": "Aerodactylite",
+              "ability": "Unnerve",
+              "nature": "Serious",
+              "moves": [
+                "rockslide",
+                "tailwind",
+                "wideguard",
+                "dualwingbeat"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "closecombat",
+                "direclaw",
+                "swordsdance"
+              ]
+            },
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Life Orb",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "headsmash",
+                "extremespeed",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Sitrus Berry",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "flareblitz",
+                "darkestlariat",
+                "partingshot"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "grassyglide",
+                "woodhammer",
+                "fakeout",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 6,
+          "player": "Dakota Foster",
+          "members": [
+            {
+              "pokemonId": "lucario",
+              "name": "Lucario",
+              "item": "Lucarionite Z",
+              "ability": "Inner Focus",
+              "nature": "Serious",
+              "moves": [
+                "flashcannon",
+                "aurasphere",
+                "nastyplot",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Leftovers",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "uturn",
+                "grassyglide",
+                "woodhammer",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Sitrus Berry",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "throatchop",
+                "fakeout",
+                "partingshot"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Mystic Water",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "wavecrash",
+                "protect",
+                "lastrespects",
+                "aquajet"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "direclaw",
+                "fakeout",
+                "closecombat",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "maushold",
+              "name": "Maushold",
+              "item": "Focus Sash",
+              "ability": "Friend Guard",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "followme",
+                "helpinghand",
+                "superfang"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 7,
+          "player": "GloriWasHere",
+          "members": [
+            {
+              "pokemonId": "sirfetchd",
+              "name": "Sirfetch'd",
+              "item": "Leek",
+              "ability": "Scrappy",
+              "nature": "Serious",
+              "moves": [
+                "meteorassault",
+                "bravebird",
+                "knockoff",
+                "detect"
+              ]
+            },
+            {
+              "pokemonId": "garchomp",
+              "name": "Garchomp",
+              "item": "Garchompite Z",
+              "ability": "Rough Skin",
+              "nature": "Serious",
+              "moves": [
+                "dragoncheer",
+                "dracometeor",
+                "protect",
+                "rockslide"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "direclaw",
+                "acrobatics",
+                "swordsdance"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Occa Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "woodhammer",
+                "grassyglide",
+                "fakeout",
+                "uturn"
+              ]
+            },
+            {
+              "pokemonId": "indeedeef",
+              "name": "Indeedee ♀",
+              "item": "Rocky Helmet",
+              "ability": "Psychic Surge",
+              "nature": "Serious",
+              "moves": [
+                "followme",
+                "helpinghand",
+                "terrainpulse",
+                "trickroom"
+              ]
+            },
+            {
+              "pokemonId": "blastoise",
+              "name": "Blastoise",
+              "item": "Blastoisinite",
+              "ability": "Torrent",
+              "nature": "Serious",
+              "moves": [
+                "darkpulse",
+                "waterpulse",
+                "terrainpulse",
+                "shellsmash"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 8,
+          "player": "Mattytaxes",
+          "members": [
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "doubleedge",
+                "tailwind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Sitrus Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "woodhammer",
+                "grassyglide",
+                "uturn"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "direclaw",
+                "closecombat",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Life Orb",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "wavecrash",
+                "lastrespects",
+                "aquajet",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Black Glasses",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "kowtowcleave",
+                "suckerpunch",
+                "swordsdance",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "moonblast",
+                "dazzlinggleam",
+                "calmmind",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 9,
+          "player": "Marowakky",
+          "members": [
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Terrain Extender",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "grassyglide",
+                "woodhammer",
+                "uturn"
+              ]
+            },
+            {
+              "pokemonId": "baxcalibur",
+              "name": "Baxcalibur",
+              "item": "Baxcalibrite",
+              "ability": "Thermal Exchange",
+              "nature": "Serious",
+              "moves": [
+                "dragondance",
+                "iciclecrash",
+                "glaiverush",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Rocky Helmet",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "partingshot",
+                "flareblitz",
+                "darkestlariat"
+              ]
+            },
+            {
+              "pokemonId": "talonflame",
+              "name": "Talonflame",
+              "item": "Focus Sash",
+              "ability": "Gale Wings",
+              "nature": "Serious",
+              "moves": [
+                "tailwind",
+                "bravebird",
+                "willowisp",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "milotic",
+              "name": "Milotic",
+              "item": "Grassy Seed",
+              "ability": "Competitive",
+              "nature": "Serious",
+              "moves": [
+                "muddywater",
+                "hypnosis",
+                "coil",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "dracometeor",
+                "flamethrower",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 10,
+          "player": "Sanaito",
+          "members": [
+            {
+              "pokemonId": "golisopod",
+              "name": "Golisopod",
+              "item": "Golisopite",
+              "ability": "Emergency Exit",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "bulkup",
+                "ironhead",
+                "leechlife"
+              ]
+            },
+            {
+              "pokemonId": "indeedeef",
+              "name": "Indeedee ♀",
+              "item": "Colbur Berry",
+              "ability": "Psychic Surge",
+              "nature": "Serious",
+              "moves": [
+                "followme",
+                "helpinghand",
+                "trickroom",
+                "psychic"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Psychic Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "closecombat",
+                "direclaw",
+                "rockslide"
+              ]
+            },
+            {
+              "pokemonId": "pelipper",
+              "name": "Pelipper",
+              "item": "Focus Sash",
+              "ability": "Drizzle",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "tailwind",
+                "weatherball",
+                "hurricane"
+              ]
+            },
+            {
+              "pokemonId": "gardevoir",
+              "name": "Gardevoir",
+              "item": "Gardevoirite",
+              "ability": "Trace",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "expandingforce",
+                "hypervoice",
+                "trickroom"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Choice Scarf",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "flipturn",
+                "wavecrash",
+                "lastrespects",
+                "aquajet"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "WARTORTLE WEDNESDAYS #65 REG M-C BO3 OTS",
+      "date": "2026-09-10",
+      "players": 17,
+      "regulation": "gen9championsvgc2026regmc",
+      "topCut": [],
+      "topPokemon": [
+        {
+          "id": "sneasler",
+          "name": "Sneasler",
+          "usagePercent": 41
+        },
+        {
+          "id": "rillaboom",
+          "name": "Rillaboom",
+          "usagePercent": 35
+        },
+        {
+          "id": "salamence",
+          "name": "Salamence",
+          "usagePercent": 29
+        },
+        {
+          "id": "kingambit",
+          "name": "Kingambit",
+          "usagePercent": 29
+        },
+        {
+          "id": "incineroar",
+          "name": "Incineroar",
+          "usagePercent": 24
+        },
+        {
+          "id": "indeedeef",
+          "name": "Indeedee ♀",
+          "usagePercent": 12
+        },
+        {
+          "id": "garchomp",
+          "name": "Garchomp",
+          "usagePercent": 12
+        },
+        {
+          "id": "arcaninehisui",
+          "name": "Hisuian Arcanine",
+          "usagePercent": 12
+        },
+        {
+          "id": "basculegion",
+          "name": "Basculegion",
+          "usagePercent": 12
+        },
+        {
+          "id": "pawmot",
+          "name": "Pawmot",
+          "usagePercent": 12
+        },
+        {
+          "id": "farigiraf",
+          "name": "Farigiraf",
+          "usagePercent": 12
+        },
+        {
+          "id": "gholdengo",
+          "name": "Gholdengo",
+          "usagePercent": 12
+        },
+        {
+          "id": "floetteeternal",
+          "name": "Eternal Flower Floette",
+          "usagePercent": 12
+        },
+        {
+          "id": "delphox",
+          "name": "Delphox",
+          "usagePercent": 12
+        },
+        {
+          "id": "whimsicott",
+          "name": "Whimsicott",
+          "usagePercent": 6
+        }
+      ],
+      "teams": [
+        {
+          "placement": 1,
+          "player": "Army6670",
+          "members": [
+            {
+              "pokemonId": "indeedeef",
+              "name": "Indeedee ♀",
+              "item": "Colbur Berry",
+              "ability": "Psychic Surge",
+              "nature": "Serious",
+              "moves": [
+                "psychic",
+                "trickroom",
+                "followme",
+                "helpinghand"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Psychic Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "direclaw",
+                "protect",
+                "fakeout",
+                "closecombat"
+              ]
+            },
+            {
+              "pokemonId": "whimsicott",
+              "name": "Whimsicott",
+              "item": "Focus Sash",
+              "ability": "Prankster",
+              "nature": "Serious",
+              "moves": [
+                "moonblast",
+                "protect",
+                "encore",
+                "tailwind"
+              ]
+            },
+            {
+              "pokemonId": "garchomp",
+              "name": "Garchomp",
+              "item": "Garchompite Z",
+              "ability": "Rough Skin",
+              "nature": "Serious",
+              "moves": [
+                "dracometeor",
+                "surf",
+                "earthpower",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "armarouge",
+              "name": "Armarouge",
+              "item": "Life Orb",
+              "ability": "Flash Fire",
+              "nature": "Serious",
+              "moves": [
+                "armorcannon",
+                "expandingforce",
+                "protect",
+                "flashcannon"
+              ]
+            },
+            {
+              "pokemonId": "staraptor",
+              "name": "Staraptor",
+              "item": "Staraptite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "bravebird",
+                "roost",
+                "closecombat"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 2,
+          "player": "DodgeThiss",
+          "members": [
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Aerilate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "doubleedge",
+                "tailwind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Sitrus Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "woodhammer",
+                "grassyglide",
+                "uturn",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "direclaw",
+                "closecombat",
+                "fakeout",
+                "swordsdance"
+              ]
+            },
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "headsmash",
+                "extremespeed",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Chople Berry",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "kowtowcleave",
+                "ironhead",
+                "lowkick",
+                "suckerpunch"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Life Orb",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "wavecrash",
+                "lastrespects",
+                "aquajet",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 3,
+          "player": "Sanaito",
+          "members": [
+            {
+              "pokemonId": "froslass",
+              "name": "Froslass",
+              "item": "Froslassite",
+              "ability": "Cursed Body",
+              "nature": "Serious",
+              "moves": [
+                "blizzard",
+                "shadowball",
+                "auroraveil",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "pawmot",
+              "name": "Pawmot",
+              "item": "Focus Sash",
+              "ability": "Iron Fist",
+              "nature": "Serious",
+              "moves": [
+                "doubleshock",
+                "closecombat",
+                "fakeout",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Black Glasses",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "kowtowcleave",
+                "suckerpunch",
+                "ironhead",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "farigiraf",
+              "name": "Farigiraf",
+              "item": "Sitrus Berry",
+              "ability": "Armor Tail",
+              "nature": "Serious",
+              "moves": [
+                "psychic",
+                "trickroom",
+                "foulplay",
+                "helpinghand"
+              ]
+            },
+            {
+              "pokemonId": "garchomp",
+              "name": "Garchomp",
+              "item": "Life Orb",
+              "ability": "Rough Skin",
+              "nature": "Serious",
+              "moves": [
+                "dragonclaw",
+                "rockslide",
+                "earthquake",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "sinistcha",
+              "name": "Sinistcha",
+              "item": "Kasib Berry",
+              "ability": "Hospitality",
+              "nature": "Serious",
+              "moves": [
+                "ragepowder",
+                "matchagotcha",
+                "lifedew",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 4,
+          "player": "Guitarspear",
+          "members": [
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "grassyglide",
+                "fakeout",
+                "woodhammer",
+                "uturn"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "tailwind",
+                "dracometeor",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "direclaw",
+                "feint",
+                "closecombat"
+              ]
+            },
+            {
+              "pokemonId": "gholdengo",
+              "name": "Gholdengo",
+              "item": "Life Orb",
+              "ability": "Good as Gold",
+              "nature": "Serious",
+              "moves": [
+                "shadowball",
+                "nastyplot",
+                "makeitrain",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "moonblast",
+                "dazzlinggleam",
+                "calmmind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Sitrus Berry",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "partingshot",
+                "fakeout",
+                "darkestlariat"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 5,
+          "player": "Jorman",
+          "members": [
+            {
+              "pokemonId": "charizard",
+              "name": "Charizard",
+              "item": "Charizardite Y",
+              "ability": "Blaze",
+              "nature": "Serious",
+              "moves": [
+                "ancientpower",
+                "solarbeam",
+                "heatwave",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "dragonpulse",
+                "tailwind",
+                "hypervoice"
+              ]
+            },
+            {
+              "pokemonId": "indeedeef",
+              "name": "Indeedee ♀",
+              "item": "Rocky Helmet",
+              "ability": "Psychic Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "followme",
+                "terrainpulse",
+                "trickroom"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Sitrus Berry",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "flareblitz",
+                "partingshot",
+                "darkestlariat"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Psychic Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "direclaw",
+                "protect",
+                "feint",
+                "acrobatics"
+              ]
+            },
+            {
+              "pokemonId": "pawmot",
+              "name": "Pawmot",
+              "item": "Focus Sash",
+              "ability": "Iron Fist",
+              "nature": "Serious",
+              "moves": [
+                "doubleshock",
+                "fakeout",
+                "closecombat",
+                "revivalblessing"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 6,
+          "player": "RedbamaXxXx",
+          "members": [
+            {
+              "pokemonId": "farfetchd",
+              "name": "Farfetch'd",
+              "item": "Leek",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "bravebird",
+                "roost",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "grimmsnarl",
+              "name": "Grimmsnarl",
+              "item": "Light Clay",
+              "ability": "Prankster",
+              "nature": "Serious",
+              "moves": [
+                "partingshot",
+                "lightscreen",
+                "reflect",
+                "spiritbreak"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Rocky Helmet",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "partingshot",
+                "flareblitz",
+                "darkestlariat"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Leftovers",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "uturn",
+                "woodhammer",
+                "grassyglide"
+              ]
+            },
+            {
+              "pokemonId": "farigiraf",
+              "name": "Farigiraf",
+              "item": "Grassy Seed",
+              "ability": "Armor Tail",
+              "nature": "Serious",
+              "moves": [
+                "psychic",
+                "thunderbolt",
+                "trickroom",
+                "helpinghand"
+              ]
+            },
+            {
+              "pokemonId": "blastoise",
+              "name": "Blastoise",
+              "item": "Blastoisinite",
+              "ability": "Rain Dish",
+              "nature": "Serious",
+              "moves": [
+                "waterspout",
+                "darkpulse",
+                "shellsmash",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 7,
+          "player": "mikew",
+          "members": [
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "White Herb",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "direclaw",
+                "coaching",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "delphox",
+              "name": "Delphox",
+              "item": "Delphoxite",
+              "ability": "Blaze",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "heatwave",
+                "psyshock",
+                "encore"
+              ]
+            },
+            {
+              "pokemonId": "tsareena",
+              "name": "Tsareena",
+              "item": "Sitrus Berry",
+              "ability": "Queenly Majesty",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "tropkick",
+                "lowkick",
+                "taunt"
+              ]
+            },
+            {
+              "pokemonId": "mamoswine",
+              "name": "Mamoswine",
+              "item": "Focus Sash",
+              "ability": "Oblivious",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "iciclecrash",
+                "earthquake",
+                "iceshard"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Black Glasses",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "kowtowcleave",
+                "suckerpunch",
+                "ironhead"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "hypervoice",
+                "dracometeor",
+                "tailwind"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 8,
+          "player": "monkeychese",
+          "members": [
+            {
+              "pokemonId": "delphox",
+              "name": "Delphox",
+              "item": "Delphoxite",
+              "ability": "Blaze",
+              "nature": "Serious",
+              "moves": [
+                "heatwave",
+                "psychic",
+                "nastyplot",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "woodhammer",
+                "grassyglide",
+                "fakeout",
+                "uturn"
+              ]
+            },
+            {
+              "pokemonId": "incineroar",
+              "name": "Incineroar",
+              "item": "Sitrus Berry",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "darkestlariat",
+                "fakeout",
+                "partingshot",
+                "flareblitz"
+              ]
+            },
+            {
+              "pokemonId": "maushold",
+              "name": "Maushold",
+              "item": "Focus Sash",
+              "ability": "Technician",
+              "nature": "Serious",
+              "moves": [
+                "populationbomb",
+                "followme",
+                "taunt",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Chople Berry",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "kowtowcleave",
+                "lowkick",
+                "suckerpunch",
+                "ironhead"
+              ]
+            },
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "moonblast",
+                "dazzlinggleam",
+                "calmmind",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 9,
+          "player": "Haru1899",
+          "members": [
+            {
+              "pokemonId": "aerodactyl",
+              "name": "Aerodactyl",
+              "item": "Aerodactylite",
+              "ability": "Unnerve",
+              "nature": "Serious",
+              "moves": [
+                "dualwingbeat",
+                "rockslide",
+                "tailwind",
+                "wideguard"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "grassyglide",
+                "woodhammer",
+                "fakeout",
+                "uturn"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Life Orb",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "aquajet",
+                "wavecrash",
+                "protect",
+                "lastrespects"
+              ]
+            },
+            {
+              "pokemonId": "baxcalibur",
+              "name": "Baxcalibur",
+              "item": "Baxcalibrite",
+              "ability": "Thermal Exchange",
+              "nature": "Serious",
+              "moves": [
+                "glaiverush",
+                "iceshard",
+                "dragondance",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Choice Scarf",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "kowtowcleave",
+                "suckerpunch",
+                "ironhead",
+                "lowkick"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "acrobatics",
+                "direclaw",
+                "closecombat",
+                "fakeout"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 10,
+          "player": "JSplat",
+          "members": [
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "doubleedge",
+                "hypervoice",
+                "tailwind",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "White Herb",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "direclaw",
+                "closecombat",
+                "coaching",
+                "fakeout"
+              ]
+            },
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "headsmash",
+                "extremespeed",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "primarina",
+              "name": "Primarina",
+              "item": "Life Orb",
+              "ability": "Liquid Voice",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "moonblast",
+                "aquajet",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Sitrus Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "grassyglide",
+                "drumbeating",
+                "highhorsepower"
+              ]
+            },
+            {
+              "pokemonId": "gholdengo",
+              "name": "Gholdengo",
+              "item": "Grassy Seed",
+              "ability": "Good as Gold",
+              "nature": "Serious",
+              "moves": [
+                "makeitrain",
+                "shadowball",
+                "nastyplot",
+                "protect"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pokepal Smackdown #157 (Champions) (Reg M-C)",
+      "date": "2026-09-09",
+      "players": 48,
+      "regulation": "gen9championsvgc2026regmc",
+      "topCut": [],
+      "topPokemon": [
+        {
+          "id": "kingambit",
+          "name": "Kingambit",
+          "usagePercent": 13
+        },
+        {
+          "id": "farigiraf",
+          "name": "Farigiraf",
+          "usagePercent": 10
+        },
+        {
+          "id": "arcaninehisui",
+          "name": "Hisuian Arcanine",
+          "usagePercent": 6
+        },
+        {
+          "id": "golisopod",
+          "name": "Golisopod",
+          "usagePercent": 6
+        },
+        {
+          "id": "salamence",
+          "name": "Salamence",
+          "usagePercent": 6
+        },
+        {
+          "id": "rillaboom",
+          "name": "Rillaboom",
+          "usagePercent": 6
+        },
+        {
+          "id": "sneasler",
+          "name": "Sneasler",
+          "usagePercent": 6
+        },
+        {
+          "id": "froslass",
+          "name": "Froslass",
+          "usagePercent": 4
+        },
+        {
+          "id": "floetteeternal",
+          "name": "Eternal Flower Floette",
+          "usagePercent": 4
+        },
+        {
+          "id": "indeedeef",
+          "name": "Indeedee ♀",
+          "usagePercent": 4
+        },
+        {
+          "id": "basculegion",
+          "name": "Basculegion",
+          "usagePercent": 4
+        },
+        {
+          "id": "charizard",
+          "name": "Charizard",
+          "usagePercent": 4
+        },
+        {
+          "id": "sylveon",
+          "name": "Sylveon",
+          "usagePercent": 4
+        },
+        {
+          "id": "pelipper",
+          "name": "Pelipper",
+          "usagePercent": 4
+        },
+        {
+          "id": "archaludon",
+          "name": "Archaludon",
+          "usagePercent": 4
+        }
+      ],
+      "teams": [
+        {
+          "placement": 1,
+          "player": "LittlePotato13",
+          "members": [
+            {
+              "pokemonId": "froslass",
+              "name": "Froslass",
+              "item": "Froslassite",
+              "ability": "Cursed Body",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "auroraveil",
+                "shadowball",
+                "blizzard"
+              ]
+            },
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "extremespeed",
+                "flareblitz",
+                "headsmash"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Chople Berry",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "suckerpunch",
+                "kowtowcleave",
+                "lowkick",
+                "ironhead"
+              ]
+            },
+            {
+              "pokemonId": "farigiraf",
+              "name": "Farigiraf",
+              "item": "Sitrus Berry",
+              "ability": "Armor Tail",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "trickroom",
+                "helpinghand",
+                "psychic"
+              ]
+            },
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "dazzlinggleam",
+                "moonblast",
+                "lightofruin"
+              ]
+            },
+            {
+              "pokemonId": "toxapex",
+              "name": "Toxapex",
+              "item": "Leftovers",
+              "ability": "Regenerator",
+              "nature": "Serious",
+              "moves": [
+                "banefulbunker",
+                "wideguard",
+                "toxic",
+                "infestation"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 2,
+          "player": "dylanman5",
+          "members": [
+            {
+              "pokemonId": "golisopod",
+              "name": "Golisopod",
+              "item": "Golisopite",
+              "ability": "Emergency Exit",
+              "nature": "Serious",
+              "moves": [
+                "closecombat",
+                "ironhead",
+                "leechlife",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kleavor",
+              "name": "Kleavor",
+              "item": "Focus Sash",
+              "ability": "Sharpness",
+              "nature": "Serious",
+              "moves": [
+                "stoneaxe",
+                "xscissor",
+                "feint",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "indeedeef",
+              "name": "Indeedee ♀",
+              "item": "Psychic Seed",
+              "ability": "Psychic Surge",
+              "nature": "Serious",
+              "moves": [
+                "psychic",
+                "followme",
+                "trickroom",
+                "charm"
+              ]
+            },
+            {
+              "pokemonId": "armarouge",
+              "name": "Armarouge",
+              "item": "Life Orb",
+              "ability": "Flash Fire",
+              "nature": "Serious",
+              "moves": [
+                "armorcannon",
+                "protect",
+                "wideguard",
+                "expandingforce"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Choice Scarf",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "wavecrash",
+                "aquajet",
+                "lastrespects",
+                "flipturn"
+              ]
+            },
+            {
+              "pokemonId": "sinistcha",
+              "name": "Sinistcha",
+              "item": "Sitrus Berry",
+              "ability": "Hospitality",
+              "nature": "Serious",
+              "moves": [
+                "matchagotcha",
+                "protect",
+                "trickroom",
+                "ragepowder"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 3,
+          "player": "Cole J",
+          "members": [
+            {
+              "pokemonId": "froslass",
+              "name": "Froslass",
+              "item": "Froslassite",
+              "ability": "Cursed Body",
+              "nature": "Serious",
+              "moves": [
+                "blizzard",
+                "shadowball",
+                "auroraveil",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "hypervoice",
+                "doubleedge",
+                "tailwind"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "grassyglide",
+                "woodhammer",
+                "highhorsepower"
+              ]
+            },
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "flareblitz",
+                "headsmash",
+                "rockslide"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Grassy Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "direclaw",
+                "closecombat",
+                "coaching"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Life Orb",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "suckerpunch",
+                "kowtowcleave",
+                "swordsdance"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 4,
+          "player": "papajohnson",
+          "members": [
+            {
+              "pokemonId": "charizard",
+              "name": "Charizard",
+              "item": "Charizardite Y",
+              "ability": "Blaze",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "heatwave",
+                "weatherball",
+                "solarbeam"
+              ]
+            },
+            {
+              "pokemonId": "typhlosionhisui",
+              "name": "Hisuian Typhlosion",
+              "item": "Choice Scarf",
+              "ability": "Frisk",
+              "nature": "Serious",
+              "moves": [
+                "shadowball",
+                "eruption",
+                "heatwave",
+                "burningjealousy"
+              ]
+            },
+            {
+              "pokemonId": "venusaur",
+              "name": "Venusaur",
+              "item": "Wide Lens",
+              "ability": "Chlorophyll",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "energyball",
+                "sleeppowder",
+                "sludgebomb"
+              ]
+            },
+            {
+              "pokemonId": "farigiraf",
+              "name": "Farigiraf",
+              "item": "Sitrus Berry",
+              "ability": "Armor Tail",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "trickroom",
+                "thunderbolt",
+                "psychicnoise"
+              ]
+            },
+            {
+              "pokemonId": "sylveon",
+              "name": "Sylveon",
+              "item": "Fairy Feather",
+              "ability": "Pixilate",
+              "nature": "Serious",
+              "moves": [
+                "detect",
+                "hyperbeam",
+                "hypervoice",
+                "quickattack"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Life Orb",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "kowtowcleave",
+                "suckerpunch",
+                "lowkick"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 5,
+          "player": "kamalghinaglia",
+          "members": [
+            {
+              "pokemonId": "blastoise",
+              "name": "Blastoise",
+              "item": "Blastoisinite",
+              "ability": "Rain Dish",
+              "nature": "Serious",
+              "moves": [
+                "shellsmash",
+                "terrainpulse",
+                "protect",
+                "waterspout"
+              ]
+            },
+            {
+              "pokemonId": "pelipper",
+              "name": "Pelipper",
+              "item": "Focus Sash",
+              "ability": "Drizzle",
+              "nature": "Serious",
+              "moves": [
+                "weatherball",
+                "hurricane",
+                "tailwind",
+                "wideguard"
+              ]
+            },
+            {
+              "pokemonId": "indeedeef",
+              "name": "Indeedee ♀",
+              "item": "Sitrus Berry",
+              "ability": "Psychic Surge",
+              "nature": "Serious",
+              "moves": [
+                "followme",
+                "helpinghand",
+                "psychic",
+                "healpulse"
+              ]
+            },
+            {
+              "pokemonId": "archaludon",
+              "name": "Archaludon",
+              "item": "Magnet",
+              "ability": "Sturdy",
+              "nature": "Serious",
+              "moves": [
+                "dragonpulse",
+                "electroshot",
+                "protect",
+                "flashcannon"
+              ]
+            },
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "Psychic Seed",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "closecombat",
+                "direclaw",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Life Orb",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "suckerpunch",
+                "protect",
+                "kowtowcleave",
+                "ironhead"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 6,
+          "player": "KamikazekidGC",
+          "members": [
+            {
+              "pokemonId": "golisopod",
+              "name": "Golisopod",
+              "item": "Golisopite",
+              "ability": "Emergency Exit",
+              "nature": "Serious",
+              "moves": [
+                "firstimpression",
+                "ironhead",
+                "aquajet",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "farigiraf",
+              "name": "Farigiraf",
+              "item": "Grassy Seed",
+              "ability": "Armor Tail",
+              "nature": "Serious",
+              "moves": [
+                "psychic",
+                "trickroom",
+                "helpinghand",
+                "hypervoice"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Miracle Seed",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "grassyglide",
+                "woodhammer",
+                "uturn"
+              ]
+            },
+            {
+              "pokemonId": "pelipper",
+              "name": "Pelipper",
+              "item": "Sitrus Berry",
+              "ability": "Drizzle",
+              "nature": "Serious",
+              "moves": [
+                "weatherball",
+                "hurricane",
+                "wideguard",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "pawmot",
+              "name": "Pawmot",
+              "item": "Focus Sash",
+              "ability": "Iron Fist",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "doubleshock",
+                "closecombat",
+                "revivalblessing"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Aerilate",
+              "nature": "Serious",
+              "moves": [
+                "hypervoice",
+                "protect",
+                "flamethrower",
+                "tailwind"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 7,
+          "player": "iljone",
+          "members": [
+            {
+              "pokemonId": "chimecho",
+              "name": "Chimecho",
+              "item": "Chimechite",
+              "ability": "Levitate",
+              "nature": "Serious",
+              "moves": [
+                "psychic",
+                "trickroom",
+                "flashcannon",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "arcaninehisui",
+              "name": "Hisuian Arcanine",
+              "item": "Focus Sash",
+              "ability": "Rock Head",
+              "nature": "Serious",
+              "moves": [
+                "flareblitz",
+                "headsmash",
+                "extremespeed",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "mimikyu",
+              "name": "Mimikyu",
+              "item": "Sitrus Berry",
+              "ability": "Disguise",
+              "nature": "Serious",
+              "moves": [
+                "trickroom",
+                "willowisp",
+                "playrough",
+                "curse"
+              ]
+            },
+            {
+              "pokemonId": "dragalge",
+              "name": "Dragalge",
+              "item": "Life Orb",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "dracometeor",
+                "sludgebomb",
+                "sludgewave",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "scrafty",
+              "name": "Scrafty",
+              "item": "Scraftinite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "closecombat",
+                "knockoff",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "rotomwash",
+              "name": "Wash Rotom",
+              "item": "Leftovers",
+              "ability": "Levitate",
+              "nature": "Serious",
+              "moves": [
+                "hydropump",
+                "thunderbolt",
+                "nastyplot",
+                "protect"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 8,
+          "player": "shinjijordan",
+          "members": [
+            {
+              "pokemonId": "aerodactyl",
+              "name": "Aerodactyl",
+              "item": "Aerodactylite",
+              "ability": "Unnerve",
+              "nature": "Serious",
+              "moves": [
+                "rocktomb",
+                "tailwind",
+                "dualwingbeat",
+                "icefang"
+              ]
+            },
+            {
+              "pokemonId": "charizard",
+              "name": "Charizard",
+              "item": "Charizardite Y",
+              "ability": "Blaze",
+              "nature": "Serious",
+              "moves": [
+                "weatherball",
+                "heatwave",
+                "solarbeam",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Occa Berry",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "lowkick",
+                "ironhead",
+                "kowtowcleave",
+                "suckerpunch"
+              ]
+            },
+            {
+              "pokemonId": "sylveon",
+              "name": "Sylveon",
+              "item": "Fairy Feather",
+              "ability": "Pixilate",
+              "nature": "Serious",
+              "moves": [
+                "detect",
+                "hypervoice",
+                "hyperbeam",
+                "yawn"
+              ]
+            },
+            {
+              "pokemonId": "garchomp",
+              "name": "Garchomp",
+              "item": "Choice Scarf",
+              "ability": "Rough Skin",
+              "nature": "Serious",
+              "moves": [
+                "poisonjab",
+                "rockslide",
+                "stompingtantrum",
+                "dragonclaw"
+              ]
+            },
+            {
+              "pokemonId": "farigiraf",
+              "name": "Farigiraf",
+              "item": "Sitrus Berry",
+              "ability": "Armor Tail",
+              "nature": "Serious",
+              "moves": [
+                "psychic",
+                "thunderbolt",
+                "protect",
+                "trickroom"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 9,
+          "player": "TreyBayBay",
+          "members": [
+            {
+              "pokemonId": "farigiraf",
+              "name": "Farigiraf",
+              "item": "Grassy Seed",
+              "ability": "Armor Tail",
+              "nature": "Serious",
+              "moves": [
+                "expandingforce",
+                "hypervoice",
+                "helpinghand",
+                "trickroom"
+              ]
+            },
+            {
+              "pokemonId": "rillaboom",
+              "name": "Rillaboom",
+              "item": "Sitrus Berry",
+              "ability": "Grassy Surge",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "woodhammer",
+                "uturn",
+                "grassyglide"
+              ]
+            },
+            {
+              "pokemonId": "archaludon",
+              "name": "Archaludon",
+              "item": "Leftovers",
+              "ability": "Stamina",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "dragonpulse",
+                "flashcannon",
+                "electroshot"
+              ]
+            },
+            {
+              "pokemonId": "politoed",
+              "name": "Politoed",
+              "item": "Life Orb",
+              "ability": "Drizzle",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "weatherball",
+                "icebeam",
+                "earthpower"
+              ]
+            },
+            {
+              "pokemonId": "lucario",
+              "name": "Lucario",
+              "item": "Lucarionite Z",
+              "ability": "Inner Focus",
+              "nature": "Serious",
+              "moves": [
+                "protect",
+                "aurasphere",
+                "flashcannon",
+                "darkpulse"
+              ]
+            },
+            {
+              "pokemonId": "golisopod",
+              "name": "Golisopod",
+              "item": "Golisopite",
+              "ability": "Emergency Exit",
+              "nature": "Serious",
+              "moves": [
+                "firstimpression",
+                "ironhead",
+                "leechlife",
+                "liquidation"
+              ]
+            }
+          ]
+        },
+        {
+          "placement": 10,
+          "player": "notwinning",
+          "members": [
+            {
+              "pokemonId": "sneasler",
+              "name": "Sneasler",
+              "item": "White Herb",
+              "ability": "Unburden",
+              "nature": "Serious",
+              "moves": [
+                "fakeout",
+                "direclaw",
+                "closecombat",
+                "protect"
+              ]
+            },
+            {
+              "pokemonId": "kingambit",
+              "name": "Kingambit",
+              "item": "Chople Berry",
+              "ability": "Defiant",
+              "nature": "Serious",
+              "moves": [
+                "ironhead",
+                "lowkick",
+                "suckerpunch",
+                "kowtowcleave"
+              ]
+            },
+            {
+              "pokemonId": "floetteeternal",
+              "name": "Eternal Flower Floette",
+              "item": "Floettite",
+              "ability": "Flower Veil",
+              "nature": "Serious",
+              "moves": [
+                "lightofruin",
+                "moonblast",
+                "protect",
+                "dazzlinggleam"
+              ]
+            },
+            {
+              "pokemonId": "salamence",
+              "name": "Salamence",
+              "item": "Salamencite",
+              "ability": "Intimidate",
+              "nature": "Serious",
+              "moves": [
+                "doubleedge",
+                "protect",
+                "rockslide",
+                "dragonclaw"
+              ]
+            },
+            {
+              "pokemonId": "garchomp",
+              "name": "Garchomp",
+              "item": "Choice Scarf",
+              "ability": "Rough Skin",
+              "nature": "Serious",
+              "moves": [
+                "dragonclaw",
+                "stompingtantrum",
+                "earthquake",
+                "rockslide"
+              ]
+            },
+            {
+              "pokemonId": "basculegion",
+              "name": "Basculegion",
+              "item": "Life Orb",
+              "ability": "Adaptability",
+              "nature": "Serious",
+              "moves": [
+                "aquajet",
+                "wavecrash",
+                "protect",
+                "lastrespects"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

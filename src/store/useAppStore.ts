@@ -1,12 +1,14 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { TeamCard, ThreatCard, Relationships, TeamProfile } from '../types/store';
+import { DEFAULT_REGULATION } from '../utils/regulation';
+import type { TeamCard, ThreatCard, Relationships, TeamProfile, EnemyProfile } from '../types/store';
 
 interface AppState {
   teams: Record<string, TeamProfile>;
   activeTeamId: string;
   threats: ThreatCard[];
   relationships: Relationships;
+  enemyTeams: EnemyProfile[];
   
   // Team Management Actions
   createTeam: (name?: string) => void;
@@ -33,6 +35,15 @@ interface AppState {
   // Data Export/Import
   exportData: () => string;
   importData: (jsonData: string) => void;
+
+  // Enemy Team Actions
+  createEnemyTeam: (name?: string) => void;
+  updateEnemyTeam: (id: string, updates: Partial<EnemyProfile>) => void;
+  deleteEnemyTeam: (id: string) => void;
+  addEnemyTeamMember: (enemyTeamId: string, card: Omit<TeamCard, 'id' | 'isTeamMember'>) => void;
+  updateEnemyTeamMember: (enemyTeamId: string, memberId: string, updates: Partial<TeamCard>) => void;
+  removeEnemyTeamMember: (enemyTeamId: string, memberId: string) => void;
+  importEnemyTeam: (profile: Omit<EnemyProfile, 'id'>) => void;
 }
 
 const generateId = () => Math.random().toString(36).substring(2, 9);
@@ -43,17 +54,18 @@ export const useAppStore = create<AppState>()(
   persist(
     (set, get) => ({
       teams: {
-        [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Team 1', regulation: 'gen9championsvgc2026regma', members: [] }
+        [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Team 1', regulation: DEFAULT_REGULATION, members: [] }
       },
       activeTeamId: INITIAL_TEAM_ID,
       threats: [],
       relationships: {},
+      enemyTeams: [],
 
       // Team Management
       createTeam: (name = 'New Team') => set((state) => {
         const id = generateId();
         return {
-          teams: { ...state.teams, [id]: { id, name, regulation: 'gen9championsvgc2026regma', members: [] } },
+          teams: { ...state.teams, [id]: { id, name, regulation: DEFAULT_REGULATION, members: [] } },
           activeTeamId: id
         };
       }),
@@ -82,7 +94,7 @@ export const useAppStore = create<AppState>()(
         // Prevent deleting the last team
         if (Object.keys(newTeams).length === 0) {
           const fallbackId = generateId();
-          const newTeamProfile: TeamProfile = { id: fallbackId, name: 'Team 1', regulation: 'gen9championsvgc2026regma', members: [] };
+          const newTeamProfile: TeamProfile = { id: fallbackId, name: 'Team 1', regulation: DEFAULT_REGULATION, members: [] };
           newTeams[fallbackId] = newTeamProfile;
           return { teams: newTeams, activeTeamId: fallbackId };
         }
@@ -211,12 +223,12 @@ export const useAppStore = create<AppState>()(
           let importedActiveId = data.activeTeamId;
           
           if (!importedTeams && data.team) {
-             importedTeams = { [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Imported Team', regulation: 'gen9championsvgc2026regma', members: data.team } as TeamProfile };
+             importedTeams = { [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Imported Team', regulation: DEFAULT_REGULATION, members: data.team } as TeamProfile };
              importedActiveId = INITIAL_TEAM_ID;
           }
 
           set({
-            teams: (importedTeams || { [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Team 1', regulation: 'gen9championsvgc2026regma', members: [] } }) as unknown as Record<string, TeamProfile>,
+            teams: (importedTeams || { [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Team 1', regulation: DEFAULT_REGULATION, members: [] } }) as unknown as Record<string, TeamProfile>,
             activeTeamId: importedActiveId || INITIAL_TEAM_ID,
             threats: data.threats || [],
             relationships: data.relationships || {}
@@ -224,7 +236,64 @@ export const useAppStore = create<AppState>()(
         } catch (e) {
           console.error("Failed to import data", e);
         }
-      }
+      },
+
+      // Enemy Team Actions
+      createEnemyTeam: (name = 'Enemy Team') => set((state) => ({
+        enemyTeams: [...state.enemyTeams, {
+          id: generateId(),
+          name,
+          regulation: state.teams[state.activeTeamId]?.regulation || DEFAULT_REGULATION,
+          members: [],
+          tournamentName: '',
+          placement: 0,
+          date: '',
+          source: 'manual' as const,
+          patternFlags: [],
+        }],
+      })),
+
+      updateEnemyTeam: (id, updates) => set((state) => ({
+        enemyTeams: state.enemyTeams.map((et) => et.id === id ? { ...et, ...updates } : et),
+      })),
+
+      deleteEnemyTeam: (id) => set((state) => ({
+        enemyTeams: state.enemyTeams.filter((et) => et.id !== id),
+      })),
+
+      addEnemyTeamMember: (enemyTeamId, card) => set((state) => ({
+        enemyTeams: state.enemyTeams.map((et) => {
+          if (et.id !== enemyTeamId || et.members.length >= 6) return et;
+          return {
+            ...et,
+            members: [...et.members, { ...card, id: generateId(), isTeamMember: true as const }],
+          };
+        }),
+      })),
+
+      updateEnemyTeamMember: (enemyTeamId, memberId, updates) => set((state) => ({
+        enemyTeams: state.enemyTeams.map((et) => {
+          if (et.id !== enemyTeamId) return et;
+          return {
+            ...et,
+            members: et.members.map((m) => m.id === memberId ? { ...m, ...updates } : m),
+          };
+        }),
+      })),
+
+      removeEnemyTeamMember: (enemyTeamId, memberId) => set((state) => ({
+        enemyTeams: state.enemyTeams.map((et) => {
+          if (et.id !== enemyTeamId) return et;
+          return {
+            ...et,
+            members: et.members.filter((m) => m.id !== memberId),
+          };
+        }),
+      })),
+
+      importEnemyTeam: (profile) => set((state) => ({
+        enemyTeams: [...state.enemyTeams, { ...profile, id: generateId() }],
+      })),
     }),
     {
       name: 'poke-coach-storage',
@@ -234,7 +303,7 @@ export const useAppStore = create<AppState>()(
           return {
             ...persistedState,
             teams: {
-              [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Legacy Team', regulation: 'gen9championsvgc2026regma', members: persistedState.team }
+              [INITIAL_TEAM_ID]: { id: INITIAL_TEAM_ID, name: 'Legacy Team', regulation: DEFAULT_REGULATION, members: persistedState.team }
             },
             activeTeamId: INITIAL_TEAM_ID,
             team: undefined // cleanup old key

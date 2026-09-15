@@ -62,9 +62,9 @@
     "name": "Kingambit",
     "usage": 38.21,
     "commonItems": [
-      "Assault Vest",
       "Black Glasses",
-      "Life Orb"
+      "Life Orb",
+      "Leftovers"
     ],
     "commonMoves": [
       "kowtowcleave",
@@ -73,16 +73,17 @@
       "swordsdance"
     ],
     "commonAbilities": [
-      "Supreme Overlord"
+      "Supreme Overlord",
+      "Defiant"
     ],
     "recommendedNature": "Adamant",
     "defaultSps": {
-      "hp": 30,
+      "hp": 0,
       "atk": 32,
-      "def": 4,
+      "def": 0,
       "spa": 0,
-      "spd": 0,
-      "spe": 0
+      "spd": 2,
+      "spe": 32
     }
   },
   {
@@ -90,7 +91,7 @@
     "name": "Basculegion",
     "usage": 38.16,
     "commonItems": [
-      "Choice Scarf",
+      "Choice Band",
       "Life Orb",
       "Mystic Water"
     ],
@@ -104,7 +105,7 @@
       "Adaptability",
       "Swift Swim"
     ],
-    "recommendedNature": "Jolly",
+    "recommendedNature": "Adamant",
     "defaultSps": {
       "hp": 0,
       "atk": 32,
@@ -119,28 +120,27 @@
     "name": "Incineroar",
     "usage": 35.84,
     "commonItems": [
-      "Heavy-Duty Boots",
       "Sitrus Berry",
-      "Figy Berry"
+      "Safety Goggles",
+      "Aguav Berry"
     ],
     "commonMoves": [
       "flareblitz",
       "knockoff",
       "uturn",
-      "fakeout",
-      "partingshot"
+      "fakeout"
     ],
     "commonAbilities": [
       "Intimidate"
     ],
-    "recommendedNature": "Careful",
+    "recommendedNature": "Adamant",
     "defaultSps": {
       "hp": 30,
-      "atk": 0,
-      "def": 6,
+      "atk": 30,
+      "def": 4,
       "spa": 0,
-      "spd": 30,
-      "spe": 0
+      "spd": 0,
+      "spe": 2
     }
   },
   {
@@ -159,36 +159,34 @@
       "strengthsap"
     ],
     "commonAbilities": [
-      "Hospitality"
+      "Hospitality",
+      "Heatproof"
     ],
-    "recommendedNature": "Calm",
+    "recommendedNature": "Bold",
     "defaultSps": {
       "hp": 30,
       "atk": 0,
-      "def": 0,
-      "spa": 26,
-      "spd": 10,
+      "def": 32,
+      "spa": 0,
+      "spd": 4,
       "spe": 0
     }
   },
   {
-    "id": "floettemega",
+    "id": "floette-mega",
     "name": "Floette-Mega",
     "usage": 21.37,
     "commonItems": [
-      "Floettite",
-      "Life Orb"
+      "Floettite"
     ],
     "commonMoves": [
       "moonblast",
       "energyball",
       "calmmind",
-      "synthesis",
-      "dazzlinggleam",
-      "psychic"
+      "synthesis"
     ],
     "commonAbilities": [
-      "Flower Veil"
+      "Fairy Aura"
     ],
     "recommendedNature": "Timid",
     "defaultSps": {
@@ -211,8 +209,7 @@
       "heatwave",
       "solarbeam",
       "airslash",
-      "protect",
-      "dragonpulse"
+      "protect"
     ],
     "commonAbilities": [
       "Drought"
@@ -233,20 +230,18 @@
     "usage": 15.69,
     "commonItems": [
       "Damp Rock",
-      "Focus Sash",
-      "Sitrus Berry"
+      "Focus Sash"
     ],
     "commonMoves": [
       "hurricane",
       "weatherball",
       "uturn",
-      "tailwind",
-      "hydropump"
+      "tailwind"
     ],
     "commonAbilities": [
       "Drizzle"
     ],
-    "recommendedNature": "Timid",
+    "recommendedNature": "Modest",
     "defaultSps": {
       "hp": 0,
       "atk": 0,
@@ -262,15 +257,13 @@
     "usage": 15.26,
     "commonItems": [
       "Focus Sash",
-      "Heavy-Duty Boots",
-      "Life Orb"
+      "Choice Band"
     ],
     "commonMoves": [
       "stoneedge",
       "dualwingbeat",
       "earthquake",
-      "tailwind",
-      "taunt"
+      "tailwind"
     ],
     "commonAbilities": [
       "Pressure",
@@ -291,9 +284,8 @@
     "name": "Archaludon",
     "usage": 13.81,
     "commonItems": [
-      "Leftovers",
-      "Rocky Helmet",
-      "Sitrus Berry"
+      "Assault Vest",
+      "Leftovers"
     ],
     "commonMoves": [
       "bodypress",
@@ -302,7 +294,35 @@
       "electroshot"
     ],
     "commonAbilities": [
-      "Stamina"
+      "Stamina",
+      "Sturdy"
+    ],
+    "recommendedNature": "Bold",
+    "defaultSps": {
+      "hp": 30,
+      "atk": 0,
+      "def": 32,
+      "spa": 4,
+      "spd": 0,
+      "spe": 0
+    }
+  },
+  {
+    "id": "rotomwash",
+    "name": "Rotom-Wash",
+    "usage": 13.46,
+    "commonItems": [
+      "Sitrus Berry",
+      "Leftovers"
+    ],
+    "commonMoves": [
+      "hydropump",
+      "voltswitch",
+      "willowisp",
+      "thunderbolt"
+    ],
+    "commonAbilities": [
+      "Levitate"
     ],
     "recommendedNature": "Bold",
     "defaultSps": {
@@ -315,41 +335,12 @@
     }
   },
   {
-    "id": "rotomwash",
-    "name": "Rotom-Wash",
-    "usage": 13.46,
-    "commonItems": [
-      "Sitrus Berry",
-      "Leftovers",
-      "Choice Specs"
-    ],
-    "commonMoves": [
-      "hydropump",
-      "voltswitch",
-      "willowisp",
-      "thunderbolt"
-    ],
-    "commonAbilities": [
-      "Levitate"
-    ],
-    "recommendedNature": "Modest",
-    "defaultSps": {
-      "hp": 30,
-      "atk": 0,
-      "def": 6,
-      "spa": 30,
-      "spd": 0,
-      "spe": 0
-    }
-  },
-  {
     "id": "farigiraf",
     "name": "Farigiraf",
     "usage": 13.23,
     "commonItems": [
-      "Sitrus Berry",
       "Throat Spray",
-      "Leftovers"
+      "Sitrus Berry"
     ],
     "commonMoves": [
       "hypervoice",
@@ -360,12 +351,12 @@
     "commonAbilities": [
       "Armor Tail"
     ],
-    "recommendedNature": "Modest",
+    "recommendedNature": "Quiet",
     "defaultSps": {
       "hp": 30,
       "atk": 0,
-      "def": 6,
-      "spa": 30,
+      "def": 4,
+      "spa": 32,
       "spd": 0,
       "spe": 0
     }
@@ -375,7 +366,6 @@
     "name": "Milotic",
     "usage": 10.83,
     "commonItems": [
-      "Flame Orb",
       "Leftovers",
       "Sitrus Berry"
     ],
@@ -405,15 +395,13 @@
     "usage": 10.64,
     "commonItems": [
       "Focus Sash",
-      "Mental Herb",
-      "Covert Cloak"
+      "Mental Herb"
     ],
     "commonMoves": [
       "moonblast",
       "tailwind",
       "encore",
-      "taunt",
-      "energyball"
+      "taunt"
     ],
     "commonAbilities": [
       "Prankster"
@@ -423,13 +411,13 @@
       "hp": 0,
       "atk": 0,
       "def": 0,
-      "spa": 32,
+      "spa": 0,
       "spd": 2,
-      "spe": 32
+      "spe": 64
     }
   },
   {
-    "id": "froslassmega",
+    "id": "froslass-mega",
     "name": "Froslass-Mega",
     "usage": 9.37,
     "commonItems": [
@@ -442,7 +430,7 @@
       "spikes"
     ],
     "commonAbilities": [
-      "Cursed Body"
+      "Shadow Tag"
     ],
     "recommendedNature": "Timid",
     "defaultSps": {
@@ -460,8 +448,7 @@
     "usage": 8.32,
     "commonItems": [
       "Leftovers",
-      "Air Balloon",
-      "Weakness Policy"
+      "Spell Tag"
     ],
     "commonMoves": [
       "kingsshield",
@@ -476,9 +463,9 @@
     "defaultSps": {
       "hp": 30,
       "atk": 0,
-      "def": 0,
+      "def": 4,
       "spa": 32,
-      "spd": 4,
+      "spd": 0,
       "spe": 0
     }
   },
@@ -488,8 +475,7 @@
     "usage": 8.01,
     "commonItems": [
       "Throat Spray",
-      "Pixie Plate",
-      "Choice Specs"
+      "Pixie Plate"
     ],
     "commonMoves": [
       "hypervoice",
@@ -504,14 +490,14 @@
     "defaultSps": {
       "hp": 30,
       "atk": 0,
-      "def": 6,
-      "spa": 30,
+      "def": 4,
+      "spa": 32,
       "spd": 0,
       "spe": 0
     }
   },
   {
-    "id": "aerodactylmega",
+    "id": "aerodactyl-mega",
     "name": "Aerodactyl-Mega",
     "usage": 7.94,
     "commonItems": [
@@ -541,20 +527,17 @@
     "name": "Talonflame",
     "usage": 7.57,
     "commonItems": [
-      "Heavy-Duty Boots",
-      "Life Orb",
-      "Sharp Beak"
+      "Sharp Beak",
+      "Life Orb"
     ],
     "commonMoves": [
       "bravebird",
       "flareblitz",
       "tailwind",
-      "uturn",
-      "willowisp"
+      "uturn"
     ],
     "commonAbilities": [
-      "Gale Wings",
-      "Flame Body"
+      "Gale Wings"
     ],
     "recommendedNature": "Jolly",
     "defaultSps": {
@@ -567,7 +550,7 @@
     }
   },
   {
-    "id": "tyranitarmega",
+    "id": "tyranitar-mega",
     "name": "Tyranitar-Mega",
     "usage": 7.08,
     "commonItems": [
@@ -597,9 +580,8 @@
     "name": "Maushold",
     "usage": 6.85,
     "commonItems": [
-      "Focus Sash",
       "Wide Lens",
-      "Silk Scarf"
+      "Focus Sash"
     ],
     "commonMoves": [
       "populationbomb",
@@ -621,7 +603,7 @@
     }
   },
   {
-    "id": "delphoxmega",
+    "id": "delphox-mega",
     "name": "Delphox-Mega",
     "usage": 6.51,
     "commonItems": [
@@ -647,7 +629,7 @@
     }
   },
   {
-    "id": "gengarmega",
+    "id": "gengar-mega",
     "name": "Gengar-Mega",
     "usage": 6.47,
     "commonItems": [
@@ -678,8 +660,7 @@
     "usage": 5.93,
     "commonItems": [
       "Leftovers",
-      "Rocky Helmet",
-      "Sitrus Berry"
+      "Rocky Helmet"
     ],
     "commonMoves": [
       "bodypress",

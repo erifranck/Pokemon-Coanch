@@ -1,6 +1,7 @@
 import React, { useMemo, useEffect } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { createChampionsPokemon, calculateFullDamageResult, getNatureModifier } from '../utils/calcAdapter';
+import { DEFAULT_REGULATION } from '../utils/regulation';
 import formatData from '../data/format_data.json';
 import { getMegaFormId } from '../utils/megaUtils';
 import { getShowdownSpriteUrl } from '../utils/spriteUtils';
@@ -22,7 +23,7 @@ const getNatureColor = (statName: string, nature: string) => {
 const LiveSimulator: React.FC = () => {
   const { teams, activeTeamId, threats, relationships, updateTeamMember, updateThreat } = useAppStore();
   const team = teams[activeTeamId]?.members || [];
-  const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
+  const regulation = teams[activeTeamId]?.regulation || DEFAULT_REGULATION;
   
   const sim = useSimulatorState();
   const activeAllyId = sim.activeAllyId || team[0]?.id || '';

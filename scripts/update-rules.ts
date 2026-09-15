@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 
 // Define the formats we want to support
 const FORMATS_TO_EXTRACT = [
-    { id: 'gen9championsvgc2026regma', name: 'Gen 9 Champions Reg M-A' }
+    { id: 'gen9championsvgc2026regmc', name: 'Gen 9 Champions Reg M-C' }
 ];
 
 const OUTPUT_DIR = path.join(__dirname, '../src/data');
@@ -40,6 +40,33 @@ async function extractRules() {
         
         const ruleTable = formatDex.formats.getRuleTable(formatObj);
 
+        const extractLearnset = (species: any): string[] => {
+            const allowedMoves: string[] = [];
+            try {
+                // Access learnsets via data.Learnsets directly
+                const speciesLearnset = (formatDex.data as any).Learnsets?.[species.id];
+                if (speciesLearnset && speciesLearnset.learnset) {
+                    for (const moveId of Object.keys(speciesLearnset.learnset)) {
+                        allowedMoves.push(moveId);
+                    }
+                }
+                
+                // For alternate forms (Mega, regional), inherit base species learnset
+                if (allowedMoves.length === 0 && species.baseSpecies && species.baseSpecies !== species.name) {
+                    const baseId = species.baseSpecies.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    const baseLearnset = (formatDex.data as any).Learnsets?.[baseId];
+                    if (baseLearnset && baseLearnset.learnset) {
+                        for (const moveId of Object.keys(baseLearnset.learnset)) {
+                            allowedMoves.push(moveId);
+                        }
+                    }
+                }
+            } catch (e) {
+                // Learnset extraction failed; leave empty as fallback
+            }
+            return allowedMoves;
+        };
+
         for (const species of formatDex.species.all()) {
             if (species.num <= 0) continue;
             
@@ -65,32 +92,6 @@ async function extractRules() {
             // Wait, formatDex.data.Species might be empty if we don't call includeData!
             // Actually `formatDex.species.all()` is the proper way to get all species
 
-            
-            // Extract learnset: get all move IDs this species can learn
-            const allowedMoves: string[] = [];
-            try {
-                // Access learnsets via data.Learnsets directly
-                const speciesLearnset = (formatDex.data as any).Learnsets?.[species.id];
-                if (speciesLearnset && speciesLearnset.learnset) {
-                    for (const moveId of Object.keys(speciesLearnset.learnset)) {
-                        allowedMoves.push(moveId);
-                    }
-                }
-                
-                // For alternate forms (Mega, regional), inherit base species learnset
-                if (allowedMoves.length === 0 && species.baseSpecies && species.baseSpecies !== species.name) {
-                    const baseId = species.baseSpecies.toLowerCase().replace(/[^a-z0-9]/g, '');
-                    const baseLearnset = (formatDex.data as any).Learnsets?.[baseId];
-                    if (baseLearnset && baseLearnset.learnset) {
-                        for (const moveId of Object.keys(baseLearnset.learnset)) {
-                            allowedMoves.push(moveId);
-                        }
-                    }
-                }
-            } catch (e) {
-                // Learnset extraction failed; leave empty as fallback
-            }
-            
             legalPokemon[species.id] = {
                 id: species.id,
                 name: species.name,
@@ -98,13 +99,36 @@ async function extractRules() {
                 types: species.types,
                 baseStats: species.baseStats,
                 abilities: species.abilities,
-                allowedMoves: allowedMoves 
+                allowedMoves: extractLearnset(species)
             };
             legalCount++;
         }
         
         console.log(`Found ${legalCount} legal Pokemon for ${format.name}`);
         
+        // Build a full "any Pokemon" pool so out-of-format species can still be
+        // rendered and marked as Illegal in the UI instead of being blocked.
+        const allPokemon: any = {};
+        let allCount = 0;
+        for (const species of formatDex.species.all()) {
+            if (species.num <= 0) continue;
+            if (species.isNonstandard === 'Custom' || species.isNonstandard === 'CAP' || species.isNonstandard === 'Gigantamax' || species.isNonstandard === 'Unobtainable') {
+                continue;
+            }
+            if (species.gen > 9) continue;
+            allPokemon[species.id] = {
+                id: species.id,
+                name: species.name,
+                num: species.num,
+                types: species.types,
+                baseStats: species.baseStats,
+                abilities: species.abilities,
+                allowedMoves: extractLearnset(species)
+            };
+            allCount++;
+        }
+        console.log(`Built all-Pokemon pool with ${allCount} species (for Illegal-chip support)`);
+
         const legalItems: any = {};
         for (const item of formatDex.items.all()) {
             if (item.isNonstandard) continue;
@@ -131,7 +155,9 @@ async function extractRules() {
                 name: move.name,
                 type: move.type,
                 basePower: move.basePower,
-                category: move.category
+                category: move.category,
+                accuracy: move.accuracy ?? true,
+                priority: move.priority ?? 0
             };
         }
         
@@ -139,9 +165,18 @@ async function extractRules() {
             id: format.id,
             name: format.name,
             pokemon: legalPokemon,
+            allPokemon: allPokemon,
             items: legalItems,
             moves: legalMoves
         };
+
+        // Also emit a flat moves.json (superset-compatible with the legacy
+        // parse-data.js output) used for move metadata enrichment in the UI.
+        fs.writeFileSync(
+            path.join(OUTPUT_DIR, 'moves.json'),
+            JSON.stringify(legalMoves, null, 2)
+        );
+        console.log(`Wrote ${Object.keys(legalMoves).length} moves to moves.json`);
     }
     
     if (!fs.existsSync(OUTPUT_DIR)) {

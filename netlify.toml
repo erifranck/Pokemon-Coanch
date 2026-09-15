@@ -1,0 +1,11 @@
+[build]
+  command = "VITE_BASE=/ npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[functions]
+  node_bundler = "esbuild"
+  directory = "netlify/functions"
+  included_files = ["src/data/format_data.json", "src/data/meta_sets.json", "src/data/tournament_data.json"]

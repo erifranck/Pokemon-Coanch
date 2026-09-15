@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { TYPES } from '../utils/typeChart';
+import { DEFAULT_REGULATION } from '../utils/regulation';
 import { getOffensiveCoverage, type MemberCoverage } from '../utils/offensiveCoverage';
 import formatData from '../data/format_data.json';
 import { getShowdownSpriteUrl } from '../utils/spriteUtils';
@@ -9,7 +10,7 @@ import { TypeChip } from '../components/TypeChip';
 const OffensiveCoverage: React.FC = () => {
   const { teams, activeTeamId } = useAppStore();
   const team = teams[activeTeamId]?.members || [];
-  const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
+  const regulation = teams[activeTeamId]?.regulation || DEFAULT_REGULATION;
   const [useTera, setUseTera] = useState(false);
   const [highlightStab, setHighlightStab] = useState(true);
 

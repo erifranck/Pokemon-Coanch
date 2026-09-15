@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { TYPES, calculateDefensiveMultiplier } from '../utils/typeChart';
+import { DEFAULT_REGULATION } from '../utils/regulation';
 import formatData from '../data/format_data.json';
 import { getMegaFormId } from '../utils/megaUtils';
 import { getImmunityTypes } from '../utils/abilityImmunities';
@@ -28,7 +29,7 @@ const getMultiplierText = (mult: number, isAbility = false) => {
 const TypeSynergy: React.FC = () => {
   const { teams, activeTeamId } = useAppStore();
   const team = teams[activeTeamId]?.members || [];
-  const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
+  const regulation = teams[activeTeamId]?.regulation || DEFAULT_REGULATION;
   const [useTera, setUseTera] = useState(false);
   const [useAbilities, setUseAbilities] = useState(false);
   const [showCoreModal, setShowCoreModal] = useState(false);

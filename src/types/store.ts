@@ -31,8 +31,20 @@ export interface ThreatCard extends PokemonCard {
 export interface TeamProfile {
   id: string;
   name: string;
-  regulation: string; // e.g., 'gen9championsvgc2026regma'
+  regulation: string; // e.g., 'gen9championsvgc2026regmc'
   members: TeamCard[];
+}
+
+export interface EnemyProfile {
+  id: string;
+  name: string;
+  regulation: string;
+  members: TeamCard[];
+  tournamentName: string;
+  placement: number;
+  date: string;
+  source: 'tournament' | 'manual';
+  patternFlags: string[];
 }
 
 // Maps a TeamCard ID to an array of ThreatCard IDs that it specifically counters/checks

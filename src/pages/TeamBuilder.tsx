@@ -2,18 +2,24 @@ import React, { useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { PokemonCard } from '../components/PokemonCard';
 import formatData from '../data/format_data.json';
+import { DEFAULT_REGULATION } from '../utils/regulation';
 import { TeamManager } from '../components/TeamManager';
 
 const TeamBuilder: React.FC = () => {
   const { teams, activeTeamId, addTeamMember, updateTeamMember, removeTeamMember } = useAppStore();
   const team = teams[activeTeamId]?.members || [];
-  const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
+  const regulation = teams[activeTeamId]?.regulation || DEFAULT_REGULATION;
   const [search, setSearch] = useState('');
 
   const activeFormat = (formatData as any)[regulation];
 
+  const allPool = {
+    ...(activeFormat?.allPokemon || {}),
+    ...(activeFormat?.pokemon || {}),
+  };
+
   const handleAddPokemon = (pokemonId: string) => {
-    const def = activeFormat?.pokemon[pokemonId];
+    const def = allPool[pokemonId];
     if (!def) return;
     
     addTeamMember({
@@ -29,7 +35,7 @@ const TeamBuilder: React.FC = () => {
     setSearch('');
   };
 
-  const filteredPokedex = activeFormat ? Object.entries(activeFormat.pokemon)
+  const filteredPokedex = activeFormat ? Object.entries(allPool)
     .filter(([_key, def]: any) => 
       def.name.toLowerCase().includes(search.toLowerCase()) &&
       !def.name.includes('-Mega') // Exclude Mega forms (they're accessed via the card's Mega Toggle)
@@ -61,16 +67,26 @@ const TeamBuilder: React.FC = () => {
           />
           {search && (
             <div className="absolute top-full mt-1 w-full bg-gray-800 border border-gray-700 rounded-lg shadow-xl overflow-hidden">
-              {filteredPokedex.map(([key, def]: any) => (
-                <button
-                  key={key}
-                  className="w-full text-left px-4 py-2 hover:bg-gray-700 flex justify-between items-center"
-                  onClick={() => handleAddPokemon(key)}
-                >
-                  <span className="capitalize">{def.name}</span>
-                  <span className="text-xs text-gray-500">{def.types.join('/')}</span>
-                </button>
-              ))}
+              {filteredPokedex.map(([key, def]: any) => {
+                const isIllegal = !activeFormat?.pokemon[key];
+                return (
+                  <button
+                    key={key}
+                    className="w-full text-left px-4 py-2 hover:bg-gray-700 flex justify-between items-center"
+                    onClick={() => handleAddPokemon(key)}
+                  >
+                    <span className="flex items-center gap-2">
+                      <span className="capitalize">{def.name}</span>
+                      {isIllegal && (
+                        <span className="text-[10px] font-bold uppercase px-1.5 py-0.5 rounded bg-red-600 text-white">
+                          Illegal
+                        </span>
+                      )}
+                    </span>
+                    <span className="text-xs text-gray-500">{def.types.join('/')}</span>
+                  </button>
+                );
+              })}
             </div>
           )}
         </div>

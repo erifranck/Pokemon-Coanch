@@ -3,6 +3,7 @@ import { useAppStore } from '../store/useAppStore';
 import formatData from '../data/format_data.json';
 import { getMegaFormId } from '../utils/megaUtils';
 import { getShowdownSpriteUrl } from '../utils/spriteUtils';
+import { DEFAULT_REGULATION } from '../utils/regulation';
 import { parsePokePaste, exportToPokePaste } from '../utils/pokepaste';
 
 export const TeamManager: React.FC = () => {
@@ -37,7 +38,7 @@ export const TeamManager: React.FC = () => {
       });
     }
     let msg = `Imported ${toAdd.length} Pokémon to new team.`;
-    if (dropped.length > 0) msg += ` Skipped ${dropped.length} illegal: ${dropped.join(', ')}`;
+    if (dropped.length > 0) msg += ` Skipped ${dropped.length} unknown species: ${dropped.join(', ')}`;
     setImportMsg(msg);
     setShowImport(false);
     setImportText('');
@@ -89,7 +90,7 @@ export const TeamManager: React.FC = () => {
 
         <select
           className="bg-gray-800 text-gray-300 p-1.5 rounded-lg border border-gray-700 focus:outline-none focus:border-blue-500 text-xs max-w-[140px]"
-          value={activeTeam.regulation || 'gen9championsvgc2026regma'}
+          value={activeTeam.regulation || DEFAULT_REGULATION}
           onChange={(e) => updateTeamRegulation(activeTeamId, e.target.value)}
         >
           {Object.entries(formatData).map(([key, format]: any) => (

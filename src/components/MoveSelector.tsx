@@ -115,9 +115,16 @@ export const MoveSelector: React.FC<Props> = ({ label, value, options, onChange,
 
   return (
     <div className={"relative " + className} ref={wrapperRef}>
-      <label className="block text-gray-400 text-xs mb-0.5 flex justify-between">
+      <label className="block text-gray-400 text-xs mb-0.5 flex justify-between items-center">
         {label}
-        {isIllegal && <span className="text-red-500 font-bold" title="Illegal in current format">⚠️</span>}
+        {isIllegal && (
+          <span
+            className="text-[10px] font-bold uppercase px-1.5 py-0.5 rounded bg-red-600 text-white"
+            title="This Pokemon cannot learn this move in the current format"
+          >
+            Illegal
+          </span>
+        )}
       </label>
       
       {/* Selected value display - shows type badge + move name, hover shows tooltip */}

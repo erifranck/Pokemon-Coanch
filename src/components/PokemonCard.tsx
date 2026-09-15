@@ -8,7 +8,8 @@ import { getShowdownSpriteUrl } from '../utils/spriteUtils';
 import { TypeChip } from './TypeChip';
 import { Combobox } from './Combobox';
 import { MoveSelector, type MoveOption } from './MoveSelector';
-import { checkLegality } from '../utils/legality';
+import { checkLegality, isMoveIllegalForPokemon } from '../utils/legality';
+import { DEFAULT_REGULATION } from '../utils/regulation';
 import { useAppStore } from '../store/useAppStore';
 
 interface Props {
@@ -39,7 +40,7 @@ const ALL_NATURE_OPTIONS = Object.entries(NATURES).map(([name, effect]) => ({
 
 export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
   const { teams, activeTeamId } = useAppStore();
-  const regulation = teams[activeTeamId]?.regulation || 'gen9championsvgc2026regma';
+  const regulation = teams[activeTeamId]?.regulation || DEFAULT_REGULATION;
   
   const [previewMode, setPreviewMode] = useState<'mega' | 'base'>('mega');
   
@@ -47,13 +48,14 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
   const activeFormat = (formatData as any)[regulation];
   if (!activeFormat) return <div className="p-4 bg-gray-800 rounded-lg border border-red-500 text-red-400 text-sm">Format data not found for {regulation}. Run update script.</div>;
 
-  const basePokemonDef = activeFormat.pokemon[card.pokemonId];
+  const basePokemonDef = activeFormat.pokemon[card.pokemonId] || activeFormat.allPokemon?.[card.pokemonId];
+  const isIllegalPokemon = !activeFormat.pokemon[card.pokemonId];
   if (!basePokemonDef) return (
-    <div className="p-4 bg-gray-800 rounded-lg border border-yellow-500 text-yellow-400 text-sm">
-      Pokémon {card.name || card.pokemonId} is not legal in {regulation}.
+    <div className="p-4 bg-gray-800 rounded-lg border border-red-500 text-red-400 text-sm">
+      Pokémon {card.name || card.pokemonId} was not found in the data.
       {onRemove && (
         <button onClick={onRemove} className="ml-3 px-2 py-1 bg-red-600 hover:bg-red-500 text-white text-xs rounded">
-          Remove Illegal
+          Remove
         </button>
       )}
     </div>
@@ -69,8 +71,9 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
   // Choose the definition to display
   let activePokemonDef = basePokemonDef;
   const resolvedMegaId = megaFormId; // TS narrowing
-  if (isHoldingMegaStone && resolvedMegaId && previewMode === 'mega' && activeFormat?.pokemon?.[resolvedMegaId]) {
-      activePokemonDef = activeFormat.pokemon[resolvedMegaId];
+  if (isHoldingMegaStone && resolvedMegaId && previewMode === 'mega') {
+      const megaDef = activeFormat?.pokemon?.[resolvedMegaId] || activeFormat?.allPokemon?.[resolvedMegaId];
+      if (megaDef) activePokemonDef = megaDef;
   }
 
   const totalSP = Object.values(card.sps).reduce((a, b) => a + b, 0);
@@ -160,8 +163,16 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
             <h2 className={`text-xl font-bold capitalize ${isHoldingMegaStone && previewMode === 'mega' ? 'text-purple-400' : 'text-yellow-400'}`}>
                 {activePokemonDef.name}
             </h2>
-            <div className="flex space-x-1 mt-1">
+            <div className="flex items-center space-x-1 mt-1">
               {activePokemonDef.types.map((t: string) => <TypeChip key={t} type={t} />)}
+              {isIllegalPokemon && (
+                <span
+                  className="ml-1 text-[10px] font-bold uppercase px-1.5 py-0.5 rounded bg-red-600 text-white"
+                  title={`Not allowed in ${activeFormat.name}`}
+                >
+                  Illegal
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -240,18 +251,13 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
             const moveId = card.moves[idx] || '';
             
             // Build enriched move options with inline details
+            // NOTE: Validation is non-blocking by design — the full move pool is
+            // offered and unlearnable moves are flagged with an "Illegal" chip.
             const buildMoveOptions = (): MoveOption[] => {
-              const allowedMoves = basePokemonDef.allowedMoves || [];
               const allMoves = Object.values(activeFormat.moves || {}) as any[];
               const movesDict = (movesData as Record<string, any>);
               
-              let filteredMoves = allMoves;
-              if (allowedMoves.length > 0) {
-                const allowedSet = new Set(allowedMoves);
-                filteredMoves = allMoves.filter((m: any) => allowedSet.has(m.id));
-              }
-              
-              return filteredMoves.map((m: any) => {
+              return allMoves.map((m: any) => {
                 const fullMoveData = movesDict[m.id];
                 return {
                   id: m.id,
@@ -275,7 +281,7 @@ export const PokemonCard: React.FC<Props> = ({ card, onUpdate, onRemove }) => {
                     newMoves[idx] = val;
                     onUpdate({ moves: newMoves });
                   }}
-                  isIllegal={!checkLegality(card.pokemonId, 'move', moveId, regulation)}
+                  isIllegal={isMoveIllegalForPokemon(card.pokemonId, moveId, regulation)}
                 />
               </div>
             );

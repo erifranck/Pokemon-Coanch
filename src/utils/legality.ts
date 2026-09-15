@@ -33,7 +33,7 @@ export const checkLegality = (
 
   // 4. Check if ability belongs to Pokemon in the current format
   if (type === 'ability') {
-    const pokeDef = format.pokemon[pokemonId];
+    const pokeDef = format.pokemon[pokemonId] || format.allPokemon?.[pokemonId];
     if (pokeDef && pokeDef.abilities) {
       const validAbilities = Object.values(pokeDef.abilities);
       return validAbilities.includes(valueId);
@@ -41,4 +41,40 @@ export const checkLegality = (
   }
 
   return true;
+};
+
+/**
+ * Whether a Pokemon exists in ANY pool (regulation or all-Pokemon fallback).
+ * Used to guard against hallucinated IDs while still allowing out-of-format species.
+ */
+export const isKnownPokemon = (pokemonId: string, formatId: string): boolean => {
+  if (!pokemonId) return false;
+  const format = (formatData as any)[formatId];
+  if (!format) return false;
+  return !!(format.pokemon[pokemonId] || format.allPokemon?.[pokemonId]);
+};
+
+/**
+ * Learnset-based move legality for the "Illegal chip" UI.
+ *
+ * Validation is intentionally non-blocking: any move can be selected, but a move
+ * that the Pokemon cannot learn is flagged as illegal so the user knows the
+ * moveset would not be valid in the regulation.
+ */
+export const isMoveIllegalForPokemon = (
+  pokemonId: string,
+  moveId: string,
+  formatId: string
+): boolean => {
+  if (!moveId) return false;
+  const format = (formatData as any)[formatId];
+  if (!format) return false;
+
+  const pokeDef = format.pokemon[pokemonId] || format.allPokemon?.[pokemonId];
+  if (!pokeDef) return false;
+
+  const learnset: string[] = pokeDef.allowedMoves || [];
+  if (learnset.length === 0) return false; // Unknown learnset → can't flag
+
+  return !learnset.includes(moveId);
 };
